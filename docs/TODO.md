@@ -23,7 +23,7 @@ Il dettaglio ora per ora è in `docs/PLAN.md`; il contesto completo per le AI in
 - [ ] **G** (facoltativo) Stessi prompt su ChatGPT Deep Research, per confrontare
 
 ### Studio
-- [ ] **F G S** PDF di teoria serale (AI, industria, business: parole chiave e concetti) — in arrivo in `docs/`
+- [ ] **F G S** PDF di teoria serale `docs/studio-serale.pdf` (4 pagine, ~45 min)
 
 ## Venerdì 13 — capire, provare, decidere
 

@@ -99,7 +99,7 @@ Suggerisci alla persona di tenere aperto un secondo terminale con `bash scripts/
 
 | Quando | Cosa |
 |---|---|
-| **Giovedì sera** | Setup + canale. Lettura della rosa dei problemi. Opinione personale scritta in `.coord/agents/<nome>/work/opinione-problemi.md`. Studio del PDF di teoria (in arrivo in `docs/`). |
+| **Giovedì sera** | Setup + canale. Lettura della rosa dei problemi. Opinione personale scritta in `.coord/agents/<nome>/work/opinione-problemi.md`. Studio di `docs/studio-serale.pdf`. |
 | **Venerdì 09:00–12:30** | Ricerca e test sui 2–3 candidati migliori (sezione 8). Trovare una persona del settore da sentire per 10 minuti. |
 | **Venerdì 13:30–14:00** | **Decisione:** problema principale + riserva, votando sui criteri della giuria. |
 | **Venerdì pomeriggio** | Sul problema scelto: dati, business plan, test di fattibilità più serio, ambiente. |
