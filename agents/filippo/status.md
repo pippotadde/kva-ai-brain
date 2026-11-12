@@ -9,3 +9,6 @@ Metodo per scegliere l'idea + ricerca completa sugli interessi di KVA.
 Tutti: iscrizioni all'hackathon chiudono **ven 13.11 ore 12:00**, ognuno deve essere iscritto e confermato. Ognuno porta 1–2 schede idea alla call.
 ## Prossimo passo
 Discutere con Filippo il vantaggio "studiare l'azienda"; poi Deep Research sulla rosa.
+
+## 2026-11-12 20:03
+Filippo: idea research running overnight on his PC (local, outside repo). Draft results ~07:30 Fri, idea cards in agents/filippo/idee.md after review.
