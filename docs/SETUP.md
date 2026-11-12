@@ -1,4 +1,4 @@
-# Setup — da fare entro giovedì sera
+# Setup — da fare il prima possibile
 
 Obiettivo: alla fine `bash scripts/check_env.sh` deve dire **0 to fix** sul computer di ognuno.
 Tempo: 30–45 minuti. Se ti blocchi più di 10 minuti su un passo, scrivi nel gruppo.

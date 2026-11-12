@@ -59,6 +59,8 @@ Il team è di 3 studenti di Ingegneria Informatica al PoliTo. Programmano bene (
 | `docs/site/generale.html` | Regole, voto, team, **cosa fare entro sabato in ordine**, **sabato minuto per minuto** |
 | `docs/site/problemi.html` | Come funziona la scelta, il tema, i 7 ambiti KVA spiegati, come si sceglie, proposte di Claude, business plan, dati e AI |
 | `docs/site/lettura.html` | Come si costruisce un AI brain: le 5 parti, esempio di codice funzionante, ontologia in 20 minuti, strumenti, demo, business |
+| `docs/site/metodo.html` | **Scegliere l'idea**: segnali KVA, 5 strade per trovare idee, scheda, filtro, voto, business, scheletro tecnico |
+| `research/kva-interests.md`, `research/kva-company.md` | Tutto su KVA: interessi, bandi, prodotti, paper, giuria, OIDA |
 | `research/problems/candidates.md` | Rosa dei problemi con punteggi e fonti |
 | `docs/jury.md` | Chi giudica, domande probabili |
 | `docs/research-prompts.md` | Prompt per Deep Research (Gemini / ChatGPT) |
@@ -155,5 +157,5 @@ Facoltativo: sentire una persona del settore. I passi successivi (dati, business
 ## 12. Primo messaggio quando hai finito il setup
 
 ```bash
-bash scripts/coord.sh msg filippo "Setup completato" "Ambiente verde (check_env 0 to fix), canale collegato. Prossimo: opinione sui problemi."
+bash scripts/coord.sh msg filippo "Setup completato" "Ambiente verde (check_env 0 to fix), canale collegato. Prossimo: 2 idee entro venerdì sera."
 ```

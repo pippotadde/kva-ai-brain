@@ -1,10 +1,21 @@
 # START KVA — file da dare al proprio Claude
 
-> **Per la persona (Giorgia o Sian):**
-> 1. Serve Claude Code già installato. Su Windows usalo **dentro WSL (Ubuntu)**, non da Windows: apri il terminale Ubuntu.
-> 2. Metti questo file nella tua cartella home di Linux (`~`), poi da lì lancia `claude` e scrivi:
->    *"Leggi START_KVA.md, sono <Giorgia|Sian>. Fai tutto tu."*
-> 3. Claude ti chiederà solo poche cose: la password del computer (`sudo`), il login GitHub nel browser, eventualmente una chiave API.
+> **Per la persona (Giorgia o Sian).** L'unica cosa da fare a mano è installare Claude Code dentro Linux; il resto lo fa lui.
+>
+> **Solo su Windows (Sian):** apri PowerShell **come amministratore**, scrivi `wsl --install -d Ubuntu-24.04`, riavvia, apri "Ubuntu" dal menu Start e scegli utente e password. Da qui in poi usa **sempre il terminale Ubuntu**, mai PowerShell.
+>
+> **Poi (Ubuntu e WSL), nel terminale:**
+> ```bash
+> sudo apt update && sudo apt install -y curl git
+> curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs
+> sudo npm install -g @anthropic-ai/claude-code
+> ```
+> Se `claude --version` funziona già, salta questi comandi.
+>
+> **Infine:** salva questo file nella home di Linux (su WSL: copialo da Windows con `cp /mnt/c/Users/<tuo-utente>/Downloads/START_KVA.md ~/`), poi nel terminale scrivi `cd ~ && claude`, fai il login con il tuo account e scrivi:
+> *"Leggi START_KVA.md, sono <Giorgia|Sian>. Fai tutto tu."*
+>
+> Claude ti chiederà solo: la password del computer (`sudo`), il login GitHub nel browser, una chiave API gratuita di Google, e di approvare i comandi che lancia.
 
 ---
 
@@ -15,13 +26,15 @@
 Lavora in Linux (WSL su Windows, oppure Ubuntu), nella home, mai in `/mnt/c/...`.
 
 ```bash
-git --version; gh --version; uv --version
+git --version; gh --version; uv --version; node --version; claude --version
 ```
 
 Installa quello che manca:
 - `git`: `sudo apt-get update && sudo apt-get install -y git`
 - `gh` (GitHub CLI): segui https://github.com/cli/cli/blob/trunk/docs/install_linux.md (repository apt ufficiale)
 - `uv`: `curl -LsSf https://astral.sh/uv/install.sh | sh`, poi riapri la shell o `source ~/.local/bin/env`
+- `node` 22: `curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs`
+- Comandi completi e alternativi: dopo il clone, `docs/SETUP.md` nella repo.
 
 Quando serve la password `sudo`, chiedila alla persona (o falle lanciare il comando con `! <comando>`).
 
@@ -61,7 +74,7 @@ Nota: le prossime sessioni conviene aprirle direttamente da `~/kva-ai-brain` (l�
 ## 6. Il compito di adesso
 
 Entro **venerdì 13.11 sera** la persona porta alla call **2 idee**:
-1. Prima controlla con lei che sia **iscritta e confermata** all'hackathon: le iscrizioni chiudono **venerdì 13.11 alle 12:00**.
+1. Prima controlla con lei che sia **iscritta e confermata** all'hackathon (le iscrizioni chiudono **venerdì 13.11 alle 12:00**) e che sia entrata nella dashboard KVA https://hackathon.kakashi.ventures (obbligatorio entro 7 giorni dalla conferma).
 2. Leggete insieme `docs/site/metodo.html` ("Scegliere l'idea"). I segnali di KVA completi sono in `research/kva-interests.md`; proposte già pronte in `docs/site/problemi.html`.
 3. Aiutala a trovare 2 idee con le 5 strade della pagina, a passarle nel filtro sì/no e a compilare la scheda (chi soffre, chi paga, numero che migliora, cosa cambia nel tempo, momento "wow", dati, perché noi).
 4. Salva le 2 schede in `.coord/agents/<nome>/idee.md`, aggiorna `status.md` e fai `bash scripts/coord.sh sync`.
@@ -69,4 +82,5 @@ Entro **venerdì 13.11 sera** la persona porta alla call **2 idee**:
 
 ## 7. Alla fine
 
-Riassumi alla persona in 5 righe: cosa è installato, se `check_env.sh` è verde, il canale funziona, cosa resta da fare (2 idee entro venerdì sera).
+Manda a Filippo: `bash scripts/coord.sh msg filippo "Setup completato" "check_env: <risultato>. Canale collegato. Iscrizione: <sì/no>. Prossimo: 2 idee."`
+Poi riassumi alla persona in 5 righe: cosa è installato, se `check_env.sh` è verde, se il canale funziona, cosa resta da fare (2 idee entro venerdì sera).
