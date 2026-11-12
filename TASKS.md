@@ -7,7 +7,7 @@ Aggiornato: 2026-11-12 17:30 · Autore: regista
 | tutti | Setup con `docs/SETUP.md`, `check_env.sh` → 0 to fix | screenshot nel gruppo |
 | tutti | `coord.sh init <nome>` e primo `status.md` | status visibile qui |
 | tutti | Leggere `research/problems/candidates.md`, scrivere opinione personale in `agents/<nome>/work/opinione-problemi.md` | file presente |
-| tutti | Studio: PDF teoria (in arrivo in `docs/`) | — |
+| tutti | Studio: `docs/studio-serale.pdf` (4 pagine) | — |
 | filippo | Deep Research Gemini su A e D (`docs/research-prompts.md`) | report in `research/market/` |
 
 ## Venerdì mattina (09:00–12:30)

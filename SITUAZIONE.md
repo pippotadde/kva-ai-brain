@@ -27,7 +27,7 @@ VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET
 ## Aperto
 - Scelta problema principale + riserva (ven 13:30)
 - Crediti AI di KVA e istruzioni checkpoint: sconosciuti
-- In arrivo dal regista: PDF di teoria, pagina "gara" (problemi dettagliati, business plan, dati, modalità AI)
+- Pronto: `docs/studio-serale.pdf`. In arrivo dal regista: pagina "gara" (problemi dettagliati, business plan, dati, modalità AI)
 
 ## Blocchi
 - Giorgia e Sian: invito GitHub da accettare, setup da completare
