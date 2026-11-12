@@ -5,7 +5,7 @@ New here? Read `docs/AI_ONBOARDING.md` first: full context, environment setup, c
 Goal: WIN the KVA hackathon "AI brain for industry" (Sat 14 Nov 2026). Judging: fit with challenge (memory/ontologies/AI brains) 25% — also tie-breaker; technical quality of what works on the day 25%; real industry problem & impact 25%; business case 20%; demo clarity 5%.
 
 ## Roles
-- Filippo: team lead, coordination, everything. His Claude is the **director** (keeps `.coord/SITUAZIONE.md` and `.coord/TASKS.md`).
+- Filippo: organisation. His Claude keeps the big picture (`.coord/SITUAZIONE.md`, `.coord/TASKS.md`).
 - Giorgia: architecture and product.
 - Sian: idea, business, pitch, data.
 Everyone contributes everywhere; the area owner decides. Switch fast when a better idea appears.
@@ -15,7 +15,7 @@ Everyone contributes everywhere; the area owner decides. Switch fast when a bett
 - Before each task: `bash scripts/coord.sh sync`, read `.coord/SITUAZIONE.md`, `.coord/TASKS.md`, `bash scripts/coord.sh inbox`, other agents' `status.md`.
 - One writer per file: write only in `.coord/agents/<me>/`, your own messages/decisions, and `shared/` files you own.
 - Update `.coord/agents/<me>/status.md` when you finish, get blocked or change direction, then sync.
-- Choices that affect others (problem, names, data formats, architecture, pitch numbers): `coord.sh decide` or message the director. Never decide silently.
+- Choices that affect others (problem, names, data formats, architecture, pitch numbers): `coord.sh decide` or message Filippo. Never decide silently.
 
 ## Working rules
 - Talk to the user in Italian; code, comments, commit messages in English.

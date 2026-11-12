@@ -16,31 +16,11 @@
 
 **Come ci distinguiamo:** la maggior parte delle squadre farà "chatbot sui documenti" (RAG). Noi facciamo vedere che il sistema **sa quando una regola non vale più, ragiona sulle relazioni e spiega perché**, in un settore preciso con numeri veri.
 
-## 2. Giovedì 12 — sera: preparazione
+## 2. Fino a sabato: passi in ordine, senza orari
 
-| Chi | Cosa | Fatto quando |
-|---|---|---|
-| Filippo | Condivide pagina, piano, `docs/AI_ONBOARDING.md` nel gruppo | Giorgia e Sian li aprono |
-| Giorgia, Sian | Aprono Claude Code nella repo e gli fanno leggere `docs/AI_ONBOARDING.md`: setup + canale AI | `check_env.sh` → 0 to fix, status nel canale |
-| Tutti | Leggono la rosa dei problemi, scrivono la propria opinione | File in `.coord/agents/<nome>/work/opinione-problemi.md` |
-| Tutti | Studio serale con il PDF di teoria | — |
-| Filippo | Lancia le Deep Research su A e D | Report in `research/market/` |
+Siamo studenti e prima di sabato non abbiamo orari fissi: ognuno avanza quando può, nell'ordine giusto. La lista è in `docs/site/generale.html` (sezione "Cosa fare entro sabato, in ordine") e, per le AI, in `docs/AI_ONBOARDING.md` sezione 7.
 
-## 3. Venerdì 13 — capire, provare, decidere
-
-| Ora | Filippo (regia) | Giorgia (architettura e prodotto) | Sian (idea, business, pitch, dati) |
-|---|---|---|---|
-| 09:00–09:20 | **Call di avvio:** opinioni a confronto, si tengono 2–3 candidati | ← | ← |
-| 09:20–12:30 | Dati disponibili per ogni candidato; sintesi per la decisione | Test di fattibilità di 30 min per candidato (`prototype/`) | Mercato, cliente, concorrenti per candidato; **trovare una persona del settore da sentire** |
-| 12:30–13:30 | Pausa | ← | ← |
-| 13:30–14:00 | **DECISIONE con limite fisso:** principale + riserva, voto sui 5 criteri. Senza accordo decide Filippo | ← | ← |
-| 14:00–17:00 | Integrazione, dati, regia; prova del flusso completo | Test di fattibilità serio sul problema scelto | Business plan v1, storia, copione demo, 3 nomi per il prodotto |
-| 17:00–17:30 | Simulazione verifica finanziaria (gli altri attaccano i numeri) | ← | ← |
-| 17:30–18:30 | **Architettura definitiva e divisione dei file**; bilancio | Guida | ← |
-| Sera | Organizzazione di sabato, controllo istruzioni KVA | Note sui prompt e schemi che funzionano | Slide checkpoint + pitch v1; **2 prove del pitch** cronometrate |
-| | **A letto entro mezzanotte.** | | |
-
-### Pronti per sabato se venerdì sera:
+### Pronti per sabato se:
 
 - [ ] Problema principale e riserva scelti, con fonti
 - [ ] Almeno una persona del settore sentita (o una citazione vera)
@@ -51,11 +31,11 @@
 - [ ] Nome del prodotto, copione demo, 3 slide checkpoint, slide pitch v1, pitch provato 2 volte
 - [ ] Tutti con `check_env.sh` verde e canale AI collegato
 
-**Regola sul codice:** il prototipo di venerdì resta in `prototype/` ed è usa e getta. Sabato il prodotto si scrive da zero in `src/`; ci portiamo dietro conoscenze, prompt e dati. È quello che il regolamento chiede.
+**Regola sul codice:** il prototipo resta in `prototype/` ed è usa e getta. Sabato il prodotto si scrive da zero in `src/`; ci portiamo dietro conoscenze, prompt e dati.
 
 ## 4. Sabato 14
 
-La scaletta minuto per minuto è nella pagina del team (sezione "Scaletta di sabato"). In più:
+La scaletta minuto per minuto è in `docs/site/generale.html`. In più:
 
 - **09:00** Filippo rende pubblica la repo: `gh repo edit pippotadde/kva-ai-brain --visibility public --accept-visibility-change-consequences`. Prima controlla che non ci siano chiavi: `git log -p | grep -iE "api_key|sk-|AIza"` deve essere vuoto.
 - **10:15** durante i talk: annotare parole e esempi usati dai giurati e riusarli nel pitch.

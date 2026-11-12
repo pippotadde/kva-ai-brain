@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lettura serale · Team KVA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><span class="brand">Team KVA</span><a href="index.html">Inizio</a><a href="generale.html">Generale</a><a href="problemi.html">Problemi</a><a href="lettura.html" aria-current="page">Lettura serale</a></nav>
+  <div class="eyebrow">Circa 45 minuti</div>
+  <h1>Lettura serale</h1>
+  <p class="lede">Come si costruisce davvero un AI brain, cosa serve sapere per sabato e cosa vuole sentire la giuria.</p>
+
+  <section>
+    <h2>1. La differenza che ci fa vincere</h2>
+    <p>Quasi tutte le squadre faranno un <b>RAG</b>: carichi dei documenti, fai una domanda, il sistema cerca i pezzi di testo più simili e un modello come Claude o Gemini risponde usando quei pezzi. Funziona, ma ha tre limiti:</p>
+    <ul>
+      <li><b>Non sa cosa vale adesso.</b> Se la procedura v2 e la v3 dicono cose diverse, le trova entrambe e può rispondere con quella vecchia.</li>
+      <li><b>Non segue le relazioni.</b> "Mario può usare la pressa?" richiede di collegare Mario, la sua mansione, la macchina, la procedura e il suo corso. Nessun testo contiene la risposta già scritta.</li>
+      <li><b>Non sa il perché.</b> Non registra chi ha cambiato una regola, quando e per quale motivo.</li>
+    </ul>
+    <p>Un <b>AI brain</b>, nel senso di KVA, risolve questi tre limiti con una <b>memoria strutturata</b>: un grafo di cose e relazioni, con le versioni, le fonti e le regole per dedurre. L'AI serve a riempire e interrogare questa memoria, non a sostituirla.</p>
+  </section>
+
+  <section>
+    <h2>2. Le cinque parti di un AI brain</h2>
+    <div class="flow"><span>1 Estrazione</span><i>→</i><span>2 Ontologia</span><i>→</i><span>3 Memoria con versioni</span><i>→</i><span>4 Ragionamento</span><i>→</i><span>5 Risposta spiegata</span></div>
+    <ol>
+      <li><b>Estrazione.</b> Un LLM legge un documento e restituisce, in JSON, le cose (entità) e i collegamenti (relazioni) che contiene. Esempio: <code>{"soggetto": "P-03", "relazione": "segue", "oggetto": "PR-114 v3"}</code>. Il trucco è dare al modello l'elenco esatto delle classi e delle relazioni ammesse, cioè l'ontologia.</li>
+      <li><b>Ontologia.</b> Lo schema del dominio: quali tipi di cose esistono (classi), come si possono collegare (relazioni) e quali regole valgono sempre (assiomi). Si disegna a mano in 20 minuti (vedi sezione 4).</li>
+      <li><b>Memoria con versioni.</b> Ogni relazione ha "valida dal / valida fino al", la fonte e l'autore. Una regola superata <b>non si cancella</b>: si chiude, e si aggiunge la relazione "v3 sostituisce v2" con chi l'ha decisa e perché. Così si può sempre ricostruire cosa valeva in un certo giorno.</li>
+      <li><b>Ragionamento.</b> Regole scritte nel codice che deducono fatti nuovi seguendo le relazioni: "chi usa una macchina deve essere formato sulla procedura attuale di quella macchina". Le deduzioni sono sicure e verificabili, a differenza di un'intuizione del modello.</li>
+      <li><b>Risposta spiegata.</b> Un agente riceve la domanda in linguaggio naturale, chiama le funzioni del grafo (tool use), e risponde citando le fonti e la catena di relazioni seguita. Ogni domanda e risposta finisce in un registro: la "scatola nera".</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. Un AI brain in 25 righe</h2>
+    <p>Questo codice funziona (lo abbiamo provato) e contiene il cuore della demo: una regola che si sostituisce e un ragionamento che cambia risposta. Leggetelo riga per riga.</p>
+<pre>import networkx as nx
+from datetime import date
+
+g = nx.MultiDiGraph()
+g.add_edge("Mario", "P-03", rel="usa")
+g.add_edge("P-03", "PR-114 v2", rel="segue", dal=date(2026, 1, 10), al=None, fonte="PR-114.pdf")
+g.add_edge("Mario", "PR-114 v2", rel="formato_su", il=date(2026, 3, 3))
+
+def procedura_attuale(macchina):
+    return next(v for _, v, d in g.out_edges(macchina, data=True)
+                if d["rel"] == "segue" and d["al"] is None)
+
+def aggiorna_procedura(macchina, nuova, autore, motivo, oggi):
+    vecchia = procedura_attuale(macchina)
+    g[macchina][vecchia][0]["al"] = oggi            # la vecchia si chiude, non si cancella
+    g.add_edge(nuova, vecchia, rel="sostituisce", autore=autore, motivo=motivo, il=oggi)
+    g.add_edge(macchina, nuova, rel="segue", dal=oggi, al=None, fonte=f"{nuova}.pdf")
+
+def abilitato(persona, macchina):
+    proc = procedura_attuale(macchina)
+    formato = any(v == proc and d["rel"] == "formato_su" for _, v, d in g.out_edges(persona, data=True))
+    return formato, proc
+
+print(abilitato("Mario", "P-03"))   # (True, 'PR-114 v2')
+aggiorna_procedura("P-03", "PR-114 v3", "Rossi (RSPP)", "nuovo dispositivo di sicurezza", date(2026, 11, 10))
+print(abilitato("Mario", "P-03"))   # (False, 'PR-114 v3')</pre>
+    <p>Sabato aggiungiamo tre cose: <b>l'LLM che riempie il grafo</b> leggendo i documenti al posto delle righe scritte a mano, <b>l'agente che risponde in italiano</b> usando queste funzioni, e <b>l'interfaccia</b> che mostra il grafo con la regola vecchia in rosso.</p>
+    <p class="tip">Esercizio per stasera (15 minuti): chiedete al vostro Claude di farvi girare questo codice e poi di aggiungere una funzione <code>chi_va_riformato(macchina)</code>. Capirete il meccanismo meglio che leggendo.</p>
+  </section>
+
+  <section>
+    <h2>4. Come si disegna un'ontologia in 20 minuti</h2>
+    <ol>
+      <li><b>Scrivere 5 domande</b> che il cliente farebbe davvero. Esempio: "chi può usare la P-03?", "chi devo riformare se cambio questa procedura?", "perché la v3 ha sostituito la v2?".</li>
+      <li><b>I nomi diventano classi:</b> Lavoratore, Mansione, Macchina, Procedura, Corso. Tenersi tra 5 e 8 classi.</li>
+      <li><b>I verbi diventano relazioni:</b> usa, segue, formato_su, sostituisce, richiede.</li>
+      <li><b>Le regole diventano assiomi:</b> "se A sostituisce B, B non è più valida"; "chi usa una macchina deve essere formato sulla sua procedura attuale".</li>
+      <li><b>Verificare:</b> ogni domanda del punto 1 deve avere una risposta seguendo le relazioni. Se manca un collegamento, manca una relazione.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>5. Le tre domande di KVA e le nostre risposte</h2>
+    <div class="tbl"><table>
+      <tr><th>Domanda di KVA</th><th>Risposta tecnica</th></tr>
+      <tr><td>Come capisce una memoria che una regola è superata?</td><td>Validità nel tempo su ogni relazione, più la relazione esplicita "sostituisce" con autore, data e motivo.</td></tr>
+      <tr><td>Come scrivono più agenti nella stessa memoria senza contraddirsi?</td><td>Ogni fatto ha un autore e una fonte; i conflitti vengono rilevati e mostrati invece che risolti a caso; regole di precedenza (fonte ufficiale batte appunto, versione più recente batte vecchia). Lo facciamo anche noi tre con il nostro canale.</td></tr>
+      <tr><td>Come si registra perché è stata presa una decisione?</td><td>Registro delle decisioni: chi, quando, su quali fatti e fonti, quali alternative. Ogni risposta dell'agente viene salvata con la catena di relazioni seguita.</td></tr>
+      <tr><td>Come si aggiorna l'ontologia quando l'azienda cambia?</td><td>Si aggiungono classi e relazioni senza toccare quelle esistenti; l'LLM propone, una persona approva.</td></tr>
+      <tr><td>Come la usa un agente per ragionare e non solo per cercare?</td><td>L'agente chiama funzioni che seguono le relazioni e applicano le regole, invece di cercare testi simili.</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>6. Nomi da conoscere</h2>
+    <p>Utili per rispondere alla giuria con cognizione di causa, soprattutto a Davide Lai, che è un ricercatore. Non serve usarli tutti sabato.</p>
+    <div class="tbl"><table>
+      <tr><th>Nome</th><th>Cos'è</th></tr>
+      <tr><td><b>networkx</b></td><td>Libreria Python per i grafi. Quello che useremo: semplice, in memoria, nessun server.</td></tr>
+      <tr><td><b>Neo4j</b></td><td>Il database a grafo più diffuso. Per un prodotto vero, non per 2 ore e mezza.</td></tr>
+      <tr><td><b>Graphiti (Zep)</b></td><td>Libreria open source per memorie di agenti basate su grafi con validità nel tempo. Molto vicina alla nostra idea: buono da citare come stato dell'arte.</td></tr>
+      <tr><td><b>Mem0, Letta (MemGPT), Cognee</b></td><td>Progetti e startup che costruiscono "memoria" per agenti AI. Dimostrano che il mercato esiste.</td></tr>
+      <tr><td><b>GraphRAG</b></td><td>Approccio proposto da Microsoft: RAG che usa un grafo estratto dai documenti.</td></tr>
+      <tr><td><b>RDF, OWL, SHACL, SPARQL</b></td><td>Gli standard formali per ontologie, regole di validazione e interrogazioni. Esistono e sono rigorosi; per noi bastano come riferimento.</td></tr>
+      <tr><td><b>DMN</b></td><td>Standard per descrivere decisioni con tabelle di regole (lo spunto KVA "modelli decisionali").</td></tr>
+      <tr><td><b>Presidio</b></td><td>Libreria open source di Microsoft per trovare e mascherare dati personali (lo spunto "anonimizzazione").</td></tr>
+      <tr><td><b>Streamlit</b></td><td>Per fare un'interfaccia web in Python in poche righe. La useremo per la demo.</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>7. Lavorare con Claude Code in 2 ore e mezza</h2>
+    <ul>
+      <li><b>Prima il piano, poi il codice.</b> Chiedetegli di proporre i passi, correggete il piano, poi fate eseguire un passo alla volta.</li>
+      <li><b>Compiti piccoli e verificabili:</b> "scrivi la funzione X che prende Y e restituisce Z, con un test". Evitate "fammi l'app".</li>
+      <li><b>Ognuno nei suoi file.</b> Ditelo esplicitamente a Claude: "tocca solo <code>src/graph.py</code>".</li>
+      <li><b>Fate girare il codice subito,</b> non dopo un'ora. Un errore trovato dopo 5 minuti costa poco.</li>
+      <li><b>Salvate spesso su GitHub</b>, e usate il canale tra le AI per dire agli altri quando una parte comune cambia.</li>
+      <li><b>Se Claude gira a vuoto</b> per più di 10 minuti sullo stesso errore, fermatevi e chiedete agli altri.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>8. Una demo che vince</h2>
+    <ul>
+      <li><b>Una storia, non un elenco di funzioni:</b> una persona, un problema, un prima e un dopo.</li>
+      <li><b>Il momento chiave deve vedersi:</b> la regola vecchia che diventa rossa e la risposta che cambia, con la fonte.</li>
+      <li><b>Dati preparati e provati:</b> stesse domande, stessi documenti, sempre.</li>
+      <li><b>Niente attese:</b> se un passaggio dell'AI è lento, il risultato si prepara prima e si mostra subito.</li>
+      <li><b>Video di riserva</b> sempre pronto.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>9. Business in cinque minuti</h2>
+    <p>I giurati di KVA investono in startup. Si chiederanno: chi paga, quanto, quanti clienti esistono, perché voi.</p>
+    <div class="tbl"><table>
+      <tr><th>Termine</th><th>Cosa significa</th></tr>
+      <tr><td><b>B2B SaaS</b></td><td>Software in abbonamento per aziende. Il modello più comune e più apprezzato dagli investitori.</td></tr>
+      <tr><td><b>TAM / SAM / SOM</b></td><td>Mercato totale / raggiungibile / realistico in 3 anni. Si calcola dal basso: numero di aziende × prezzo annuo.</td></tr>
+      <tr><td><b>Utente, decisore, pagante</b></td><td>Nel B2B spesso sono tre persone diverse. Si convince chi paga, parlando di rischio, ore e soldi.</td></tr>
+      <tr><td><b>ARR</b></td><td>Ricavi ricorrenti annui: la metrica principale di un SaaS.</td></tr>
+      <tr><td><b>CAC e LTV</b></td><td>Quanto costa conquistare un cliente e quanto rende nel tempo. Sano se il secondo vale almeno 3 volte il primo.</td></tr>
+      <tr><td><b>Go-to-market</b></td><td>Come si trovano i primi clienti: vendita diretta, consulenti come canale, partner.</td></tr>
+      <tr><td><b>Moat</b></td><td>Cosa impedisce agli altri di copiarci: dati e ontologie di settore accumulati, integrazioni, fiducia.</td></tr>
+      <tr><td><b>Why now</b></td><td>Perché proprio adesso: una norma, una scadenza, l'AI che oggi sa estrarre strutture dai testi.</td></tr>
+      <tr><td><b>Pre-seed</b></td><td>Il primo investimento in una startup. L'opzione B del premio (1.500 € per il 15%) vale la nostra società 10.000 €.</td></tr>
+    </table></div>
+    <p class="note"><b>Le domande che faranno quasi certamente:</b> chi paga e quanto? Perché non usano semplicemente ChatGPT sui loro documenti? Come trovate i primi 10 clienti? Cosa succede quando l'AI sbaglia? Cosa fareste nei prossimi 3 mesi?</p>
+  </section>
+
+  <section>
+    <h2>10. Glossario lampo</h2>
+    <div class="tbl"><table>
+      <tr><td><b>LLM</b></td><td>Modello linguistico (Claude, Gemini, GPT). Prevede testo; non conosce i dati dell'azienda se non glieli diamo.</td></tr>
+      <tr><td><b>Token</b></td><td>Pezzo di testo, circa 3/4 di parola. Si paga a token.</td></tr>
+      <tr><td><b>Context window</b></td><td>Quanto testo il modello legge in una volta. I file piccoli ci stanno, gli archivi grandi vanno indicizzati.</td></tr>
+      <tr><td><b>Output strutturato</b></td><td>Risposta in JSON con uno schema preciso, così il codice la può usare.</td></tr>
+      <tr><td><b>Embedding</b></td><td>Numeri che rappresentano il significato di un testo; testi simili hanno numeri vicini.</td></tr>
+      <tr><td><b>Allucinazione</b></td><td>Il modello inventa un fatto plausibile ma falso. Si limita dando fonti e regole.</td></tr>
+      <tr><td><b>Agente e tool use</b></td><td>Un LLM che decide quali funzioni nostre chiamare, legge il risultato e continua finché ha finito.</td></tr>
+      <tr><td><b>Provenienza</b></td><td>Da dove viene ogni fatto: documento, autore, data.</td></tr>
+    </table></div>
+  </section>
+</div>
+</body>
+</html>

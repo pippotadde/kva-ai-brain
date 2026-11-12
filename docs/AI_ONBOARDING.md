@@ -2,7 +2,7 @@
 
 > **Per la persona:** apri Claude Code nella cartella della repo e scrivi:
 > *"Leggi docs/AI_ONBOARDING.md, sono <Giorgia|Sian>. Prepara il mio ambiente e collegati al canale di coordinamento."*
-> Il resto lo fa Claude, chiedendoti solo le cose che servono (login, chiave API).
+> Il resto lo fa Claude, chiedendoti solo le cose che servono (password, login, chiave API).
 
 > **Per Claude:** questo file ti dà tutto il contesto. Seguilo in ordine. Parla con la persona in italiano; codice, commenti e commit in inglese.
 
@@ -10,18 +10,24 @@
 
 ## 1. Missione
 
-**VINCERE** l'hackathon "AI brain for industry" di Kakashi Venture Accelerator (KVA), **sabato 14 novembre 2026, 09:30–18:30 CET**, online. Tutto quello che fai si misura su una domanda: *alza il voto della giuria?*
+**VINCERE** l'hackathon "AI brain for industry" di Kakashi Venture Accelerator (KVA), **sabato 14 novembre 2026, 09:30–18:30 CET**, online (noi tre lavoriamo insieme a casa di Giorgia). Tutto quello che fai si misura su una domanda: *alza il voto della giuria?*
 
-Il team è di 3 persone, studenti di Ingegneria Informatica al PoliTo. Tutti sanno programmare bene (olimpiadi di informatica, aree IT di Team ASTRA e HKN, CyberChallenge), ma **non conoscono l'AI applicata né un settore industriale**: spiega i concetti AI in modo semplice e concreto quando servono.
+Il team è di 3 studenti di Ingegneria Informatica al PoliTo. Programmano bene (olimpiadi di informatica, aree IT di Team ASTRA e HKN, CyberChallenge), ma **non conoscono l'AI applicata né un settore industriale**: quando servono concetti di AI, spiegali in modo semplice e concreto.
 
-## 2. La gara in breve
+**Come lavorare con la tua persona:** sta anche studiando per gli esami e non ha orari fissi prima di sabato. Sii efficiente: proponi il prossimo passo più utile, fai tu il lavoro meccanico, chiedi solo quello che serve davvero. Non fissare orari: lavora per **passi in ordine** (sezione 7).
 
-- **Tema aperto:** "scegli un problema reale di AI applicata e risolvilo" con memoria condivisa, ontologie o AI brain su misura. **Nessuno ci assegna un problema**: lo scegliamo noi. KVA ha suggerito 7 spunti (in `research/problems/candidates.md` e nella pagina del team).
+## 2. La gara
+
+- **Tema aperto.** "Scegli un problema reale di AI applicata e risolvilo" con memoria condivisa, ontologie o AI brain su misura. **Nessuno ci assegna un problema**: lo scegliamo noi, prima di sabato.
+- **Le domande di KVA** (il cuore del tema):
+  - Memoria: come capisce una memoria che una regola è stata superata? Come scrivono più agenti nella stessa memoria senza contraddirsi? Come si registra *perché* è stata presa una decisione?
+  - Ontologie: come si costruisce un'ontologia? Come si aggiorna quando l'azienda cambia modo di lavorare? Come la usa un agente per *ragionare* e non solo per cercare?
+- **I 7 spunti di KVA** (facoltativi): rendere accessibile a tutti uno strumento da specialisti; pipeline per dataset piccoli e grandi; ontologia da un corpus di documenti; memoria dell'agente visibile e correggibile dalle persone; modelli decisionali integrati con l'agente; anonimizzazione prima della memoria; scatola nera per agenti che compiono azioni critiche.
 - **Regole chiave** (fonte: https://github.com/kakashi-ventures/hackathon/blob/main/RULES.md):
   - si possono portare idea, dataset (con diritto d'uso), librerie e modelli open source;
-  - il **prodotto va costruito principalmente durante l'evento** → prima di sabato si fanno solo ricerca, dati, business e test usa e getta in `prototype/`; il codice del prodotto si scrive sabato in `src/`;
+  - il **prodotto va costruito principalmente durante l'evento** → prima di sabato solo ricerca, dati, business e test usa e getta in `prototype/`; il codice del prodotto si scrive sabato in `src/`;
   - vanno **dichiarati gli strumenti AI usati**; il codice va in una **repo pubblica**;
-  - checkpoint obbligatori prima delle presentazioni delle 12:30 e delle 17:00.
+  - consegne obbligatorie prima delle presentazioni delle 12:30 e delle 17:00.
 - **Voto della giuria** (1–5 per criterio):
 
 | Criterio | Peso |
@@ -32,50 +38,49 @@ Il team è di 3 persone, studenti di Ingegneria Informatica al PoliTo. Tutti san
 | Business case (verificato alle 16:30) | 20% |
 | Chiarezza della demo | 5% |
 
-- **Sabato:** 10:15 talk, 10:30–12:30 ideazione, 12:30 prima presentazione, **14:00–16:30 costruzione (solo 2h30)**, 16:30 verifica finanziaria, 17:00 demo finale, 18:30 premiazione.
-- **Giuria:** KVA è un venture studio AI che investe in startup (fondatori Federico Bottino e Alberto Trivero; controllato dal Gruppo Excellence, consulenza per banche, assicurazioni, grandi aziende). Pensano da investitori. Dettagli in `docs/jury.md`.
+- **Giuria:** KVA è un venture studio AI che investe in startup (fondatori Federico Bottino e Alberto Trivero; controllato dal Gruppo Excellence, consulenza per banche, assicurazioni e grandi aziende). Pensano da investitori. Davide Lai è un ricercatore: aspettarsi domande tecniche su memoria e ontologie. Dettagli in `docs/jury.md`.
 
-## 3. Team, ruoli e modello di lavoro
+## 3. Team e modello di lavoro
 
-| Persona | Ruolo | Il suo Claude |
+| Persona | Area | Il suo Claude |
 |---|---|---|
-| Filippo | Team leader, coordinamento, tutto | **Regista**: quadro completo, compiti, decisioni globali |
+| Filippo | Organizzazione | Tiene il quadro completo: `.coord/SITUAZIONE.md` e `.coord/TASKS.md` |
 | Giorgia | Architettura e prodotto | Agente tecnico |
-| Sian | Idea, business, pitch, dati | Agente idea/business |
+| Sian | Idea, business, pitch, dati | Agente idea e business |
 
-- Ognuno contribuisce a tutto, ma **ogni area ha un responsabile che decide**. Se dopo 5 minuti non c'è accordo, decide il responsabile.
+- Ognuno contribuisce a tutto, ma ogni area ha chi la segue: se dopo 5 minuti non c'è accordo, decide lui o lei.
 - **Essere dinamici:** se qualcuno porta un'idea migliore, si cambia subito.
-- Le persone parlano con il proprio Claude. **I Claude si coordinano tra loro sul canale `.coord/`** (sezione 6).
+- Le persone parlano con il proprio Claude; **i Claude si coordinano tra loro sul canale `.coord/`** (sezione 6).
 
-## 4. Mappa della repo
+## 4. Dove trovare le cose
 
 | Percorso | Contenuto |
 |---|---|
-| `CLAUDE.md` | Regole permanenti per tutti i Claude |
-| `docs/PLAN.md` | Piano ora per ora fino a sabato, rischi, piano B |
-| `docs/TODO.md` | Lista completa delle cose da fare, per persona |
-| `docs/SETUP.md` | Guida all'ambiente (per la persona) |
-| `docs/jury.md` | Chi giudica e domande probabili |
+| `docs/site/generale.html` | Regole, voto, team, **cosa fare entro sabato in ordine**, **sabato minuto per minuto** |
+| `docs/site/problemi.html` | Problemi candidati spiegati, come si costruisce il business plan, dati, come usiamo l'AI |
+| `docs/site/lettura.html` | Come si costruisce un AI brain: le 5 parti, esempio di codice funzionante, ontologia in 20 minuti, strumenti, demo, business |
+| `research/problems/candidates.md` | Rosa dei problemi con punteggi e fonti |
+| `docs/jury.md` | Chi giudica, domande probabili |
 | `docs/research-prompts.md` | Prompt per Deep Research (Gemini / ChatGPT) |
-| `research/problems/candidates.md` | Rosa dei problemi con punteggi |
-| `research/market/`, `research/data/` | Ricerche di mercato, registro dei dati |
-| `business/business-plan.md` | Modello del business plan |
-| `pitch/pitch-script.md` | Copione del pitch da 3 minuti |
+| `docs/PLAN.md`, `docs/TODO.md` | Strategia, rischi e piano B; lista completa per persona |
+| `docs/SETUP.md` | Guida all'ambiente passo per passo |
+| `business/business-plan.md`, `pitch/pitch-script.md` | Modelli da riempire |
+| `research/market/`, `research/data/README.md` | Ricerche di mercato; registro dei dati con fonte e licenza |
 | `prototype/` | Test usa e getta (prima di sabato) |
 | `src/` | Il prodotto (solo sabato) |
-| `scripts/check_env.sh` | Verifica dell'ambiente |
-| `scripts/coord.sh` | Canale di coordinamento tra AI |
-| `.coord/` | Il canale (ramo git `coord`, cartella separata dal codice) |
+| `scripts/check_env.sh`, `scripts/coord.sh` | Verifica dell'ambiente; canale di coordinamento |
+
+Le stesse pagine sono pubblicate per le persone su un link claude.ai privato che Filippo condivide; tu leggi i file in `docs/site/`.
 
 ## 5. Prepara l'ambiente (Claude, fallo tu)
 
 Lavora **dentro Linux** (WSL su Windows, Ubuntu nativo per Giorgia), con la repo in `~/kva-ai-brain`, mai in `/mnt/c/...`.
 
-1. Controlla cosa c'è: `git --version; gh --version; uv --version; node --version; claude --version`.
-2. Installa quello che manca seguendo `docs/SETUP.md` (sezione 1). Chiedi la password `sudo` alla persona quando serve.
-3. Git: verifica `git config user.name` e `user.email`; se mancano chiedili. Verifica `gh auth status`; se non è loggato, fai lanciare alla persona `gh auth login` (è interattivo: suggerisci di scrivere `! gh auth login`).
-4. `uv sync` nella cartella della repo.
-5. Chiave API: chiedi alla persona di creare una chiave su https://aistudio.google.com/apikey, poi `cp .env.example .env` e falla incollare **da lei** nel file `.env`. Non scrivere mai la chiave in altri file, nei commit o nei messaggi.
+1. Se la repo non c'è ancora: la persona deve aver accettato l'invito (https://github.com/pippotadde/kva-ai-brain/invitations), poi `gh repo clone pippotadde/kva-ai-brain ~/kva-ai-brain`.
+2. Controlla gli strumenti: `git --version; gh --version; uv --version; node --version; claude --version`. Installa quello che manca seguendo `docs/SETUP.md`; chiedi la password `sudo` alla persona quando serve.
+3. Git: verifica `git config user.name` e `user.email`, chiedili se mancano. Verifica `gh auth status`; se non è loggato, fai lanciare alla persona `! gh auth login` (è interattivo).
+4. `uv sync` nella repo.
+5. Chiave API: la persona crea una chiave su https://aistudio.google.com/apikey; tu fai `cp .env.example .env` e **lei** la incolla nel file `.env`. Mai scrivere la chiave altrove, nei commit o nei messaggi.
 6. `bash scripts/check_env.sh` → deve finire con **0 to fix**. Se qualcosa non va, sistemalo e riprova.
 
 ## 6. Collegati al canale di coordinamento
@@ -84,56 +89,72 @@ Lavora **dentro Linux** (WSL su Windows, Ubuntu nativo per Giorgia), con la repo
 bash scripts/coord.sh init <giorgia|sian>
 ```
 
-Poi leggi `.coord/README.md` (regole del canale), `.coord/SITUAZIONE.md` e `.coord/TASKS.md`, e scrivi il primo `.coord/agents/<nome>/status.md`. Infine `bash scripts/coord.sh sync`.
-
-Suggerisci alla persona di tenere aperto un secondo terminale con `bash scripts/coord.sh watch` (sincronizza ogni 60 secondi).
+Leggi `.coord/README.md`, `.coord/SITUAZIONE.md`, `.coord/TASKS.md`; scrivi il primo `.coord/agents/<nome>/status.md`; poi `bash scripts/coord.sh sync`. Suggerisci alla persona di tenere aperto un secondo terminale con `bash scripts/coord.sh watch` (sincronizza ogni 60 secondi).
 
 **Regole del canale (obbligatorie):**
 1. **Prima di ogni compito:** `sync`, leggi SITUAZIONE, TASKS, `inbox` e gli status degli altri.
 2. **Ogni file ha un solo autore.** Scrivi solo in `agents/<te>/`, nei tuoi messaggi, nelle tue decisioni e nei file `shared/` di cui sei owner. Per cambiare altro, manda un messaggio.
 3. **Aggiorna il tuo `status.md`** quando finisci qualcosa, ti blocchi o cambi direzione, poi `sync`.
-4. **Le scelte che toccano gli altri** (problema, nomi, formati dei dati, architettura, numeri del pitch) vanno in `coord.sh decide` o in un messaggio al regista. Mai decidere in silenzio.
-5. **Fonti sempre.** Ogni numero o fatto da usare nel pitch ha un link. Se non ce l'ha, scrivilo.
+4. **Le scelte che toccano gli altri** (problema, nomi, formati dei dati, architettura, numeri del pitch) vanno in `coord.sh decide` o in un messaggio a Filippo. Mai decidere in silenzio.
+5. **Fonti sempre.** Ogni numero o fatto per il pitch ha un link; se non ce l'ha, scrivilo.
 
-## 7. Il calendario
+## 7. Cosa fare entro sabato, in ordine (senza orari)
 
-| Quando | Cosa |
-|---|---|
-| **Giovedì sera** | Setup + canale. Lettura della rosa dei problemi. Opinione personale scritta in `.coord/agents/<nome>/work/opinione-problemi.md`. Studio di `docs/studio-serale.pdf`. |
-| **Venerdì 09:00–12:30** | Ricerca e test sui 2–3 candidati migliori (sezione 8). Trovare una persona del settore da sentire per 10 minuti. |
-| **Venerdì 13:30–14:00** | **Decisione:** problema principale + riserva, votando sui criteri della giuria. |
-| **Venerdì pomeriggio** | Sul problema scelto: dati, business plan, test di fattibilità più serio, ambiente. |
-| **Venerdì sera** | Architettura e divisione dei file; 2 prove del pitch; a letto presto. |
-| **Sabato** | Scaletta nella pagina del team e in `docs/PLAN.md`. |
+1. **Ambiente e canale** (sezioni 5 e 6).
+2. **Opinione sui problemi:** aiuta la persona a leggere `docs/site/problemi.html`, poi scrivi la sua opinione (2 preferiti e perché) in `.coord/agents/<nome>/work/opinione-problemi.md`.
+3. **Lettura serale:** `docs/site/lettura.html`. Proponi l'esercizio della sezione 3 (far girare il codice d'esempio e aggiungere `chi_va_riformato`).
+4. **Approfondimento dei 2–3 candidati più votati** (sezione 8).
+5. **Una persona del settore** da sentire 10 minuti, se possibile.
+6. **Scelta del problema** principale + riserva, quando tutti hanno finito il passo 4. Registrata con `coord.sh decide`.
+7. **Preparazione del problema scelto:** dati registrati, business plan v1, test di fattibilità più serio, 3 nomi per il prodotto.
+8. **Architettura e divisione dei file** per sabato (`docs/architecture.md`, owner Giorgia).
+9. **Pitch:** 3 slide per le 12:30, slide e copione del pitch, 2 prove cronometrate.
+10. **Logistica:** istruzioni e crediti KVA, portatile carico, cuffie, caricatore.
 
-## 8. Venerdì mattina: cosa approfondire
+## 8. Approfondimento dei candidati: cosa guardare
 
 **Giorgia (architettura e prodotto)** — per ogni candidato, un test di 30 minuti in `prototype/<lettera>/`:
 - Si trovano documenti veri da usare? (formato, quantità, licenza)
-- Un LLM riesce a estrarne entità e relazioni affidabili in JSON?
-- Riusciamo a rappresentare "regola X sostituisce regola Y" e a fare una domanda che segue le relazioni?
-- Quale sarebbe la demo da 90 secondi e cosa serve per costruirla in 2h30?
+- Un LLM ne estrae entità e relazioni affidabili in JSON, dato l'elenco di classi e relazioni ammesse?
+- Si rappresenta "regola X sostituisce regola Y" e si risponde a una domanda seguendo le relazioni?
+- Qual è la demo da 90 secondi e cosa serve per costruirla in 2h30?
 - Risultato: `prototype/<lettera>/NOTES.md` con "fattibile / rischioso / no" e perché.
 
 **Sian (idea, business, pitch, dati)** — per ogni candidato:
-- Chi è il cliente preciso, chi paga, quanto costa oggi il problema (con fonte)?
+- Cliente preciso, chi paga, quanto costa oggi il problema (con fonte)?
 - Quanti clienti potenziali in Italia ed Europa, quanto pagherebbero, chi sono i concorrenti?
-- Qual è la storia da 30 secondi per aprire il pitch?
-- Chi possiamo sentire oggi (contatti, professori, LinkedIn)?
-- Risultato: `.coord/agents/sian/work/<lettera>-business.md`.
+- La storia da 30 secondi per aprire il pitch.
+- Chi possiamo sentire (contatti, professori PoliTo, LinkedIn)?
+- Risultato: `.coord/agents/sian/work/<lettera>-business.md`. Struttura del business plan: sezione "Come si costruisce il business plan" in `docs/site/problemi.html`.
 
-**Filippo (regia)** — sintesi per la decisione delle 13:30: tabella con i voti sui 5 criteri, basata su ricerche e test, in `.coord/SITUAZIONE.md`.
+**Filippo (organizzazione)** — Deep Research, dati disponibili, sintesi con i voti sui 5 criteri in `.coord/SITUAZIONE.md`.
 
-## 9. Regole di lavoro con il codice
+## 9. Principi del prodotto e della demo
 
-- `main` deve sempre funzionare. `git pull --rebase` prima di ogni push; commit piccoli ogni 20–30 minuti.
-- Ognuno tocca solo i file assegnati (si decide venerdì sera).
+- **L'AI estrae e spiega; le regole decidono.** Le deduzioni importanti ("Mario non è abilitato") vengono da regole nel codice che seguono il grafo, non da un'intuizione del modello.
+- **Provenienza ovunque:** ogni fatto mostrato ha documento, autore, data. Le regole superate si chiudono, non si cancellano.
+- **Poco ma funzionante:** una demo piccola che funziona dal vivo batte un progetto grande a metà.
+- **Stack di base:** Python 3.12 + uv, `networkx` per il grafo, `streamlit` + `pyvis` per l'interfaccia, `google-genai` / `anthropic` per i modelli. Giorgia può cambiarlo.
+- **Demo sicura:** stessi dati e stesse domande sempre; i passaggi lenti dell'AI preparati in anticipo; video di riserva.
+
+## 10. Sabato: le regole che contano
+
+- Scaletta completa in `docs/site/generale.html`.
+- 09:00 ritrovo da Giorgia; `git pull`, `check_env.sh` verde, `coord.sh watch` acceso. **Un solo computer con l'audio nella call KVA**, gli altri muti.
+- 13:00–14:00 pranzo (cucina Giorgia) + architettura definitiva e divisione dei file.
+- 14:00–16:00 costruzione; salvataggi su GitHub ogni 20–30 minuti; `main` sempre funzionante.
+- **16:00 stop alle funzioni nuove**, video di riserva registrato.
+- Consegna finale: README con descrizione, come si avvia e **strumenti AI usati**.
+
+## 11. Regole di lavoro con il codice
+
+- `git pull --rebase` prima di ogni push; commit piccoli e frequenti.
+- Ognuno tocca solo i file assegnati.
 - Mai committare `.env` o chiavi: sabato la repo diventa pubblica.
 - Librerie: `uv add <nome>`, poi commit di `pyproject.toml` e `uv.lock`.
 - Dati: prima si registrano in `research/data/README.md` con fonte e licenza.
-- Nel prodotto, ogni fatto mostrato deve avere la sua **provenienza** (documento, autore, data): è il cuore del tema.
 
-## 10. Primo messaggio da mandare quando hai finito
+## 12. Primo messaggio quando hai finito il setup
 
 ```bash
 bash scripts/coord.sh msg filippo "Setup completato" "Ambiente verde (check_env 0 to fix), canale collegato. Prossimo: opinione sui problemi."

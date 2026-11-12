@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Generale · Team KVA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><span class="brand">Team KVA</span><a href="index.html">Inizio</a><a href="generale.html" aria-current="page">Generale</a><a href="problemi.html">Problemi</a><a href="lettura.html">Lettura serale</a></nav>
+  <div class="eyebrow">Sabato 14.11.2026 · 09:30–18:30 · online, noi 3 insieme</div>
+  <h1>Generale</h1>
+  <div class="goal"><b>Obiettivo: vincere.</b> Ogni scelta si misura su una domanda: alza il voto della giuria?</div>
+
+  <section>
+    <h2>Le regole</h2>
+    <ul>
+      <li><b>Il problema lo scegliamo noi.</b> Il tema è "AI brain per l'industria": memoria condivisa, ontologie, AI su misura. KVA ha dato 7 spunti, ma non assegna un problema.</li>
+      <li><b>Si può preparare prima:</b> idea, ricerca, dati che possiamo usare, business plan, test usa e getta.</li>
+      <li><b>Il prodotto si costruisce il giorno</b> della gara.</li>
+      <li><b>Codice in una repo pubblica</b> e dichiarazione degli strumenti AI usati.</li>
+      <li><b>Due consegne obbligatorie:</b> prima delle 12:30 e prima delle 17:00.</li>
+      <li><b>Premio:</b> €1.500 per cedere il progetto a KVA, oppure €1.500 investiti da KVA per il 15% di una nostra società.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Come vota la giuria</h2>
+    <div class="tbl"><table>
+      <tr><th>Criterio</th><th class="num">Peso</th><th style="width:28%"></th></tr>
+      <tr><td><b>Aderenza al tema</b>. Decide anche i pareggi.</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+      <tr><td><b>Qualità tecnica</b> di quello che funziona davvero</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+      <tr><td><b>Problema reale</b> e impatto per un'industria</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+      <tr><td><b>Business case</b>, verificato alle 16:30</td><td class="num">20%</td><td><div class="bar" style="width:80%"></div></td></tr>
+      <tr><td><b>Chiarezza della demo</b></td><td class="num">5%</td><td><div class="bar" style="width:20%"></div></td></tr>
+    </table></div>
+    <p class="note">Quasi metà del voto non dipende dal codice. Una demo piccola che funziona batte un progetto grande a metà.</p>
+  </section>
+
+  <section>
+    <h2>Il team</h2>
+    <div class="grid3">
+      <div class="card"><span class="role">Organizzazione</span><b>Filippo</b></div>
+      <div class="card"><span class="role">Architettura e prodotto</span><b>Giorgia</b></div>
+      <div class="card"><span class="role">Idea, business, pitch, dati</span><b>Sian</b></div>
+    </div>
+    <ul>
+      <li>Tutti contribuiscono a tutto. Se dopo 5 minuti non c'è accordo, decide chi segue quell'area.</li>
+      <li>Se arriva un'idea migliore, si cambia subito.</li>
+      <li>Ognuno lavora con il suo Claude. I tre Claude si tengono aggiornati tra loro su un canale condiviso nella repo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cosa fare entro sabato, in ordine</h2>
+    <p>Senza orari: ognuno li fa quando riesce, tra uno studio e l'altro. L'ordine conta, perché ogni passo serve al successivo.</p>
+    <ol class="steps">
+      <li><div><b>Preparare il computer.</b> Accettare l'invito GitHub, aprire Claude Code nella repo e fargli leggere <code>docs/AI_ONBOARDING.md</code>: installa e collega tutto da solo. Alla fine <code>check_env.sh</code> deve dire "0 to fix". Entrare anche nella dashboard KVA. <span class="who">tutti · 30–45 min</span></div></li>
+      <li><div><b>Leggere la pagina Problemi</b> e scrivere la propria opinione: i 2 problemi preferiti e perché. Il proprio Claude la mette nel canale. <span class="who">tutti · 30 min</span></div></li>
+      <li><div><b>Lettura serale.</b> <span class="who">tutti · 45 min</span></div></li>
+      <li><div><b>Approfondire i 2–3 candidati più votati.</b> Sian: cliente, mercato, concorrenti. Giorgia: test veloci, cioè se i dati si trovano e se l'AI riesce a estrarre la struttura. Filippo: Deep Research, dati disponibili, sintesi per scegliere. <span class="who">tutti · 1–2 ore</span></div></li>
+      <li><div><b>Sentire una persona del settore</b>, anche 10 minuti al telefono: un conoscente in fabbrica, un responsabile sicurezza, un professore. Una frase vera vale più di dieci statistiche. <span class="who">chi riesce</span></div></li>
+      <li><div><b>Scegliere il problema</b> principale e quello di riserva, con una call breve o in chat, appena tutti hanno finito il passo 4. Si vota sui criteri della giuria. <span class="who">tutti · 30 min</span></div></li>
+      <li><div><b>Preparare il problema scelto:</b> dati registrati con fonte, business plan prima versione, un test di fattibilità più serio, 3 proposte di nome per il prodotto. <span class="who">Sian business · Giorgia test · Filippo dati</span></div></li>
+      <li><div><b>Architettura e divisione del lavoro:</b> com'è fatto il prodotto e chi tocca quali file sabato. <span class="who">Giorgia guida · 30 min</span></div></li>
+      <li><div><b>Pitch:</b> 3 slide per la consegna delle 12:30, slide del pitch, copione. Provarlo 2 volte, anche in call, cronometrato. <span class="who">Sian guida · tutti</span></div></li>
+      <li><div><b>Logistica:</b> controllare email e dashboard KVA (istruzioni, crediti AI, link della call), confermare la casa di Giorgia, caricare i portatili, preparare caricatori, cuffie con microfono, ciabatta. Dormire. <span class="who">Filippo · tutti</span></div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Sabato minuto per minuto</h2>
+    <div class="tbl"><table>
+      <tr><th>Ora</th><th>KVA</th><th>Noi</th></tr>
+      <tr><td class="time">09:00</td><td>—</td><td>Ritrovo da Giorgia. Wi-Fi, hotspot del telefono, prese, caricatori.</td></tr>
+      <tr><td class="time">09:10</td><td>—</td><td>Tutti: <code>git pull</code>, <code>check_env.sh</code> verde, canale AI acceso. Filippo: controllo chiavi e repo resa pubblica.</td></tr>
+      <tr><td class="time">09:20</td><td>—</td><td>Prova della call: <b>un solo computer con l'audio acceso</b>, gli altri muti, altrimenti fischia. Prova condivisione schermo.</td></tr>
+      <tr><td class="time">09:30</td><td>Benvenuto</td><td>Collegati. Leggiamo subito le istruzioni sulle consegne.</td></tr>
+      <tr><td class="time">10:00</td><td>Regole</td><td>Filippo annota le novità.</td></tr>
+      <tr><td class="time">10:05</td><td>Team matching</td><td>Per noi niente: ultimo ripasso del problema.</td></tr>
+      <tr><td class="time">10:15</td><td>Talk</td><td>Sian: parole chiave dei giurati. Giorgia: spunti tecnici. Filippo: cosa cambia per noi.</td></tr>
+      <tr><td class="time">10:30</td><td>Ideazione</td><td>In 20 minuti: confermiamo il problema o passiamo alla riserva.</td></tr>
+      <tr><td class="time">10:50</td><td></td><td>In parallelo. Sian: storia e slide. Giorgia: architettura e copione della demo. Filippo: materiale della consegna e numeri.</td></tr>
+      <tr><td class="time">11:30</td><td></td><td>15 minuti di critica incrociata: ognuno attacca il lavoro degli altri.</td></tr>
+      <tr><td class="time">11:45</td><td></td><td>Slide definitive, una prova della presentazione.</td></tr>
+      <tr><td class="time">12:15</td><td></td><td>Filippo invia il materiale della consegna.</td></tr>
+      <tr class="hot"><td class="time">12:30</td><td>Prima presentazione</td><td>Presenta Sian.</td></tr>
+      <tr class="food"><td class="time">13:00</td><td>Pranzo</td><td><b>Giorgia ai fornelli.</b> Mentre cuoce: Filippo e Sian riassumono i commenti ricevuti.</td></tr>
+      <tr class="food"><td class="time">13:20</td><td>Pranzo</td><td>Si mangia e si fissa l'architettura: chi tocca quali file, cosa si vede nella demo.</td></tr>
+      <tr><td class="time">13:45</td><td></td><td>Giorgia crea lo scheletro del codice e lo carica; gli altri lo scaricano.</td></tr>
+      <tr><td class="time">14:00</td><td>Costruzione</td><td>Tre filoni in parallelo. Salvataggi su GitHub ogni 20–30 minuti.</td></tr>
+      <tr><td class="time">14:45</td><td></td><td>Controllo di 5 minuti: cosa funziona, cosa è bloccato.</td></tr>
+      <tr><td class="time">15:30</td><td></td><td>Controllo di 5 minuti: si taglia quello che non sarà pronto alle 16:00.</td></tr>
+      <tr><td class="time">16:00</td><td></td><td><b>Stop alle funzioni nuove.</b> Registriamo il video di riserva della demo. Sian chiude i numeri del business.</td></tr>
+      <tr><td class="time">16:15</td><td></td><td>Prova completa del pitch con la demo, cronometrata.</td></tr>
+      <tr class="hot"><td class="time">16:30</td><td>Verifica finanziaria</td><td>Sian presenta i numeri, Filippo supporta.</td></tr>
+      <tr class="hot"><td class="time">17:00</td><td>Demo finale</td><td>Sian presenta, Giorgia guida la demo, Filippo ha pronto il video di riserva. Consegna finale con README e strumenti AI usati.</td></tr>
+      <tr><td class="time">18:30</td><td>Premiazione</td><td>Vinciamo.</td></tr>
+    </table></div>
+  </section>
+</div>
+</body>
+</html>
