@@ -1,18 +1,13 @@
 # TASKS — compiti aperti
-Aggiornato: 2026-11-12 17:30 · Autore: regista
+Aggiornato: 2026-11-12 18:00 · Autore: Claude di Filippo
+Niente orari prima di sabato: passi in ordine. Lista completa: `docs/TODO.md` su main.
 
-## Giovedì sera
-| Chi | Compito | Fatto quando |
-|---|---|---|
-| tutti | Setup con `docs/SETUP.md`, `check_env.sh` → 0 to fix | screenshot nel gruppo |
-| tutti | `coord.sh init <nome>` e primo `status.md` | status visibile qui |
-| tutti | Leggere `research/problems/candidates.md`, scrivere opinione personale in `agents/<nome>/work/opinione-problemi.md` | file presente |
-| tutti | Studio: `docs/studio-serale.pdf` (4 pagine) | — |
-| filippo | Deep Research Gemini su A e D (`docs/research-prompts.md`) | report in `research/market/` |
-
-## Venerdì mattina (09:00–12:30)
-| Chi | Compito |
-|---|---|
-| sian | Mercato e business dei 2–3 candidati migliori; cercare una persona del settore da sentire |
-| giorgia | Test veloci di fattibilità (30 min per candidato) in `prototype/` |
-| filippo | Dati disponibili per ogni candidato; regia; sintesi per la decisione |
+| # | Passo | Chi | Fatto quando |
+|---|---|---|---|
+| 1 | Ambiente + canale (`docs/AI_ONBOARDING.md`) | giorgia, sian | check_env 0 to fix, status scritto qui |
+| 2 | Opinione sui problemi (`docs/site/problemi.html`) | tutti | `agents/<nome>/work/opinione-problemi.md` |
+| 3 | Lettura serale (`docs/site/lettura.html`) | tutti | — |
+| 4 | Approfondimento 2–3 candidati | giorgia: test in `prototype/`; sian: business; filippo: Deep Research + sintesi | file nei rispettivi `work/` |
+| 5 | Persona del settore | chi riesce | citazione in `shared/` |
+| 6 | Scelta problema + riserva | tutti | `decisions/` |
+| 7–10 | Preparazione, architettura, pitch, logistica | vedi `docs/TODO.md` | — |

@@ -1,14 +1,14 @@
 # SITUAZIONE — quadro completo
-Aggiornato: 2026-11-12 17:45 · Autore: regista (Claude di Filippo)
+Aggiornato: 2026-11-12 18:00 · Autore: regista (Claude di Filippo)
 
 ## Obiettivo
 VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET, online. Team: Filippo, Giorgia, Sian.
 
 ## Fase attuale
-**Preparazione (giovedì sera).** Tema aperto: il problema lo scegliamo noi. Decisione: **venerdì 13:30–14:00**, dopo ricerche e test veloci della mattina.
+**Preparazione.** Tema aperto: il problema lo scegliamo noi. Prima di sabato niente orari fissi (siamo studenti): si avanza per passi in ordine (`docs/TODO.md`). La scelta del problema avviene quando tutti hanno finito l'approfondimento dei candidati.
 
 ## Ruoli
-- Filippo: team leader, coordinamento, tutto (il suo Claude è il regista)
+- Filippo: organizzazione (il suo Claude tiene il quadro completo)
 - Giorgia: architettura e prodotto
 - Sian: idea, business, pitch, dati
 
@@ -27,7 +27,7 @@ VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET
 ## Aperto
 - Scelta problema principale + riserva (ven 13:30)
 - Crediti AI di KVA e istruzioni checkpoint: sconosciuti
-- Pronto: `docs/studio-serale.pdf`. In arrivo dal regista: pagina "gara" (problemi dettagliati, business plan, dati, modalità AI)
+- Pronte le pagine in `docs/site/` (generale, problemi, lettura serale), pubblicate anche come link per le persone (problemi dettagliati, business plan, dati, modalità AI)
 
 ## Blocchi
 - Giorgia e Sian: invito GitHub da accettare, setup da completare
