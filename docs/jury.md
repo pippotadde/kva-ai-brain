@@ -1,5 +1,7 @@
 # Chi giudica — note per il pitch
 
+> Dossier completo su KVA, OIDA e la loro teoria: `research/kva-company.md`. In breve: il tema della gara coincide con il loro prodotto Project OIDA.
+
 Fonti pubbliche, 12.11.2026. Da completare con LinkedIn (Filippo).
 
 ## KVA — Kakashi Venture Accelerator
@@ -14,8 +16,8 @@ Fonti pubbliche, 12.11.2026. Da completare con LinkedIn (Filippo).
 | Nome | Ruolo noto | Cosa probabilmente guarda |
 |---|---|---|
 | Federico Bottino | Co-fondatore KVA | Potenziale da startup, team, business |
-| Davide Lai | Lead Researcher KVA | Profondità tecnica su memoria e ontologie: aspettarsi domande tecniche |
-| Carlo Ferrero | da verificare | — |
+| Davide Lai | Lead Researcher KVA, comitato scientifico (DESY) | Rigore scientifico, metodo, valutazione: aspettarsi domande tecniche |
+| Carlo Ferrero | KVA, coautore del paper OIDA "Retrieval Is Not Enough" | Rigore su memoria epistemica, contraddizioni, supersession |
 | Dario Martinelli | da verificare | — |
 | Quinto membro | non ancora annunciato | — |
 
