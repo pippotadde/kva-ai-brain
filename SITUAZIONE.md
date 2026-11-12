@@ -1,5 +1,5 @@
 # SITUAZIONE — quadro completo
-Aggiornato: 2026-11-12 20:00 · Autore: regista (Claude di Filippo)
+Aggiornato: 2026-11-12 17:30 · Autore: regista (Claude di Filippo)
 
 ## Obiettivo
 VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET, online. Team: Filippo, Giorgia, Sian.

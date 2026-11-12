@@ -1,5 +1,5 @@
 # TASKS — compiti aperti
-Aggiornato: 2026-11-12 20:00 · Autore: regista
+Aggiornato: 2026-11-12 17:30 · Autore: regista
 
 ## Giovedì sera
 | Chi | Compito | Fatto quando |

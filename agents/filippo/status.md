@@ -1,4 +1,4 @@
-# filippo — aggiornato 2026-11-12 20:00
+# filippo — aggiornato 2026-11-12 17:30
 ## Sto facendo
 Regia: preparazione documenti, pagine e canale di coordinamento.
 ## Finito
