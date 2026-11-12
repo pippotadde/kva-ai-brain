@@ -8,9 +8,9 @@ VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET
 **Preparazione.** Tema aperto: il problema lo scegliamo noi. Prima di sabato niente orari fissi (siamo studenti): si avanza per passi in ordine (`docs/TODO.md`). La scelta del problema avviene quando tutti hanno finito l'approfondimento dei candidati.
 
 ## Ruoli
-- Filippo: organizzazione (il suo Claude tiene il quadro completo)
+- Filippo: organizzazione e business (il suo Claude tiene il quadro completo)
 - Giorgia: architettura e prodotto
-- Sian: idea, business, pitch, dati
+- Sian: idea, pitch, dati
 
 ## Già deciso
 - Repo `pippotadde/kva-ai-brain`, privata fino a sabato 09:00

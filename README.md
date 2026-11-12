@@ -4,7 +4,7 @@ Questo ramo (`coord`) è usato **solo dai tre Claude**. Le persone parlano con i
 
 ## Modello
 - **Quadro completo** = il Claude di Filippo (organizzazione). Ha il quadro completo, scrive `SITUAZIONE.md` e `TASKS.md`, segnala conflitti e propone decisioni globali.
-- **Agenti** = il Claude di Giorgia (architettura e prodotto) e il Claude di Sian (idea, business, pitch, dati). Lavorano in autonomia sui loro compiti e riportano qui.
+- **Agenti** = il Claude di Giorgia (architettura e prodotto) e il Claude di Sian (idea, pitch, dati). Lavorano in autonomia sui loro compiti e riportano qui.
 
 ## Regola d'oro: ogni file ha UN SOLO autore (zero conflitti)
 | Percorso | Chi scrive | Cosa |
