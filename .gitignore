@@ -1,0 +1,23 @@
+# Secrets
+.env
+.env.*
+!.env.example
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+# Node
+node_modules/
+# Data (keep small curated files only)
+data/raw/
+data/large/
+*.parquet
+*.zip
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

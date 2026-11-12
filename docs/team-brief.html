@@ -1,0 +1,299 @@
+<title>Piano di gara KVA</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: single reading column with a sticky section index; "control room" feel borrowed from KVA's terminal visuals */
+:root{
+  --bg:#f5f7f9; --surface:#ffffff; --fg:#14202b; --muted:#5a6977; --line:#d9e0e6;
+  --accent:#1f6fb2; --accent-soft:#e3eef8; --warn:#b45309; --warn-soft:#fdf1e3; --ok:#2f7d4f; --ok-soft:#e6f4ec;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1419; --surface:#151d24; --fg:#e4ebf1; --muted:#93a3b1; --line:#26323d;
+  --accent:#5aa9e6; --accent-soft:#16283a; --warn:#f0a35a; --warn-soft:#2c2116; --ok:#6cc391; --ok-soft:#15281d; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1419; --surface:#151d24; --fg:#e4ebf1; --muted:#93a3b1; --line:#26323d;
+  --accent:#5aa9e6; --accent-soft:#16283a; --warn:#f0a35a; --warn-soft:#2c2116; --ok:#6cc391; --ok-soft:#15281d; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 80px}
+header.top{display:grid;gap:10px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0;text-wrap:balance;font-weight:700}
+h2{font-size:22px;margin:0 0 12px;text-wrap:balance;display:flex;gap:10px;align-items:baseline}
+h2 .n{font-family:var(--mono);font-size:13px;color:var(--muted);font-weight:400}
+h3{font-size:16px;margin:18px 0 6px}
+p{margin:0 0 12px;max-width:68ch}
+a{color:var(--accent)}
+a:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.meta{display:flex;flex-wrap:wrap;gap:8px 18px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.goal{background:var(--fg);color:var(--bg);padding:18px 20px;border-radius:6px;display:grid;gap:4px}
+.goal b{font-size:22px;letter-spacing:.02em}
+nav.toc{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0;overflow-x:auto;white-space:nowrap;font-size:13px}
+nav.toc a{text-decoration:none;color:var(--muted);margin-right:14px}
+nav.toc a:hover{color:var(--accent)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+section{padding-top:36px;scroll-margin-top:50px}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-weight:600;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono)}
+td.time{font-family:var(--mono);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.hot td{background:var(--accent-soft)}
+.bar{height:6px;background:var(--accent);border-radius:3px}
+.note{border-left:3px solid var(--warn);background:var(--warn-soft);padding:10px 14px;border-radius:0 6px 6px 0;margin:14px 0}
+.note.ok{border-color:var(--ok);background:var(--ok-soft)}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.person{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:14px 16px;display:grid;gap:6px;align-content:start;min-width:0}
+.person .role{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.06em}
+.person b{font-size:17px}
+.person ul{margin:0;padding-left:18px;font-size:14.5px}
+ol.problems{padding-left:0;list-style:none;display:grid;gap:10px;margin:0}
+ol.problems li{display:grid;grid-template-columns:34px 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+ol.problems .k{font-family:var(--mono);color:var(--muted);font-size:13px;padding-top:2px}
+ol.problems b{display:block}
+.check{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+.check label{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start;cursor:pointer;padding:6px 8px;border-radius:4px}
+.check label:hover{background:var(--accent-soft)}
+.check input{margin-top:5px;accent-color:var(--accent)}
+.check input:checked + span{color:var(--muted);text-decoration:line-through}
+.who{font-family:var(--mono);font-size:12px;color:var(--muted)}
+code{font-family:var(--mono);font-size:.9em;background:var(--accent-soft);padding:1px 5px;border-radius:3px}
+pre{font-family:var(--mono);font-size:13px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:12px 14px;overflow-x:auto;margin:0 0 12px}
+dl.gloss{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:8px 16px;margin:0}
+dl.gloss dt{font-weight:600}
+dl.gloss dd{margin:0;min-width:0}
+@media (max-width:520px){dl.gloss{grid-template-columns:1fr}dl.gloss dd{margin-bottom:8px}}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">Team Taddei · Ferraro · Caratelli · Hackathon "AI brain for industry"</div>
+  <h1>Piano di gara KVA</h1>
+  <div class="meta"><span>Sabato 14.11.2026</span><span>09:30–18:30 CET</span><span>Online (noi 3 in presenza a casa)</span><span>Aggiornato 12.11</span></div>
+  <div class="goal"><span class="eyebrow" style="color:inherit;opacity:.7">Obiettivo</span><b>VINCERE. Arrivare primi.</b><span>Ogni scelta si misura su una domanda: fa salire il voto della giuria?</span></div>
+</header>
+
+<nav class="toc" aria-label="Sezioni">
+  <a href="#regole">Regole</a><a href="#voto">Voto</a><a href="#problemi">Problemi</a><a href="#team">Team</a><a href="#sabato">Sabato</a><a href="#prima">Da fare prima</a><a href="#ai">Corso AI</a><a href="#github">GitHub</a><a href="#business">Business</a><a href="#link">Link</a>
+</nav>
+
+<section id="regole">
+  <h2><span class="n">1</span>Le regole che contano</h2>
+  <p>Fonte ufficiale: <a href="https://github.com/kakashi-ventures/hackathon/blob/main/RULES.md">RULES.md</a> nel repo di KVA. Leggetelo una volta, sono 10 minuti.</p>
+  <div class="tbl"><table>
+    <tr><th>Cosa</th><th>Regola</th></tr>
+    <tr><td>Team</td><td>Siamo in 3 (Chen si è ritirato, KVA avvisata il 12.11). Per KVA siamo tutti online: presentiamo in videochiamata, il link lo manda KVA.</td></tr>
+    <tr><td>Cosa si può portare</td><td>Un'idea, un dataset che abbiamo il diritto di usare, librerie, framework e modelli open source.</td></tr>
+    <tr><td>Cosa si costruisce il giorno</td><td>Il progetto va costruito <b>principalmente durante l'evento</b>. La preparazione serve a saper usare gli strumenti, non a portare il prodotto già fatto.</td></tr>
+    <tr><td>AI</td><td>Si possono usare strumenti AI per codice, testi e immagini. Vanno <b>dichiarati</b> nella consegna (Claude Code, Gemini, ChatGPT, modelli usati nel prodotto).</td></tr>
+    <tr><td>Codice</td><td>Obbligatoria una <b>repo pubblica</b> su GitHub.</td></tr>
+    <tr><td>Checkpoint</td><td>Prima della presentazione delle 12:30 e di quella finale si manda a KVA il materiale richiesto. Se si salta un checkpoint si rischia di non essere valutati.</td></tr>
+    <tr><td>Premio</td><td>€1.500 per cedere il progetto a KVA, oppure €1.500 investiti da KVA per il 15% di una società costruita sul progetto. Si decide entro 14 giorni.</td></tr>
+  </table></div>
+</section>
+
+<section id="voto">
+  <h2><span class="n">2</span>Come vota la giuria</h2>
+  <p>Ogni criterio vale da 1 a 5. Quasi metà del voto non dipende dal codice.</p>
+  <div class="tbl"><table>
+    <tr><th>Criterio</th><th class="num">Peso</th><th style="width:30%"></th></tr>
+    <tr><td><b>Aderenza al tema</b>: memoria, ontologie, AI brain. In caso di pareggio vince chi ha il voto più alto qui.</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+    <tr><td><b>Qualità tecnica</b> di quello che funziona davvero il giorno stesso</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+    <tr><td><b>Problema reale</b> e impatto per un'industria</td><td class="num">25%</td><td><div class="bar" style="width:100%"></div></td></tr>
+    <tr><td><b>Business case</b>, verificato alle 16:30</td><td class="num">20%</td><td><div class="bar" style="width:80%"></div></td></tr>
+    <tr><td><b>Chiarezza della demo</b></td><td class="num">5%</td><td><div class="bar" style="width:20%"></div></td></tr>
+  </table></div>
+  <div class="note"><b>Cosa ne segue.</b> Una demo piccola che funziona davvero batte un progetto grande che funziona a metà. Il tema (memoria e ontologie) deve vedersi chiaramente nella demo. Il problema deve essere di un settore preciso, con numeri.</div>
+  <p>Giuria: Federico Bottino, Davide Lai (Lead Researcher KVA), Carlo Ferrero, Dario Martinelli, più un quinto membro ancora da annunciare.</p>
+</section>
+
+<section id="problemi">
+  <h2><span class="n">3</span>I temi e i 7 problemi proposti</h2>
+  <p>Sono spunti di KVA (dal video ufficiale), non obblighi. Le domande dei due temi principali:</p>
+  <ul>
+    <li><b>Memoria e AI.</b> Come capisce una memoria che una regola è stata superata? Come scrivono più agenti nella stessa memoria senza contraddirsi? Come si registra <i>perché</i> è stata presa una decisione?</li>
+    <li><b>Ontologie su misura.</b> Come si costruisce un'ontologia? Come si aggiorna quando l'azienda cambia modo di lavorare? Come la usa un agente per <i>ragionare</i> e non solo per cercare?</li>
+  </ul>
+  <ol class="problems">
+    <li><span class="k">P1</span><div><b>Rendere un servizio esistente accessibile a tutti</b>Prendere uno strumento usato solo da specialisti (ottimizzatore, mappe, pianificazione) e costruirci sopra un'AI a cui chiunque in azienda può fare domande.</div></li>
+    <li><span class="k">P2</span><div><b>Dataset piccoli e grandi</b>Una pipeline che riconosce un file da 40 righe e uno da 2 milioni: il primo va nel prompt, il secondo va indicizzato.</div></li>
+    <li><span class="k">P3</span><div><b>Ontologia da documenti</b>Trasformare normative, manuali e procedure di un settore in un'ontologia su cui un agente sa ragionare.</div></li>
+    <li><span class="k">P4</span><div><b>Memoria visibile alle persone</b>Mostrare cosa contiene la memoria di un agente e da dove l'ha imparato, così le persone possono correggerla.</div></li>
+    <li><span class="k">P5</span><div><b>Modelli decisionali</b>Decisioni basate su regole scritte (approvare un fornitore, assegnare una manutenzione, fare un preventivo) integrate con l'agente.</div></li>
+    <li><span class="k">P6</span><div><b>Anonimizzazione</b>Togliere nomi, email, codici fiscali e indirizzi prima che i dati arrivino alla memoria o al modello, senza rendere i dati inutili.</div></li>
+    <li><span class="k">P7</span><div><b>Scatola nera per agenti</b>Registrare cosa ha visto e fatto un agente che compie azioni critiche: approvare un pagamento, rilasciare un lotto di produzione, cambiare una procedura di sicurezza.</div></li>
+  </ol>
+  <div class="note ok"><b>Prima impressione, da discutere.</b> I progetti che uniscono memoria e ontologia prendono il massimo sul primo criterio. P3, P4 e P7 si combinano bene e danno una demo visiva: un grafo che si aggiorna quando cambia una regola e risposte che citano la fonte. L'idea si sceglie sabato, ma venerdì arriviamo con 2-3 settori e una rosa di candidati.</div>
+</section>
+
+<section id="team">
+  <h2><span class="n">4</span>Team e ruoli</h2>
+  <p><b>Regola:</b> tutti contribuiscono a tutto, ma ogni area ha un responsabile che decide. Se dopo 5 minuti non c'è accordo, decide il responsabile e si va avanti. Tutti e tre scrivono codice.</p>
+  <div class="grid3">
+    <div class="person"><span class="role">Tecnica</span><b>Giorgia</b><ul><li>Decide l'architettura e lo stack</li><li>Costruisce il cuore: pipeline AI, memoria e ontologia</li><li>Dice "questo non ci sta nei tempi"</li></ul></div>
+    <div class="person"><span class="role">Tempi e business</span><b>Filippo</b><ul><li>Gestisce tempi, priorità e tagli</li><li>Business case per la verifica delle 16:30</li><li>Repo GitHub, integrazione, test della demo</li><li>Consegna ai checkpoint</li></ul></div>
+    <div class="person"><span class="role">Idea e pitch</span><b>Sian</b><ul><li>Guida l'ideazione</li><li>Costruisce l'interfaccia della demo</li><li>Presenta alle 12:30 e alle 17:00</li><li>Racconta la storia del problema reale</li></ul></div>
+  </div>
+  <h3>Momenti fissi di confronto</h3>
+  <p>Fuori da questi momenti ognuno lavora sulla sua parte senza interruzioni.</p>
+  <ul>
+    <li><b>11:45</b> 15 minuti di critica incrociata sull'idea.</li>
+    <li><b>13:00</b> 10 minuti per fissare l'architettura. Tutti dicono la loro prima che si scriva codice.</li>
+    <li><b>14:45 e 15:30</b> controllo veloce di 5 minuti: cosa funziona, cosa è bloccato, cosa si taglia.</li>
+    <li><b>16:00</b> stop alle nuove funzioni, si sistema la demo. Gli altri due rivedono i numeri del business case.</li>
+  </ul>
+</section>
+
+<section id="sabato">
+  <h2><span class="n">5</span>Scaletta di sabato</h2>
+  <p>Orari CET. Le righe evidenziate sono i momenti in cui si consegna o si viene giudicati.</p>
+  <div class="tbl"><table>
+    <tr><th>Ora</th><th>Evento KVA</th><th>Cosa facciamo noi</th></tr>
+    <tr><td class="time">09:00</td><td>—</td><td>Ci troviamo. Wi-Fi, hotspot di riserva, caricatori, microfono, condivisione schermo. Tutti fanno <code>git pull</code> e verificano che l'ambiente parta.</td></tr>
+    <tr><td class="time">09:30</td><td>Benvenuto</td><td>Collegamento alla call KVA. Si legge subito ogni istruzione sui checkpoint e sui crediti AI.</td></tr>
+    <tr><td class="time">10:00</td><td>Regole, team matching</td><td>Il team è già fatto. Filippo annota le novità sulle regole.</td></tr>
+    <tr><td class="time">10:15</td><td>Talk: Venture building, Memoria e AI</td><td>Sian prende appunti su cosa interessa ai giurati: parole chiave, esempi, settori citati.</td></tr>
+    <tr><td class="time">10:30</td><td>Fase I: ideazione</td><td>45 minuti: ognuno propone 2-3 idee (problema + settore + demo).</td></tr>
+    <tr><td class="time">11:15</td><td></td><td>Votiamo le idee sui 5 criteri della giuria. Ne scegliamo <b>una</b>.</td></tr>
+    <tr><td class="time">11:45</td><td></td><td>Critica incrociata. Scriviamo il copione della demo (cosa si vede, in che ordine), architettura di massima e una frase di business. Prepariamo le 3 slide.</td></tr>
+    <tr class="hot"><td class="time">12:30</td><td>Prima presentazione delle idee</td><td>Presenta Sian. Filippo manda il materiale del checkpoint.</td></tr>
+    <tr><td class="time">13:00</td><td>Pranzo</td><td>Si fissa l'architettura in 10 minuti. Giorgia prepara la struttura del codice: chi tocca quali file.</td></tr>
+    <tr><td class="time">14:00</td><td>Fase II: sviluppo</td><td>Tre filoni in parallelo. Push ogni 20-30 minuti. Il ramo <code>main</code> deve sempre partire.</td></tr>
+    <tr><td class="time">14:45</td><td></td><td>Controllo di 5 minuti.</td></tr>
+    <tr><td class="time">15:30</td><td></td><td>Controllo di 5 minuti. Si taglia tutto quello che non sarà pronto alle 16:00.</td></tr>
+    <tr><td class="time">16:00</td><td></td><td><b>Stop alle nuove funzioni.</b> Si sistema la demo e si prepara un video di riserva della demo. Business case finito.</td></tr>
+    <tr class="hot"><td class="time">16:30</td><td>Verifica finanziaria</td><td>Filippo presenta i numeri del business case.</td></tr>
+    <tr class="hot"><td class="time">17:00</td><td>Demo finale e valutazione</td><td>Sian presenta, Giorgia fa la demo dal vivo, Filippo ha pronto il video di riserva. Consegna finale.</td></tr>
+    <tr><td class="time">18:30</td><td>Premiazione</td><td>Vinciamo.</td></tr>
+  </table></div>
+</section>
+
+<section id="prima">
+  <h2><span class="n">6</span>Da fare prima di sabato</h2>
+  <p>Spuntate le voci man mano. Le spunte restano salvate solo sul vostro browser.</p>
+  <h3>Entro stasera (giovedì)</h3>
+  <ul class="check" data-group="thu">
+    <li><label><input type="checkbox" id="c-read"><span>Leggere questa pagina e <a href="https://github.com/kakashi-ventures/hackathon/blob/main/RULES.md">RULES.md</a>. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-dash"><span>Accedere alla dashboard KVA con il link via email. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-invite"><span>Accettare l'invito alla repo GitHub del team. Il link arriva a breve. <span class="who">Giorgia, Sian</span></span></label></li>
+    <li><label><input type="checkbox" id="c-wsl"><span>Windows: installare WSL2 con Ubuntu e lavorare <b>sempre</b> dentro WSL, non in PowerShell. <span class="who">Sian (Filippo è già a posto)</span></span></label></li>
+    <li><label><input type="checkbox" id="c-tools"><span>Nel terminale Linux: <code>git</code>, <code>gh</code> (poi <code>gh auth login</code>), Python 3.11 o più recente, <code>uv</code>, Node 20 o più recente. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-cc"><span>Claude Code installato e con accesso fatto, dentro WSL o Ubuntu. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-key"><span>Creare una chiave API Gemini gratuita su <a href="https://aistudio.google.com/apikey">Google AI Studio</a>. Serve al nostro prodotto per chiamare un modello, finché non sappiamo che crediti dà KVA. <b>Non va mai messa nel codice o su GitHub.</b> <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-vscode"><span>VS Code con l'estensione WSL (su Windows). <span class="who">Sian, Filippo</span></span></label></li>
+  </ul>
+  <h3>Venerdì</h3>
+  <ul class="check" data-group="fri">
+    <li><label><input type="checkbox" id="c-study"><span>Mattina: corso rapido di AI (sezione 7), circa 2 ore. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-dry"><span>Pomeriggio: <b>mini-hackathon di prova da 2 ore e mezza</b> in call, su un problema finto, con gli stessi ruoli e la stessa scaletta di sabato. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-retro"><span>Dopo la prova: 20 minuti di bilancio su cosa ha funzionato e cosa cambiare. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-sectors"><span>Ognuno porta 2 settori industriali con un problema concreto e una fonte (articolo, rapporto, numero). <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-biz"><span>Modello del business case pronto da riempire. <span class="who">Filippo</span></span></label></li>
+    <li><label><input type="checkbox" id="c-pitch"><span>Struttura del pitch da 3 minuti e modello delle slide. <span class="who">Sian</span></span></label></li>
+    <li><label><input type="checkbox" id="c-call"><span>Prova di videochiamata: microfono, condivisione schermo, hotspot di riserva. <span class="who">tutti</span></span></label></li>
+  </ul>
+  <div class="note"><b>Limiti di Claude Code Pro.</b> Con un uso intenso tutto il giorno si possono finire i messaggi a disposizione. Venerdì non sprecateli. Sabato le riserve sono Gemini Pro (Filippo) e ChatGPT Pro (Giorgia).</div>
+</section>
+
+<section id="ai">
+  <h2><span class="n">7</span>Corso rapido di AI applicata</h2>
+  <p>Programmare lo sapete già, quindi qui solo i concetti che servono sabato. Per ognuno: capire l'idea, poi chiedere a Claude Code di costruire un esempio da 30 righe e leggerlo riga per riga.</p>
+  <div class="tbl"><table>
+    <tr><th>#</th><th>Concetto</th><th>Perché serve sabato</th></tr>
+    <tr><td class="time">1</td><td>Chiamare un LLM da Python: prompt di sistema, risposta in JSON strutturato</td><td>Base di tutto</td></tr>
+    <tr><td class="time">2</td><td>Embeddings e ricerca semantica (RAG)</td><td>Fare domande ai documenti, con le fonti citate</td></tr>
+    <tr><td class="time">3</td><td>Estrarre entità e relazioni da un testo con un LLM, cioè costruire un knowledge graph</td><td>Il cuore del tema ontologie</td></tr>
+    <tr><td class="time">4</td><td>Ontologie: classi, relazioni, regole, inferenza semplice</td><td>"Ragionare e non solo cercare"</td></tr>
+    <tr><td class="time">5</td><td>Agenti e tool use: l'LLM che chiama funzioni nostre</td><td>L'"AI brain" che agisce</td></tr>
+    <tr><td class="time">6</td><td>Memoria con versioni: regola valida o superata, chi l'ha scritta, perché</td><td>Esattamente il tema "Memoria e AI"</td></tr>
+    <tr><td class="time">7</td><td>Interfaccia demo veloce con grafo interattivo</td><td>Il 5% demo e soprattutto far <i>vedere</i> il tema</td></tr>
+  </table></div>
+  <h3>Glossario minimo</h3>
+  <dl class="gloss">
+    <dt>LLM</dt><dd>Modello linguistico (Claude, Gemini, GPT). Gli dai testo, ti restituisce testo. Lo chiami via API, cioè con una richiesta HTTP che contiene la chiave.</dd>
+    <dt>Prompt di sistema</dt><dd>Le istruzioni fisse che dicono al modello chi è e come deve rispondere.</dd>
+    <dt>Output strutturato</dt><dd>Chiedere al modello di rispondere in JSON con uno schema preciso, così il codice può usare la risposta.</dd>
+    <dt>Embedding</dt><dd>Un vettore di numeri che rappresenta il significato di un testo. Testi simili danno vettori vicini.</dd>
+    <dt>RAG</dt><dd>Retrieval-Augmented Generation. Si cercano i pezzi di documento pertinenti e si mettono nel prompt, così il modello risponde sui nostri dati e può citarli.</dd>
+    <dt>Knowledge graph</dt><dd>Un grafo con entità come nodi (Macchina M-03, Procedura P-114) e relazioni come archi (<i>ispezionata secondo</i>, <i>sostituisce</i>).</dd>
+    <dt>Ontologia</dt><dd>Lo schema del grafo: quali classi esistono, quali relazioni sono ammesse, quali regole valgono. Esempio di regola: se A sostituisce B, allora B non è più valida.</dd>
+    <dt>Inferenza</dt><dd>Ricavare un fatto non scritto da fatti scritti, per esempio da due relazioni dedurne una terza. È il "ragionare".</dd>
+    <dt>Agente</dt><dd>Un LLM in un ciclo: decide quale strumento (una nostra funzione) chiamare, legge il risultato, decide il passo successivo.</dd>
+    <dt>Tool use</dt><dd>Il meccanismo con cui l'LLM chiede di eseguire una funzione nostra, con argomenti in JSON.</dd>
+    <dt>Provenienza</dt><dd>Per ogni fatto in memoria: da quale documento viene, chi l'ha scritto, quando. Permette di citare le fonti.</dd>
+    <dt>Context window</dt><dd>Quanto testo il modello legge in una volta. I dati piccoli ci stanno, quelli grandi vanno indicizzati (problema P2).</dd>
+  </dl>
+  <h3>Stack proposto (decide Giorgia)</h3>
+  <p>Scelto per costruire in fretta, non per eleganza:</p>
+  <pre>Python 3.11 + uv          gestione progetto e dipendenze
+google-genai / anthropic  chiamate al modello
+networkx                  grafo e ontologia in memoria
+streamlit                 interfaccia demo in poche righe
+pyvis o streamlit-agraph  grafo interattivo nell'interfaccia
+.env + python-dotenv      chiavi API, mai su GitHub</pre>
+</section>
+
+<section id="github">
+  <h2><span class="n">8</span>Come lavoriamo su GitHub</h2>
+  <ul>
+    <li><b>Una repo pubblica</b>, con Filippo come responsabile e Giorgia e Sian come collaboratori.</li>
+    <li><b>Ognuno lavora su file o cartelle sue.</b> Si decide alle 13:00 chi tocca cosa: niente conflitti, niente attese.</li>
+    <li><b>Il ramo <code>main</code> deve sempre partire.</b> Se rompi qualcosa, lo sistemi subito o torni indietro.</li>
+    <li><b>Commit e push piccoli e frequenti</b>, ogni 20-30 minuti. Prima del push: <code>git pull --rebase</code>.</li>
+    <li><b>Messaggi di commit in inglese</b>, corti: <code>add rule versioning to memory</code>.</li>
+    <li><b>Mai committare chiavi o il file <code>.env</code>.</b> La repo è pubblica e le chiavi vengono rubate in pochi minuti.</li>
+    <li><b>Claude Code</b> legge il file <code>CLAUDE.md</code> della repo: lì scriviamo le regole del progetto così tutti e tre i Claude lavorano allo stesso modo.</li>
+  </ul>
+</section>
+
+<section id="business">
+  <h2><span class="n">9</span>Business case e pitch</h2>
+  <h3>Business case (alle 16:30, vale il 20%)</h3>
+  <ol>
+    <li><b>Cliente:</b> chi paga, con un esempio preciso (es. "responsabile qualità di un'azienda farmaceutica da 200 dipendenti").</li>
+    <li><b>Problema in euro o in ore:</b> quanto costa oggi, con una fonte.</li>
+    <li><b>Mercato:</b> quante aziende così esistono in Italia e in Europa (TAM, SAM, SOM: mercato totale, raggiungibile, conquistabile).</li>
+    <li><b>Modello di ricavo:</b> abbonamento, prezzo per postazione o per uso. Un prezzo preciso.</li>
+    <li><b>Costi:</b> costo dei modelli AI per cliente, infrastruttura, vendita.</li>
+    <li><b>Concorrenti</b> e perché noi siamo diversi.</li>
+    <li><b>Primi 12 mesi:</b> 3 tappe concrete.</li>
+  </ol>
+  <h3>Pitch da 3 minuti</h3>
+  <ol>
+    <li><b>30 secondi:</b> una persona reale con un problema reale, con un numero.</li>
+    <li><b>20 secondi:</b> la soluzione in una frase.</li>
+    <li><b>90 secondi:</b> la demo dal vivo, che fa vedere memoria e ontologia al lavoro.</li>
+    <li><b>20 secondi:</b> perché funziona, il lato tecnico.</li>
+    <li><b>20 secondi:</b> business e prossimi passi.</li>
+  </ol>
+</section>
+
+<section id="link">
+  <h2><span class="n">10</span>Link</h2>
+  <ul>
+    <li>Sito KVA: <a href="https://hackathon.kakashi.ventures/en/hackathon">hackathon.kakashi.ventures</a> (la dashboard partecipanti si apre da qui)</li>
+    <li>Regole ufficiali: <a href="https://github.com/kakashi-ventures/hackathon">github.com/kakashi-ventures/hackathon</a>. Cliccate <i>Watch</i> per ricevere le novità.</li>
+    <li>Repo del team: in arrivo</li>
+    <li>Chiave Gemini: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></li>
+    <li>Contatto KVA: <code>hello@kakashi.ventures</code></li>
+  </ul>
+</section>
+
+<footer>Pagina mantenuta da Filippo. Se qualcosa non torna, scrivetelo nel gruppo.</footer>
+</div>
+
+<script>
+document.querySelectorAll('.check input[type=checkbox]').forEach(function(cb){
+  var key='kva-'+cb.id;
+  try{ if(localStorage.getItem(key)==='1') cb.checked=true; }catch(e){}
+  cb.addEventListener('change',function(){
+    try{ localStorage.setItem(key, cb.checked?'1':'0'); }catch(e){}
+  });
+});
+</script>
