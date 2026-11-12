@@ -21,3 +21,5 @@ data/large/
 Thumbs.db
 .vscode/
 .idea/
+.coord/
+.coord-me
