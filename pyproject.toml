@@ -1,0 +1,24 @@
+[project]
+name = "kva-ai-brain"
+version = "0.1.0"
+description = "KVA hackathon 2026 - AI brain for industry"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+# Baseline toolbox (open-source libraries only). Giorgia owns the final stack:
+# add/remove with `uv add <pkg>` / `uv remove <pkg>`, never by hand-editing.
+dependencies = [
+    "anthropic>=0.40",
+    "google-genai>=1.0",
+    "python-dotenv>=1.0",
+    "pydantic>=2.7",
+    "networkx>=3.3",
+    "pandas>=2.2",
+    "streamlit>=1.40",
+    "pyvis>=0.3.2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[tool.uv]
+package = false

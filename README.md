@@ -10,7 +10,8 @@ Team: Filippo Taddei, Giorgia Ferraro, Sian Caratelli.
 
 | Folder | Purpose |
 |---|---|
-| `docs/` | Team brief, rules summary, working agreements |
+| `docs/` | Team brief, `PLAN.md` (timeline), `SETUP.md` (environment), `jury.md` |
+| `scripts/` | `check_env.sh` (is my machine ready?), `smoke_llm.py` (does my API key work?) |
 | `research/problems/` | Problem discovery: candidate industry problems, evidence, scoring |
 | `research/market/` | Market sizing, competitors, customer profiles |
 | `research/data/` | Notes on datasets we can legally use (source, licence) |
@@ -22,7 +23,13 @@ Team: Filippo Taddei, Giorgia Ferraro, Sian Caratelli.
 
 ## Running
 
-Instructions will be added once the stack is fixed. Secrets go in `.env` (see `.env.example`), never in git.
+```bash
+uv sync                      # install Python 3.12 + dependencies
+cp .env.example .env         # then paste your API key
+bash scripts/check_env.sh    # must end with 0 to fix
+```
+
+Full setup guide: `docs/SETUP.md`. Secrets go in `.env`, never in git.
 
 ## AI tools used
 
