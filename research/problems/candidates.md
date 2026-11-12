@@ -23,11 +23,11 @@ I voti sono una mia prima stima: vanno discussi. Dove un numero viene da fonti d
 | A | Direttive di aeronavigabilità che si sostituiscono (manutenzione aerei) | 5 | 4 | 5 | 4 | 5 | **4,55** |
 | D | Sicurezza sul lavoro: procedure, macchine, formazione (D.Lgs. 81/08) | 5 | 4 | 5 | 4 | 5 | **4,55** |
 | C | Procedure GMP nel farmaceutico: versioni, deviazioni, motivazioni | 5 | 4 | 4 | 4 | 4 | **4,25** |
-| B | Nuovo Regolamento Macchine UE 2023/1230 (scadenza gennaio 2027) | 4 | 3 | 5 | 5 | 3 | **4,10** |
+| B | Nuovo Regolamento Macchine UE 2023/1230 (scadenza gennaio 2027) | 4 | 3 | 5 | 5 | 3 | **4,15** |
 | E | Conoscenza dei manutentori che vanno in pensione | 4 | 4 | 4 | 3 | 4 | **3,80** |
 | F | Scatola nera per agenti AI che fanno azioni critiche | 5 | 3 | 3 | 3 | 3 | **3,50** |
 | G | Modello decisionale per qualifica fornitori | 3 | 4 | 3 | 3 | 3 | **3,25** |
-| H | Anonimizzazione dei dati aziendali | 2 | 3 | 4 | 3 | 2 | **2,85** |
+| H | Anonimizzazione dei dati aziendali | 2 | 3 | 4 | 3 | 2 | **2,95** |
 
 Totale = 0,25·Tema + 0,25·Fattib. + 0,25·Reale + 0,20·Business + 0,05·Demo.
 
