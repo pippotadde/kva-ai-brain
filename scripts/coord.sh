@@ -58,7 +58,7 @@ case "${1:-}" in
   inbox)
     sync >/dev/null 2>&1 || true
     ls -1r "$CO/messages" 2>/dev/null | grep -E -- "-to-($(me)|all)\.md$" | head -15 | while read -r m; do
-      echo "== $m"; sed -n '6,$p' "$CO/messages/$m"; echo
+      echo "== $m"; sed -n '7,$p' "$CO/messages/$m"; echo
     done
     ;;
   *) sed -n '2,13p' "$0";;

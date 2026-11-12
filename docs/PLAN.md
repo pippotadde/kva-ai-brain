@@ -8,50 +8,50 @@
 |---|---|---|
 | Tema (25%, decide i pareggi) | Memoria con regole che si sostituiscono + ontologia con inferenza visibili **nella demo**, non solo a parole | Ven: test di fattibilità |
 | Tecnica (25%) | Pochissime funzioni, ma che funzionano dal vivo senza errori; dati veri | Ven: test; Sab: freeze alle 16:00 |
-| Problema reale (25%) | Un settore preciso, una persona precisa, un numero con fonte | Gio–Ven: ricerca |
-| Business (20%) | Cliente che paga, prezzo, mercato con fonti, "perché ora" | Ven: bozza; Sab: definitivo |
-| Demo (5%) | Copione provato 3 volte, video di riserva | Ven sera + Sab 16:00 |
+| Problema reale (25%) | Un settore preciso, una persona vera sentita, un numero con fonte | Gio–Ven: ricerca |
+| Business (20%) | Cliente che paga, prezzo, mercato con fonti, "perché ora" (Sian) | Ven: bozza; Sab: definitivo |
+| Demo (5%) | Nome che si ricorda, copione provato 3 volte, video di riserva | Ven sera + Sab 16:00 |
 
 **Chi giudica** (vedi `docs/jury.md`): KVA è un venture studio AI che investe in startup e fa consulenza per aziende tramite il Gruppo Excellence (banche, assicurazioni, grandi aziende). Ragionano da investitori: vogliono vedere **un'azienda possibile**, non solo un bel progetto tecnico.
 
 **Come ci distinguiamo:** la maggior parte delle squadre farà "chatbot sui documenti" (RAG). Noi facciamo vedere che il sistema **sa quando una regola non vale più, ragiona sulle relazioni e spiega perché**, in un settore preciso con numeri veri.
 
-## 2. Giovedì 12 — sera
+## 2. Giovedì 12 — sera: preparazione
 
 | Chi | Cosa | Fatto quando |
 |---|---|---|
-| Filippo | Condivide la pagina del team e questo piano nel gruppo | Giorgia e Sian li aprono |
-| Tutti | Accettano l'invito GitHub e completano `docs/SETUP.md` | `check_env.sh` → 0 to fix, screenshot nel gruppo |
-| Tutti | Leggono `research/problems/candidates.md` e scelgono i loro 2 preferiti, con il perché | Voto pronto per domani |
-| Tutti | Corso AI, parte 1 (concetti 1–3 della pagina, ~1h30) | Ognuno ha fatto girare una chiamata LLM con risposta in JSON |
-| Claude | Modelli di business plan, pitch, registro dati; note sulla giuria | File nella repo |
+| Filippo | Condivide pagina, piano, `docs/AI_ONBOARDING.md` nel gruppo | Giorgia e Sian li aprono |
+| Giorgia, Sian | Aprono Claude Code nella repo e gli fanno leggere `docs/AI_ONBOARDING.md`: setup + canale AI | `check_env.sh` → 0 to fix, status nel canale |
+| Tutti | Leggono la rosa dei problemi, scrivono la propria opinione | File in `.coord/agents/<nome>/work/opinione-problemi.md` |
+| Tutti | Studio serale con il PDF di teoria | — |
+| Filippo | Lancia le Deep Research su A e D | Report in `research/market/` |
 
-## 3. Venerdì 13
+## 3. Venerdì 13 — capire, provare, decidere
 
-| Ora | Filippo | Giorgia | Sian |
+| Ora | Filippo (regia) | Giorgia (architettura e prodotto) | Sian (idea, business, pitch, dati) |
 |---|---|---|---|
-| 09:00–09:30 | **Call: scelta del problema** principale + riserva (Sian conduce, voto sui criteri) | ← | ← |
-| 09:30–11:30 | Mercato e bozza business plan (`business/`) | Raccolta e analisi dati (`research/data/`) | Storia del problema, persona, copione demo v0 (`pitch/`) |
-| 11:30–12:00 | **Sync**: ognuno mostra cosa ha, si decide cosa mostrare nella demo | ← | ← |
-| 12:00–14:00 | Pausa + corso AI parte 2 (concetti 4–7) | ← | ← |
-| 14:00–16:30 | **Test di fattibilità nelle condizioni di sabato** (2h30, stessi ruoli). Filippo: tempi, integrazione, prova il flusso | Cuore tecnico: estrazione ontologia, memoria con versioni | Interfaccia demo e grafo |
-| 16:30–17:00 | Simulazione verifica finanziaria (Filippo presenta i numeri, gli altri attaccano) | ← | ← |
-| 17:00–17:30 | Simulazione pitch 3 minuti (Sian), cronometrato | ← | ← |
-| 17:30–18:00 | **Bilancio**: cosa ha funzionato, cosa cambiare. Architettura definitiva e divisione dei file | ← | ← |
-| Sera | Business plan v1, 3 slide del checkpoint | Elenco dei prompt e degli schemi che funzionano | Slide del pitch v1 |
-| | **A letto presto.** Domani si vince con la testa lucida. | | |
+| 09:00–09:20 | **Call di avvio:** opinioni a confronto, si tengono 2–3 candidati | ← | ← |
+| 09:20–12:30 | Dati disponibili per ogni candidato; sintesi per la decisione | Test di fattibilità di 30 min per candidato (`prototype/`) | Mercato, cliente, concorrenti per candidato; **trovare una persona del settore da sentire** |
+| 12:30–13:30 | Pausa | ← | ← |
+| 13:30–14:00 | **DECISIONE con limite fisso:** principale + riserva, voto sui 5 criteri. Senza accordo decide Filippo | ← | ← |
+| 14:00–17:00 | Integrazione, dati, regia; prova del flusso completo | Test di fattibilità serio sul problema scelto | Business plan v1, storia, copione demo, 3 nomi per il prodotto |
+| 17:00–17:30 | Simulazione verifica finanziaria (gli altri attaccano i numeri) | ← | ← |
+| 17:30–18:30 | **Architettura definitiva e divisione dei file**; bilancio | Guida | ← |
+| Sera | Organizzazione di sabato, controllo istruzioni KVA | Note sui prompt e schemi che funzionano | Slide checkpoint + pitch v1; **2 prove del pitch** cronometrate |
+| | **A letto entro mezzanotte.** | | |
 
 ### Pronti per sabato se venerdì sera:
 
 - [ ] Problema principale e riserva scelti, con fonti
+- [ ] Almeno una persona del settore sentita (o una citazione vera)
 - [ ] Business plan v1 con cliente, prezzo, mercato, concorrenti
 - [ ] Dati della demo nella repo, con fonte e licenza
-- [ ] Il test di fattibilità ha dimostrato che la parte difficile funziona (o abbiamo cambiato approccio)
+- [ ] Il test ha dimostrato che la parte difficile funziona (o abbiamo cambiato approccio)
 - [ ] Architettura decisa, ogni persona sa quali file tocca
-- [ ] Copione demo + 3 slide checkpoint + slide pitch v1
-- [ ] Tutti con `check_env.sh` verde
+- [ ] Nome del prodotto, copione demo, 3 slide checkpoint, slide pitch v1, pitch provato 2 volte
+- [ ] Tutti con `check_env.sh` verde e canale AI collegato
 
-**Regola sul codice:** il prototipo di venerdì resta in `prototype/` ed è usa e getta. Sabato il prodotto si scrive da zero in `src/`; quello che ci portiamo dietro sono le conoscenze, i prompt e i dati. È quello che il regolamento chiede.
+**Regola sul codice:** il prototipo di venerdì resta in `prototype/` ed è usa e getta. Sabato il prodotto si scrive da zero in `src/`; ci portiamo dietro conoscenze, prompt e dati. È quello che il regolamento chiede.
 
 ## 4. Sabato 14
 

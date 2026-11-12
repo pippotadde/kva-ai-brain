@@ -1,72 +1,73 @@
 # Tutto quello che va fatto prima della gara
 
-Lista completa, in ordine di scadenza. Spuntate qui (commit) o nel gruppo.
-**F** = Filippo, **G** = Giorgia, **S** = Sian, **C** = Claude (lo faccio io su richiesta di Filippo).
+Lista completa, in ordine di scadenza. **F** = Filippo (regia, tutto), **G** = Giorgia (architettura e prodotto), **S** = Sian (idea, business, pitch, dati), **C** = il Claude di Filippo (regista).
+Il dettaglio ora per ora è in `docs/PLAN.md`; il contesto completo per le AI in `docs/AI_ONBOARDING.md`.
 
-## Giovedì 12 — stasera
+## Giovedì 12 — stasera: preparazione
 
 ### Organizzazione
-- [ ] **F** Condividere la pagina del team (menu Share) e mandare il link nel gruppo
-- [ ] **F** Fissare la call di venerdì alle 09:00 (link Meet/Discord nel gruppo)
-- [ ] **F** Decidere dove ci troviamo sabato (casa di chi, indirizzo, orario 09:00)
+- [ ] **F** Condividere la pagina del team (menu Share) e mandare nel gruppo: link pagina, invito GitHub, istruzione "fate leggere `docs/AI_ONBOARDING.md` al vostro Claude"
+- [ ] **F** Fissare la call di venerdì alle 09:00 (link nel gruppo)
+- [ ] **F** Decidere dove ci troviamo sabato (casa di chi, indirizzo, ore 09:00)
 - [ ] **G S** Accettare l'invito GitHub: https://github.com/pippotadde/kva-ai-brain/invitations
-- [ ] **F G S** Accedere alla dashboard KVA (il regolamento chiede di farlo entro 7 giorni dalla conferma)
+- [ ] **F G S** Accedere alla dashboard KVA (obbligatorio entro 7 giorni dalla conferma)
 
-### Ambiente
-- [ ] **F G S** Seguire `docs/SETUP.md` → `bash scripts/check_env.sh` con **0 to fix** → screenshot nel gruppo
-- [ ] **F G S** Ognuno crea la propria chiave Gemini (così ne abbiamo 3 di riserva)
+### Ambiente e canale AI
+- [ ] **G S** Clonare la repo e far leggere `docs/AI_ONBOARDING.md` al proprio Claude: setup completo + `coord.sh init <nome>`
+- [ ] **F G S** `bash scripts/check_env.sh` → **0 to fix**, screenshot nel gruppo
+- [ ] **F G S** Ognuno crea la propria chiave Gemini (3 chiavi = riserva)
 
-### Problema
-- [ ] **F G S** Leggere `research/problems/candidates.md`, scegliere i propri 2 preferiti con il perché
-- [ ] **F** Lanciare 2 Deep Research su Gemini (prompt pronti in `docs/research-prompts.md`), problemi A e D
-- [ ] **G** (facoltativo) Stessi prompt su ChatGPT Deep Research, per confrontare le fonti
+### Problemi
+- [ ] **F G S** Leggere `research/problems/candidates.md`, scrivere la propria opinione (2 preferiti e perché) in `.coord/agents/<nome>/work/opinione-problemi.md`
+- [ ] **F** Lanciare 2 Deep Research su Gemini (prompt in `docs/research-prompts.md`), problemi A e D
+- [ ] **G** (facoltativo) Stessi prompt su ChatGPT Deep Research, per confrontare
 
 ### Studio
-- [ ] **F G S** Corso AI parte 1 (concetti 1–3 della pagina), ~1h30, con un esempio fatto girare
+- [ ] **F G S** PDF di teoria serale (AI, industria, business: parole chiave e concetti) — in arrivo in `docs/`
 
-## Venerdì 13
+## Venerdì 13 — capire, provare, decidere
 
-### Mattina
-- [ ] **F G S** 09:00 call: scelta problema principale + riserva (si decide sui criteri della giuria)
-- [ ] **C** Subito dopo: dossier completo sul problema scelto (mercato, concorrenti, numeri, fonti)
-- [ ] **F** Ricerca di mercato + `business/business-plan.md` v0
-- [ ] **G** Raccolta dati per la demo + `research/data/README.md` compilato
-- [ ] **S** Persona, storia del problema, copione demo v0 in `pitch/pitch-script.md`
-- [ ] **S** Proporre 3 nomi per il prodotto (corto, pronunciabile, dice cosa fa)
-- [ ] **F G S** Glossario del settore scelto: 20 termini che dobbiamo saper usare
-- [ ] **F G S** 11:30 sync di 30 minuti
+### Mattina (09:00–12:30)
+- [ ] **F G S** 09:00 call di avvio: opinioni a confronto, si tengono 2–3 candidati
+- [ ] **G** Test di fattibilità di 30 minuti per candidato → `prototype/<lettera>/NOTES.md`
+- [ ] **S** Mercato, cliente, concorrenti per candidato → `.coord/agents/sian/work/<lettera>-business.md`
+- [ ] **S** Trovare **una persona del settore** da sentire 10 minuti (contatti, professori PoliTo, LinkedIn)
+- [ ] **F** Dati disponibili per candidato + tabella di sintesi per la decisione
+- [ ] **C** Dossier completo sui candidati con le Deep Research verificate
+
+### Decisione (13:30–14:00, limite fisso)
+- [ ] **F G S** Problema principale + riserva, votando sui 5 criteri della giuria. Senza accordo decide Filippo
+- [ ] **F** Registrare la decisione: `coord.sh decide`
 
 ### Pomeriggio
-- [ ] **F G S** Corso AI parte 2 (concetti 4–7)
-- [ ] **F G S** 14:00–16:30 test di fattibilità nelle condizioni di sabato (in `prototype/`)
-- [ ] **F** 16:30 simulazione verifica finanziaria (gli altri attaccano i numeri)
-- [ ] **S** 17:00 simulazione pitch cronometrata
-- [ ] **F G S** 17:30 bilancio + architettura definitiva + chi tocca quali file
-- [ ] **G** Scrivere l'architettura in `docs/architecture.md` (1 pagina, uno schema)
+- [ ] **G** Test di fattibilità serio sul problema scelto
+- [ ] **S** `business/business-plan.md` v1 con fonti; storia del problema; copione demo v0; 3 nomi per il prodotto
+- [ ] **F** Dati della demo raccolti e registrati in `research/data/README.md`; prova del flusso completo
+- [ ] **F G S** Glossario del settore: 20 termini in `.coord/shared/glossario.md` (owner Sian)
+- [ ] **F G S** 17:00 simulazione verifica finanziaria (gli altri attaccano i numeri)
+- [ ] **F G S** 17:30 architettura definitiva e divisione dei file → `docs/architecture.md` (owner Giorgia)
 
 ### Sera
-- [ ] **F** Business plan v1 completo, numeri con fonti
-- [ ] **S** 3 slide per il checkpoint delle 12:30 + slide del pitch v1 (Google Slides condiviso)
-- [ ] **G** Elenco dei prompt e degli schemi che hanno funzionato nel test (`prototype/NOTES.md`)
-- [ ] **F G S** Una risposta da 20 secondi a ciascuna domanda probabile della giuria (`docs/jury.md`)
-- [ ] **F G S** Decidere cosa scegliere se vinciamo: opzione A (€1.500, si cede il progetto) o B (società, KVA investe per il 15%). La giuria può chiederlo.
-- [ ] **F** Controllare email e dashboard KVA: istruzioni per i checkpoint, crediti AI, link della videochiamata
-- [ ] **F G S** Caricare il portatile, preparare caricatore, cuffie con microfono, ciabatta
+- [ ] **S** 3 slide checkpoint 12:30 + slide pitch v1 (Google Slides condiviso)
+- [ ] **F G S** **2 prove del pitch** cronometrate
+- [ ] **F G S** Una risposta da 20 secondi per ogni domanda probabile (`docs/jury.md`)
+- [ ] **F G S** Opzione del premio in caso di vittoria: A (€1.500, si cede il progetto) o B (società, KVA investe per il 15%)
+- [ ] **F** Controllare email e dashboard KVA: istruzioni checkpoint, crediti AI, link della call
+- [ ] **F G S** Caricare portatili, preparare caricatore, cuffie con microfono, ciabatta
 - [ ] **F G S** A letto entro mezzanotte
 
 ## Sabato 14 — prima delle 09:30
 
 - [ ] **F G S** 09:00 ritrovo, Wi-Fi + hotspot del telefono provati
-- [ ] **F G S** `git pull` e `check_env.sh` verde su tutti i computer
-- [ ] **F** Controllare che nella repo non ci siano chiavi, poi renderla pubblica (comando in `docs/PLAN.md`)
-- [ ] **F** Aggiungere il file `LICENSE` (proposta: MIT) — il regolamento chiede di scegliere una licenza
-- [ ] **F G S** Prova di condivisione schermo e audio nella piattaforma della call KVA
-- [ ] **G** Programma per registrare lo schermo pronto (Windows: Win+G; Ubuntu: Ctrl+Alt+Shift+R) per il video di riserva
+- [ ] **F G S** `git pull`, `check_env.sh` verde, `coord.sh watch` acceso su tutti i computer
+- [ ] **F** Controllare che non ci siano chiavi nella repo, poi renderla pubblica (comando in `docs/PLAN.md`)
+- [ ] **F** Aggiungere il file `LICENSE` (proposta: MIT)
+- [ ] **F G S** Prova di condivisione schermo e audio nella call KVA
+- [ ] **G** Registratore dello schermo pronto per il video di riserva (Windows: Win+G; Ubuntu: Ctrl+Alt+Shift+R)
 - [ ] **S** Blocco note pronto per i talk delle 10:15
 
 ## Durante la gara
-
-Segue la scaletta della pagina del team. Le consegne obbligatorie:
 - [ ] 12:30 materiale del checkpoint (secondo le istruzioni KVA)
-- [ ] 16:00 video di riserva della demo registrato
+- [ ] 16:00 stop funzioni nuove, video di riserva registrato
+- [ ] 1 prova del pitch prima delle 17:00
 - [ ] Consegna finale: repo pubblica, README con descrizione, come avviarlo e **strumenti AI usati**
