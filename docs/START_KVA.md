@@ -1,13 +1,15 @@
 # START KVA — file da dare al proprio Claude
 
-> **Per la persona (Giorgia o Sian).** L'unica cosa da fare a mano è installare Claude Code dentro Linux; il resto lo fa lui.
+> **Per la persona (Giorgia o Sian).** Il resto lo fa Claude; tu scegli solo dove farlo lavorare.
 >
-> **Solo su Windows (Sian):** prima controlla se hai già WSL: apri PowerShell e scrivi `wsl -l -v`.
+> **Se usi Windows: consigliamo WSL (Linux dentro Windows), ma non è obbligatorio.** Con WSL gli script del team funzionano senza sorprese e il progetto resta separato dalle tue cose. Se preferisci restare sull'app di Claude Code che usi già, va bene: salta questa parte, apri l'app su una cartella nuova e vuota (non in OneDrive), mettici questo file e scrivi la frase in fondo. Il tuo Claude si adatterà.
+>
+> **Per usare WSL:** prima controlla se ce l'hai già: apri PowerShell e scrivi `wsl -l -v`.
 > - Se compare una riga con **Ubuntu**: ce l'hai già, apri "Ubuntu" dal menu Start e salta al passo successivo.
 > - Se dà errore o la lista è vuota: apri PowerShell **come amministratore** (tasto destro → "Esegui come amministratore"), scrivi `wsl --install -d Ubuntu-24.04`, **riavvia il computer**, poi apri "Ubuntu" dal menu Start e scegli un nome utente e una password (servirà come password `sudo`). Ci vogliono circa 10–15 minuti.
 > - Se l'installazione si lamenta della "virtualizzazione": va attivata nel BIOS; scrivi nel gruppo e ci guardiamo insieme.
 >
-> Da qui in poi usa **sempre il terminale Ubuntu**, mai PowerShell: gli script del team funzionano solo in Linux.
+> Con WSL, da qui in poi usa il terminale Ubuntu per il progetto.
 >
 > **Poi (Ubuntu e WSL), nel terminale:**
 > ```bash
@@ -25,6 +27,10 @@
 ---
 
 > **Per Claude:** sei il Claude di una persona del team KVA (Filippo, Giorgia, Sian: 3 studenti PoliTo) che sabato 14.11.2026 partecipa all'hackathon "AI brain for industry" di Kakashi Venture Accelerator, con l'obiettivo di vincere. Parla con la persona in italiano; codice, commenti e commit in inglese. La repo del team è privata e la persona non l'ha ancora sul computer: il tuo compito è portarla dentro e farla partire. Fai tu tutto il lavoro meccanico; chiedi solo quello che solo la persona può fare.
+
+## 0. Rispetta il computer della persona
+
+Lavora solo nella cartella del progetto; non toccare altri file né impostazioni del sistema. Prima di ogni installazione di' in una riga cosa installi e perché. **Non installare WSL** se la persona non l'ha scelto: se lavori su Windows senza WSL (shell Git Bash dell'app), adatta i comandi (per esempio `winget install --id GitHub.cli -e`, `winget install --id astral-sh.uv -e`) e segnala a Filippo nel messaggio finale cosa non funziona. Se serve qualcosa da amministratore, chiedi prima.
 
 ## 1. Strumenti di base
 
