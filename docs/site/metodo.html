@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Scegliere l'idea · Team KVA</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><span class="brand">Team KVA</span><a href="index.html">Inizio</a><a href="generale.html">Generale</a><a href="problemi.html">Problemi</a><a href="metodo.html" aria-current="page">Scegliere l'idea</a><a href="lettura.html">Lettura serale</a></nav>
+  <div class="eyebrow">Metodo · per tutti, anche alla prima idea</div>
+  <h1>Scegliere l'idea</h1>
+  <p class="lede">Come si trova un'idea, come si scartano quelle deboli e come si sceglie quella vincente. Sette passi in ordine.</p>
+
+  <section>
+    <h2>Perché conta così tanto</h2>
+    <p>Sabato abbiamo solo <b>2 ore e mezza</b> per costruire. La scelta dell'idea decide almeno <b>tre criteri su cinque</b> del voto (tema, problema reale, business): con un'idea debole nemmeno un codice perfetto vince. Per questo la scegliamo prima, con un metodo, e non "a sensazione".</p>
+    <div class="tbl"><table>
+      <tr><th>Passo</th><th>Cosa si fa</th><th>Chi</th></tr>
+      <tr><td>1 · Capire chi giudica</td><td>Leggere i segnali di KVA qui sotto</td><td>Tutti</td></tr>
+      <tr><td>2 · Trovare idee</td><td>Ognuno porta 1–2 idee scritte nella scheda</td><td>Tutti</td></tr>
+      <tr><td>3 · Filtro sì/no</td><td>Sei domande; un "no" e l'idea esce</td><td>Tutti</td></tr>
+      <tr><td>4 · Voto</td><td>Pagella della giuria + i due assi decisivi di KVA</td><td>Ognuno da solo, poi media</td></tr>
+      <tr><td>5 · Business</td><td>Chi soffre, chi paga, quanto</td><td>Sian guida</td></tr>
+      <tr><td>6 · Architettura, tempo, costi</td><td>Entra nello scheletro? Si fa in 2h30?</td><td>Giorgia guida</td></tr>
+      <tr><td>7 · Decidere</td><td>Una principale + una di riserva</td><td>In call, tutti</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>1 · Cosa interessa a chi giudica</h2>
+    <p>Abbiamo letto tutto quello che KVA ha pubblicato: sito, bandi, prodotti, paper, codice. Questi sono i segnali più utili. Dettagli e fonti in <code>research/kva-interests.md</code>.</p>
+    <div class="tbl"><table>
+      <tr><th>Cosa abbiamo trovato</th><th>Cosa significa per noi</th></tr>
+      <tr><td><b>9 giorni fa</b> i due fondatori hanno presentato <b>Gergo</b>: un cobot in fabbrica che l'operatore allena a voce, in italiano, con versioni approvate e registro di ogni azione. Motto: <i>"Il modello capisce. Il codice decide."</i></td><td>Stanno guardando <b>dentro la fabbrica</b>, adesso. Idee sul lavoro di reparto (operatori, tecnici, qualità) parlano la loro lingua. Ma non va rifatto Gergo.</td></tr>
+      <tr><td>Bando aperto <b>"AI per industria e manifattura"</b> (fino a 75 k€): chiedono un risultato <b>misurabile in reparto</b>: tempo ciclo, scarti, fermi, costi. Tra i temi c'è il <b>"know-how di stabilimento"</b>.</td><td>La nostra idea deve muovere <b>un numero di reparto</b>, non "far risparmiare tempo" in generale.</td></tr>
+      <tr><td>Bando <b>"Physical AI e robotica"</b>: robot, visione, sensori, <b>sicurezza</b>.</td><td>Sicurezza di persone e macchine è un tema che riconoscono.</td></tr>
+      <tr><td>Il loro prodotto <b>OIDA</b> e i loro paper: regola superata, contraddizione, fonte esatta, "non ho abbastanza prove".</td><td>Queste quattro cose devono <b>vedersi nella demo</b>.</td></tr>
+      <tr><td>Clienti e prodotti venduti: quasi solo <b>banche e assicurazioni</b>.</td><td>L'industria è dove vogliono andare ma sono scoperti. Lì portiamo qualcosa di nuovo.</td></tr>
+      <tr><td>Premio: cedere il progetto a KVA <b>oppure</b> fondare una società con KVA al 15%; per 12 mesi hanno la prelazione.</td><td>Cercano <b>un'azienda da costruire</b>. Il business case va preso sul serio.</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>2 · Come trovare idee</h2>
+    <p>Un'idea buona per questa gara è sempre la stessa forma: <b>in un'industria, qualcuno prende decisioni sulla base di informazioni che cambiano nel tempo, e oggi sbaglia o perde tempo perché non sa quale versione vale.</b> Cinque strade per trovarla:</p>
+    <div class="prob">
+      <h3>A · Parti da una persona al lavoro</h3>
+      <p>Pensa a un mestiere in fabbrica, in un cantiere, in un'officina, in un laboratorio: manutentore, capoturno, responsabile qualità, addetto sicurezza, tecnico di collaudo. Chiediti: <i>quale domanda si fa ogni settimana a cui è difficile rispondere?</i> ("Posso spedire questo lotto?", "Con che parametri riparto?", "Chi è abilitato su questa macchina?")</p>
+    </div>
+    <div class="prob">
+      <h3>B · Cerca le cose che si sostituiscono</h3>
+      <p>Ovunque esistano <b>versioni</b>: procedure, disegni, ricette, norme, deroghe, certificati, turni, configurazioni. Dove c'è una "revisione B che sostituisce la A" c'è il tema della gara.</p>
+    </div>
+    <div class="prob">
+      <h3>C · Parti da quello che KVA chiede</h3>
+      <p>Prendi un tema dei loro bandi (pianificazione, qualità, manutenzione, energia, supply chain, sicurezza, know-how di stabilimento) e chiediti che decisioni si prendono lì e dove si perde la memoria.</p>
+    </div>
+    <div class="prob">
+      <h3>D · Parti da quello che conosciamo noi</h3>
+      <p>Il "diritto di vincere" è decisivo. Un'azienda di famiglia, un tirocinio, un corso, un progetto studentesco, un parente che lavora in un settore: una frase vera di chi fa quel lavoro vale più di dieci report.</p>
+    </div>
+    <div class="prob">
+      <h3>E · Parti dai dati che esistono</h3>
+      <p>Se esistono documenti pubblici con versioni (norme, direttive tecniche, schede di sicurezza, richiami di prodotto), l'idea è più facile da dimostrare. Se no, si inventano dati realistici e lo si dice.</p>
+    </div>
+    <p class="tip"><b>Trucco con l'AI:</b> chiedi al tuo Claude "elencami 10 decisioni che prende ogni settimana un [mestiere] in un [settore], e per ognuna quali documenti consulta e quanto spesso cambiano". Poi scegli quella che fa più male.</p>
+
+    <h3>La scheda dell'idea (da compilare per ogni idea)</h3>
+    <div class="tbl"><table>
+      <tr><th>Campo</th><th>Esempio (idea I · cambi formato)</th></tr>
+      <tr><td><b>In una frase</b><br><span class="muted">Per [chi] che [problema], [prodotto] che [cosa fa], a differenza di [oggi].</span></td><td>Per il capoturno di una linea di confezionamento che a ogni cambio formato non sa quali parametri valgono, un registro che dà il valore valido con la fonte e il perché, a differenza del foglio Excel e del quaderno di turno che si contraddicono.</td></tr>
+      <tr><td><b>Chi soffre</b> (un mestiere preciso)</td><td>Capoturno, tecnico di linea</td></tr>
+      <tr><td><b>Chi paga</b></td><td>Direttore di stabilimento o responsabile produzione</td></tr>
+      <tr><td><b>Il numero che migliora</b></td><td>Minuti per cambio formato, scarti al riavvio</td></tr>
+      <tr><td><b>Cosa cambia nel tempo</b></td><td>Parametri ritoccati, con chi, quando e perché</td></tr>
+      <tr><td><b>Il momento "wow" della demo</b></td><td>Il sistema trova che il quaderno contraddice il foglio ufficiale e dice quale vale, citando la riga</td></tr>
+      <tr><td><b>Dati</b></td><td>Inventati ma realistici (schede parametri, note di turno)</td></tr>
+      <tr><td><b>Perché noi</b></td><td>Da trovare: chi conosciamo che lavora su una linea?</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2>3 · Filtro sì/no</h2>
+    <p>Prima di dare voti, sei domande. <b>Basta un "no" e l'idea esce</b> (o si modifica finché diventa "sì").</p>
+    <ol>
+      <li><b>Industria?</b> Fabbrica, energia, aerospazio, logistica, cantieri, farmaceutico. Non banca, assicurazione, media: lì KVA ha già i suoi prodotti.</li>
+      <li><b>Memoria o ontologia sono il cuore?</b> Senza "cosa vale adesso, perché, collegato a cosa" l'idea non è in tema.</li>
+      <li><b>Una persona precisa e un numero?</b> Sappiamo dire chi soffre e quale numero di reparto migliora.</li>
+      <li><b>Dati in un'ora?</b> Pubblici o inventati in modo credibile.</li>
+      <li><b>Entra nello scheletro (passo 6) e si fa in 2h30?</b></li>
+      <li><b>Non è una copia?</b> Non è OIDA in generale, non è Gergo, non è "un chatbot sui manuali".</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>4 · Il voto</h2>
+    <p>Due pagelle. Ognuno vota <b>da solo</b>, poi si fa la media; dove i voti differiscono di 2 o più punti si discute.</p>
+    <h3>Pagella della giuria (voti 1–5)</h3>
+    <div class="tbl"><table>
+      <tr><th>Criterio</th><th class="num">Peso</th><th>5 vuol dire…</th><th>1 vuol dire…</th></tr>
+      <tr><td>Tema</td><td class="num">25%</td><td>Regola superata, contraddizione, fonte e "non lo so" si vedono funzionare</td><td>È una ricerca nei documenti</td></tr>
+      <tr><td>Fattibilità</td><td class="num">25%</td><td>Il cuore si fa in 1h30, il resto è margine</td><td>Serve tutto il tempo e qualcosa di nuovo per noi</td></tr>
+      <tr><td>Problema reale</td><td class="num">25%</td><td>Numero con fonte, persona vera che conferma</td><td>Sembra un problema, nessuna prova</td></tr>
+      <tr><td>Business</td><td class="num">20%</td><td>Sappiamo chi paga, quanto, quanti clienti</td><td>"Lo vorrebbero tutti"</td></tr>
+      <tr><td>Demo</td><td class="num">5%</td><td>Si capisce in 30 secondi</td><td>Serve spiegare il settore per 3 minuti</td></tr>
+    </table></div>
+    <p>Totale = 0,25·Tema + 0,25·Fattibilità + 0,25·Reale + 0,20·Business + 0,05·Demo. In caso di pareggio vince il voto più alto sul tema (come nella gara).</p>
+    <h3>I due assi decisivi di KVA (voti 1–5)</h3>
+    <div class="tbl"><table>
+      <tr><th>Asse</th><th>Domanda</th></tr>
+      <tr><td><b>Leva di automazione</b></td><td>Quanto del lavoro di quella persona fa davvero il sistema? (cercare, confrontare versioni, controllare, rispondere)</td></tr>
+      <tr><td><b>Diritto di vincere</b></td><td>Perché proprio noi? Conoscenza, contatti, dati, una demo che nessun altro ha.</td></tr>
+    </table></div>
+    <p class="note">KVA lo dice chiaro: <b>se uno dei due manca, l'idea non passa.</b> Regola per noi: sotto 3 su uno dei due, l'idea esce anche se il totale è alto. Gli altri tre assi (quante persone fanno quel lavoro, quanto poco è stato innovato, ostacoli superabili) servono a scegliere tra idee pari.</p>
+  </section>
+
+  <section>
+    <h2>5 · Il business: per chi lo risolviamo</h2>
+    <p>Cinque domande. Se non sappiamo rispondere, l'idea non è ancora pronta.</p>
+    <ol>
+      <li><b>Chi soffre?</b> Il mestiere che usa il prodotto ogni giorno.</li>
+      <li><b>Chi decide di comprare e chi paga?</b> Spesso è un'altra persona (direttore di stabilimento, responsabile qualità, un integratore o consulente che serve molte aziende).</li>
+      <li><b>Quanto costa oggi il problema?</b> In ore, euro di scarti o fermi, sanzioni, rischi. Con fonte, o "stima nostra" con il calcolo.</li>
+      <li><b>Quanti clienti così esistono?</b> Dal basso: numero di aziende × prezzo annuo.</li>
+      <li><b>Perché adesso?</b> Una norma nuova, una scadenza, la pensione dei tecnici esperti, l'AI che finalmente legge bene i documenti.</li>
+    </ol>
+    <p class="tip">Sabato alle 16:30 c'è la verifica del business, e i giurati sono investitori: vogliono vedere un'azienda, non un esercizio.</p>
+  </section>
+
+  <section>
+    <h2>6 · Architettura, tempo e costi</h2>
+    <p>Ogni idea buona deve entrare in questo <b>scheletro unico</b>. Se entra, Giorgia sa già come costruirla; se non entra, è un campanello d'allarme.</p>
+    <div class="tbl"><table>
+      <tr><th>Pezzo</th><th>Cosa fa</th><th>Chi decide</th></tr>
+      <tr><td>1 · Documenti</td><td>Procedure, schede, note, email, con data e autore</td><td>—</td></tr>
+      <tr><td>2 · Estrazione</td><td>L'AI legge e tira fuori "pezzi di conoscenza" con un tipo (decisione, osservazione, ipotesi…) e il punto esatto del testo da cui vengono</td><td>AI</td></tr>
+      <tr><td>3 · Mappa (ontologia)</td><td>I pezzi si collegano alle cose del settore: macchina, linea, pezzo, persona, procedura</td><td>Schema scritto da noi</td></tr>
+      <tr><td>4 · Regole</td><td>Codice normale decide cosa vale adesso: cosa ha sostituito cosa, cosa è scaduto, cosa si contraddice</td><td><b>Codice, non AI</b></td></tr>
+      <tr><td>5 · Risposta</td><td>L'agente risponde citando la fonte, oppure dice "non ho abbastanza prove"</td><td>AI + regole</td></tr>
+      <tr><td>6 · (Plus) MCP</td><td>La memoria si può interrogare anche da Claude</td><td>—</td></tr>
+    </table></div>
+    <p><b>Prova dei tre momenti:</b> la demo dell'idea deve poter mostrare (1) una regola superata, (2) una contraddizione trovata, (3) un "non lo so" onesto. Se uno dei tre non ha senso nel settore, il voto sul tema scende.</p>
+    <h3>Tempo (2h30 di costruzione)</h3>
+    <ul>
+      <li><b>Prima di sabato si può preparare:</b> l'idea, i dati, lo schema della mappa sulla carta, il copione della demo, i numeri del business. Il codice del prodotto si scrive sabato.</li>
+      <li><b>Sabato:</b> circa 1h30 per il cuore (pezzi 2–5), 30 minuti per la schermata della demo, 30 minuti di margine. Se il cuore non sta in 1h30, l'idea è troppo grande: si taglia.</li>
+    </ul>
+    <h3>Costi</h3>
+    <ul>
+      <li><b>Per noi sabato:</b> KVA dà crediti AI; con pochi documenti la spesa è di pochi euro.</li>
+      <li><b>Per il cliente (nel pitch):</b> stimare il costo per azienda all'anno (AI + server) e confrontarlo con il prezzo e con il costo del problema. Deve essere una piccola frazione.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7 · Decidere</h2>
+    <ol>
+      <li>Ognuno porta <b>1–2 schede</b> compilate (anche partendo dalle proposte nella pagina Problemi).</li>
+      <li>Si passano tutte nel <b>filtro sì/no</b> insieme: 10 minuti.</li>
+      <li>Ognuno dà i <b>voti da solo</b>, poi media e discussione delle differenze: 20 minuti.</li>
+      <li>Le prime due: per ognuna si prova a dire il <b>pitch in 30 secondi</b> e la <b>demo in 3 momenti</b>. Quella che regge meglio vince.</li>
+      <li>Si sceglie <b>una principale e una di riserva</b>. Chi guida l'area ha l'ultima parola: Sian sull'idea e il business, Giorgia sulla fattibilità.</li>
+    </ol>
+    <h3>Errori da evitare</h3>
+    <ul>
+      <li>Scegliere l'idea più "bella" invece di quella che si dimostra in 3 minuti.</li>
+      <li>Un settore che nessuno di noi sa raccontare.</li>
+      <li>Promettere nel pitch cose che la demo non fa: dire sempre cosa è vero oggi e cosa è un'ipotesi.</li>
+      <li>Numeri senza fonte.</li>
+      <li>Cambiare idea sabato pomeriggio.</li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>

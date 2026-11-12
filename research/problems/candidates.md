@@ -126,6 +126,37 @@ Meno legati a memoria e ontologie, o con demo poco visiva. Li tengo come riserva
 - Qualcuno conosce persone che lavorano in un'officina aeronautica, in un ufficio sicurezza (RSPP) o nel farmaceutico? Una frase vera di un esperto vale moltissimo nel pitch.
 - Che settore ha l'azienda della famiglia di Filippo? Se è manifatturiera, D diventa ancora più forte.
 
+---
+
+## Nuove proposte (12.11 sera, dai segnali KVA)
+
+Nate da `research/kva-interests.md`: l'ultimo progetto dei fondatori (Gergo, cobot in fabbrica), il bando "AI per industria e manifattura" (KPI di reparto, "know-how di stabilimento") e i tipi epistemici di OIDA. Voti preliminari, da rifare con il metodo della pagina "Scegliere l'idea".
+
+| # | Problema | Tema | Fattib. | Reale | Business | Demo | **Totale /5** |
+|---|---|---|---|---|---|---|---|
+| I | Memoria dei cambi formato e delle ricette di linea | 5 | 4 | 4 | 4 | 5 | **4,30** |
+| J | Deroghe e non conformità di qualità che scadono e si sostituiscono | 5 | 4 | 4 | 4 | 4 | **4,25** |
+| K | Diario di manutenzione con osservazioni, ipotesi e decisioni | 5 | 4 | 4 | 3 | 4 | **4,05** |
+
+### I. Memoria dei cambi formato e delle ricette di linea
+
+**Il problema.** In food, packaging e cosmetica una linea cambia prodotto più volte al giorno. Ogni cambio usa parametri (temperature, velocità, pressioni) che negli anni sono stati ritoccati da tecnici e capiturno: il foglio ufficiale dice una cosa, il quaderno del turno un'altra, il motivo della modifica è nella testa di qualcuno. Risultato: avvii lenti, scarti al riavvio, stesse prove ripetute.
+**Il prodotto.** Registro di ogni parametro con chi l'ha cambiato, quando, perché, cosa ha sostituito; il sistema segnala le contraddizioni (foglio vs quaderno) e, alla domanda "con che parametri parto con il formato X sulla linea 2?", risponde con il valore valido, la fonte esatta, oppure "evidenze insufficienti".
+**Perché a KVA.** Stesso segmento di Gergo (PMI con cambi formato frequenti), KPI richiesti dal loro bando (tempo di cambio, scarti), "know-how di stabilimento". Si collega a Gergo senza rifarlo.
+**Rischi.** Dati inventati (realistici ma finti); serve una frase vera di un tecnico.
+
+### J. Deroghe e non conformità di qualità
+
+**Il problema.** Quando un pezzo non è conforme al disegno, la qualità decide: scarto, rilavorazione o **deroga** (si accetta così, per un lotto, fino a una data). Le deroghe scadono, vengono rinnovate o superate da una nuova revisione del disegno; nessuno sa con certezza quali valgono oggi. In aerospazio e automotive un errore qui è un richiamo.
+**Il prodotto.** Ontologia Pezzo → Revisione disegno → Non conformità → Deroga (con validità) → Lotto; risolutore deterministico "questo lotto si può spedire?" con citazione, rilevando deroghe scadute o in conflitto con la nuova revisione.
+**Perché a KVA.** Supersession, validità nel tempo e contraddizioni allo stato puro, in industria; KPI scarti e richiami.
+
+### K. Diario di manutenzione con stati epistemici
+
+**Il problema.** Il diario di turno contiene frasi come "rumore strano al cuscinetto" (osservazione), "forse è l'allineamento" (ipotesi), "sostituito il giunto" (decisione). Oggi sono testo libero: il turno dopo non sa cosa è stato verificato e cosa no.
+**Il prodotto.** L'AI classifica ogni frase con i tipi di OIDA (osservazione, ipotesi, evidenza, decisione, domanda aperta), collega alla macchina, e le **domande aperte diventano più urgenti col tempo**. Versione migliorata di E.
+**Rischio.** Tocca da vicino la loro teoria: bisogna mostrare il dominio (macchine, guasti), non la teoria.
+
 ## Fonti
 
 - Regolamento Macchine: [TÜV SÜD](https://www.tuvsud.com/en-us/knowledge-hub/articles/new-eu-machinery-regulation-what-you-need-to-know), [EU-OSHA](https://osha.europa.eu/it/legislation/directive/regulation-20231230eu-machinery), [Nemko](https://digital.nemko.com/regulations/eu-machinery-regulation)
