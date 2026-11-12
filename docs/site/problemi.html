@@ -10,149 +10,126 @@
 <body>
 <div class="wrap">
   <nav class="top"><span class="brand">Team KVA</span><a href="index.html">Inizio</a><a href="generale.html">Generale</a><a href="problemi.html" aria-current="page">Problemi</a><a href="lettura.html">Lettura serale</a></nav>
-  <div class="eyebrow">Per scegliere · versione 1, giovedì 12.11 · si aggiorna con le Deep Research</div>
+  <div class="eyebrow">Per capire e scegliere</div>
   <h1>Problemi</h1>
-  <p class="lede">I candidati spiegati bene, come si costruisce il business plan, dove prendere i dati e come usiamo l'AI.</p>
+  <p class="lede">Il tema della gara, gli ambiti proposti da KVA, come si sceglie un problema, e alcune nostre proposte di partenza.</p>
 
   <section>
-    <h2>Cosa chiede KVA</h2>
-    <p>Il tema è un "AI brain" per l'industria. KVA fa tre domande e propone 7 spunti, che non sono obbligatori:</p>
-    <ul>
-      <li><b>Memoria:</b> come capisce una memoria che una regola è stata superata? Come scrivono più agenti nella stessa memoria senza contraddirsi? Come si registra <i>perché</i> è stata presa una decisione?</li>
-      <li><b>Ontologie:</b> come si costruisce un'ontologia? Come si aggiorna quando l'azienda cambia modo di lavorare? Come la usa un agente per ragionare e non solo per cercare?</li>
-    </ul>
+    <h2>Prima di tutto: come funziona</h2>
     <div class="tbl"><table>
-      <tr><th>Spunto KVA</th><th>In breve</th></tr>
-      <tr><td>Rendere un servizio esistente accessibile a tutti</td><td>Uno strumento da specialisti (ottimizzatore, pianificazione) che chiunque in azienda può interrogare a parole</td></tr>
-      <tr><td>Dataset piccoli e grandi</td><td>Una pipeline che mette nel prompt i file piccoli e indicizza quelli grandi</td></tr>
-      <tr><td>Ontologia da documenti</td><td>Normative, manuali e procedure trasformati in un'ontologia su cui l'agente ragiona</td></tr>
-      <tr><td>Memoria visibile alle persone</td><td>Vedere cosa contiene la memoria dell'agente e da dove l'ha imparato, e poterla correggere</td></tr>
-      <tr><td>Modelli decisionali</td><td>Decisioni con regole scritte (fornitori, manutenzioni, preventivi) integrate con l'agente</td></tr>
-      <tr><td>Anonimizzazione</td><td>Togliere i dati personali prima che arrivino alla memoria o al modello</td></tr>
-      <tr><td>Scatola nera per agenti</td><td>Registrare cosa ha visto e fatto un agente che compie azioni critiche</td></tr>
+      <tr><th>Domanda</th><th>Risposta</th></tr>
+      <tr><td><b>C'è un problema uguale per tutte le squadre?</b></td><td><b>No.</b> Il <b>tema</b> è uguale per tutti: "un AI brain per l'industria". Il <b>problema preciso</b> lo sceglie ogni squadra.</td></tr>
+      <tr><td><b>Cosa ha dato KVA?</b></td><td>Il tema e <b>7 ambiti di esempio</b> (dal video ufficiale). Sono spunti facoltativi: si può scegliere uno di questi oppure un'idea propria, purché resti nel tema.</td></tr>
+      <tr><td><b>E i problemi A, B, C, D in fondo alla pagina?</b></td><td>Sono <b>proposte di Claude</b>, non di KVA: esempi concreti dentro gli ambiti di KVA, trovati con una prima ricerca. Si possono prendere, modificare o scartare.</td></tr>
+      <tr><td><b>In base a cosa scegliamo?</b></td><td>In base ai <b>criteri della giuria</b>, più una domanda pratica: riusciamo a far funzionare una demo in 2 ore e mezza? Vedi la sezione "Come si sceglie".</td></tr>
     </table></div>
   </section>
 
   <section>
-    <h2>Come scegliamo</h2>
-    <p>Ogni candidato prende un voto da 1 a 5 su ciascun criterio della giuria, con gli stessi pesi. Per la tecnica conta una domanda: <b>riusciamo a far funzionare la demo in 2 ore e mezza?</b> I voti qui sotto sono una prima stima da discutere.</p>
-    <div class="tbl"><table>
-      <tr><th>Problema</th><th class="num">Tema</th><th class="num">Fattib.</th><th class="num">Reale</th><th class="num">Business</th><th class="num">Demo</th><th class="num">Totale</th></tr>
-      <tr><td>A · Direttive aeronautiche</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num"><b>4,55</b></td></tr>
-      <tr><td>D · Sicurezza sul lavoro</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num">4</td><td class="num">5</td><td class="num"><b>4,55</b></td></tr>
-      <tr><td>C · Procedure farmaceutiche</td><td class="num">5</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">4,25</td></tr>
-      <tr><td>B · Regolamento Macchine UE</td><td class="num">4</td><td class="num">3</td><td class="num">5</td><td class="num">5</td><td class="num">3</td><td class="num">4,15</td></tr>
-      <tr><td>E · Conoscenza dei manutentori</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">3</td><td class="num">4</td><td class="num">3,80</td></tr>
-    </table></div>
+    <h2>Il tema: un "AI brain" per l'industria</h2>
+    <p>Oggi un'azienda può già fare domande ai suoi documenti con un chatbot. Ma un chatbot non <b>ricorda</b> in modo affidabile, non sa quali regole <b>valgono adesso</b>, non capisce come sono <b>collegate</b> le cose e non sa <b>perché</b> è stata presa una decisione.</p>
+    <p>Un "AI brain" è un sistema che ha una vera conoscenza dell'azienda, organizzata e aggiornata, su cui l'AI può ragionare. KVA lo divide in due grandi temi:</p>
+    <div class="grid3">
+      <div class="card"><span class="role">Tema 1</span><b>Memoria</b><span>Cosa sa il sistema, da quando, da chi l'ha imparato, cosa non vale più, perché si è deciso qualcosa. E come fanno più agenti AI a scrivere nella stessa memoria senza contraddirsi.</span></div>
+      <div class="card"><span class="role">Tema 2</span><b>Ontologie</b><span>La "mappa" della conoscenza di un settore: quali tipi di cose esistono (macchine, persone, procedure…), come sono collegate e quali regole valgono. Serve all'AI per ragionare e non solo cercare.</span></div>
+    </div>
+    <p>Qualunque problema scegliamo, la giuria vuole vedere almeno uno di questi due temi <b>funzionare davvero nella demo</b>: vale il 25% del voto e decide i pareggi.</p>
   </section>
 
   <section>
-    <h2>I candidati</h2>
+    <h2>I 7 ambiti proposti da KVA</h2>
+    <p>Per ognuno: cosa significa, dove si trova nell'industria e che tipo di progetto potrebbe nascere.</p>
 
     <div class="prob">
-      <h3>A · Manutenzione aerei: le regole che si sostituiscono</h3>
-      <p class="score">Spunti KVA: ontologia da documenti, memoria visibile, scatola nera</p>
-      <p><b>Il problema in parole semplici.</b> Le autorità dell'aviazione (EASA in Europa, FAA negli USA) emettono le <i>Airworthiness Directives</i>: ordini obbligatori del tipo "ispezionate questa parte del motore ogni 500 ore". Le direttive <b>si sostituiscono tra loro</b>, valgono solo per certi modelli e numeri di serie e si intrecciano con i bollettini dei costruttori. Chi gestisce una flotta deve sapere in ogni momento quali valgono per ciascun aereo, e dimostrarlo agli ispettori.</p>
-      <dl class="kv">
-        <dt>Esempio</dt><dd>"La direttiva 2024-05 sostituisce la 2021-11 per i motori serie X. L'aereo I-ABCD monta un motore X. Quindi la 2021-11 non vale più per I-ABCD, e l'ispezione da fare è quella nuova, entro 30 giorni."</dd>
-        <dt>Chi paga</dt><dd>Officine di manutenzione aeronautica, compagnie aeree, flotte di elicotteri e aviazione generale. Torino è un polo aerospaziale (Leonardo, Avio Aero, Thales Alenia Space).</dd>
-        <dt>Dati</dt><dd>Le direttive FAA sono pubbliche e libere, scaricabili via API dal Federal Register. Quelle EASA sono consultabili online. La flotta per la demo si inventa.</dd>
-        <dt>La demo</dt><dd>Carichiamo 20 direttive vere → nasce il grafo aereo–motore–parte–direttiva → "cosa devo fare su I-ABCD?" → arriva una direttiva nuova → la vecchia si chiude e la risposta cambia, con la fonte.</dd>
-        <dt>Punti di forza</dt><dd>È quasi uguale all'animazione di KVA sulla regola superata. Dati veri e liberi. Settore dove l'errore costa moltissimo.</dd>
-        <dt>Rischi</dt><dd>Lessico tecnico nuovo per noi e forse anche per parte della giuria. Il pitch deve restare semplice.</dd>
-      </dl>
+      <h3>1 · Rendere uno strumento da specialisti accessibile a tutti</h3>
+      <p>Molte aziende hanno strumenti potenti che sa usare solo un esperto: ottimizzatori per pianificare la produzione, software di logistica, simulatori, mappe. L'idea è lasciare lo strumento com'è e metterci sopra un'AI a cui chiunque può chiedere a parole, come è successo con ChatGPT per i modelli linguistici.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>"Se arriva un ordine urgente giovedì, cosa slitta?" a un pianificatore di produzione; "qual è il percorso migliore per queste 30 consegne?" a un ottimizzatore di rotte.</dd><dt>Legame col tema</dt><dd>L'AI deve conoscere il dominio (ontologia) per tradurre la domanda nei dati dello strumento.</dd></dl>
     </div>
 
     <div class="prob">
-      <h3>D · Sicurezza sul lavoro: chi è abilitato a fare cosa</h3>
-      <p class="score">Spunti KVA: ontologia da documenti, memoria visibile, anonimizzazione</p>
-      <p><b>Il problema in parole semplici.</b> Ogni azienda italiana con dipendenti deve avere la valutazione dei rischi (DVR), le procedure di sicurezza per macchine e reparti e la formazione obbligatoria di ogni lavoratore (D.Lgs. 81/08). Quando cambia una procedura o arriva una macchina nuova, nessuno sa con certezza <b>quali documenti sono superati, chi va riformato e chi oggi può usare quella macchina</b>. Le informazioni stanno in PDF, fogli Excel e nella testa del responsabile della sicurezza.</p>
-      <dl class="kv">
-        <dt>Esempio</dt><dd>"Mario fa il pressista e usa la pressa P-03. La procedura di P-03 è cambiata il 10 novembre. Il corso di Mario è di marzo, quindi sulla versione vecchia. Mario oggi non è abilitato."</dd>
-        <dt>Impatto</dt><dd>In Italia nel 2025: circa 598.000 denunce di infortunio e tra 1.100 e 1.200 morti sul lavoro (INAIL, dati provvisori e consolidati diversi). Nel manifatturiero, 129 morti in occasione di lavoro.</dd>
-        <dt>Chi paga</dt><dd>PMI manifatturiere e studi di consulenza sulla sicurezza, che seguono decine di aziende ciascuno e sono un ottimo canale di vendita. Il mercato mondiale del software per la sicurezza è stimato tra 2,3 e 2,8 miliardi di dollari (stime indicative).</dd>
-        <dt>Dati</dt><dd>Il testo del D.Lgs. 81/08 e gli open data INAIL sono pubblici. Lavoratori, procedure e corsi si inventano: niente dati personali veri.</dd>
-        <dt>La demo</dt><dd>Grafo lavoratore–mansione–macchina–procedura–corso. Domanda "Mario può usare P-03?" → sì, con fonte. Si carica la procedura nuova → la vecchia diventa rossa → stessa domanda → no, con il perché, e la lista di chi va riformato.</dd>
-        <dt>Punti di forza</dt><dd>Lo capiscono tutti in 10 secondi, riguarda ogni azienda italiana, ha un forte impatto umano, e il ragionamento sulle relazioni si vede benissimo.</dd>
-        <dt>Rischi</dt><dd>Esistono già software per la sicurezza: dobbiamo far vedere che il nostro ragiona sulle relazioni e non gestisce solo documenti.</dd>
-      </dl>
+      <h3>2 · Dati piccoli e grandi</h3>
+      <p>I dati aziendali arrivano in ogni dimensione: un foglio da 40 righe oggi, un'esportazione da 2 milioni di righe domani. Il file piccolo si può dare intero all'AI; quello grande no, va indicizzato o interrogato con query. Serve una pipeline che riconosca i due casi e li tratti nel modo giusto.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>Report di qualità, storici di manutenzione, ordini di acquisto, dati di sensori.</dd><dt>Legame col tema</dt><dd>Più tecnico che di memoria; la demo è meno spettacolare.</dd></dl>
     </div>
 
     <div class="prob">
-      <h3>C · Farmaceutico: procedure, versioni e deviazioni</h3>
-      <p class="score">Spunti KVA: memoria visibile, scatola nera, modelli decisionali</p>
-      <p><b>Il problema.</b> Nel farmaceutico ogni attività segue una procedura scritta (SOP) e le regole GMP. Le procedure cambiano spesso, ogni errore (deviazione) va collegato alla versione giusta, e agli ispettori va dimostrato perché si è deciso qualcosa. Tra i motivi più frequenti delle lettere di richiamo della FDA ci sono proprio le procedure non seguite e i dati non affidabili (circa il 15% delle lettere del 2025 citava problemi di integrità dei dati, secondo un'analisi di settore).</p>
-      <dl class="kv">
-        <dt>Chi paga</dt><dd>Aziende farmaceutiche e biotech, produttori conto terzi. Il mercato del software per la qualità vale tra 8 e 12 miliardi di dollari (stime discordanti).</dd>
-        <dt>Dati</dt><dd>Linee guida GMP europee e lettere FDA pubbliche. Procedure e deviazioni inventate.</dd>
-        <dt>Rischi</dt><dd>Settore molto lontano da noi e mercato pieno di fornitori.</dd>
-      </dl>
+      <h3>3 · Costruire un'ontologia dai documenti</h3>
+      <p>La conoscenza di un'azienda sta in normative, manuali, procedure, contratti. Un'AI può cercarci dentro, ma non segue i collegamenti tra le cose che descrivono. L'idea è trasformare un insieme grande e disordinato di documenti di un settore in una mappa strutturata su cui un agente può ragionare.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>Normative di sicurezza e procedure di fabbrica; manuali di manutenzione; regolamenti di settore (aviazione, farmaceutico, energia, edilizia).</dd><dt>Legame col tema</dt><dd>Massimo: è il tema "ontologie" allo stato puro.</dd></dl>
     </div>
 
     <div class="prob">
-      <h3>B · Nuovo Regolamento Macchine UE</h3>
-      <p class="score">Spunti KVA: ontologia da documenti</p>
-      <p><b>Il problema.</b> Da gennaio 2027 il nuovo Regolamento Macchine (UE 2023/1230) sostituisce la vecchia direttiva, senza periodo di transizione. Ogni costruttore di macchine deve aggiornare fascicolo tecnico, valutazione dei rischi e istruzioni, con requisiti nuovi su software e cybersecurity. L'Italia è tra i primi produttori di macchine in Europa.</p>
-      <dl class="kv">
-        <dt>Punti di forza</dt><dd>La scadenza tra due mesi dà un "perché proprio adesso" perfetto per il business.</dd>
-        <dt>Rischi</dt><dd>È più un confronto tra documenti che un problema di memoria. La demo è meno visiva e i testi sono lunghi: costruirla in 2h30 è più difficile.</dd>
-      </dl>
+      <h3>4 · Rendere visibile la memoria dell'AI</h3>
+      <p>La memoria di un agente decide cosa risponde, ma le persone che lo usano non vedono cosa contiene né da dove l'ha imparato. L'idea è renderla leggibile e visualizzabile, così le persone possono correggerla e capire come l'AI sta imparando.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>Un grafo che mostra cosa sa l'assistente aziendale, con fonti e date; la possibilità di dire "questa informazione è sbagliata" e vedere la correzione propagarsi.</dd><dt>Legame col tema</dt><dd>Massimo sul tema "memoria", e molto visivo in demo.</dd></dl>
     </div>
 
     <div class="prob">
-      <h3>Gli altri, in breve</h3>
-      <ul>
-        <li><b>E · Conoscenza dei manutentori che vanno in pensione:</b> problema vero, ma è l'idea più ovvia ("chatbot sui manuali") e la faranno in molti.</li>
-        <li><b>F · Scatola nera per agenti:</b> molto in tema ma astratta. La useremo comunque <b>come funzione</b> dentro il progetto scelto: ogni risposta registrata con le sue fonti.</li>
-        <li><b>G · Qualifica fornitori</b> e <b>H · Anonimizzazione:</b> più lontani da memoria e ontologie. L'anonimizzazione può diventare una funzione dentro D.</li>
-      </ul>
+      <h3>5 · Modelli decisionali</h3>
+      <p>Molte decisioni aziendali seguono regole scritte: approvare un fornitore, assegnare una richiesta di manutenzione, fare un preventivo. Esistono tecnologie apposite per descrivere queste regole in modo formale. L'idea è collegarle a un agente AI, così le decisioni sono veloci ma rispettano sempre le regole.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>"Questo fornitore può essere approvato?" con la risposta che cita le regole applicate.</dd><dt>Legame col tema</dt><dd>Buono se si registra il perché di ogni decisione.</dd></dl>
     </div>
-    <p>Fonti e dettagli: <code>research/problems/candidates.md</code> nella repo.</p>
+
+    <div class="prob">
+      <h3>6 · Anonimizzare i dati</h3>
+      <p>I dati aziendali sono pieni di dati personali: nomi, email, codici fiscali, indirizzi. Vanno tolti prima che arrivino alla memoria o al modello, ma quello che resta deve rimanere utile.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>Report HR, segnalazioni di infortunio, email dei clienti.</dd><dt>Legame col tema</dt><dd>Più debole: è un passaggio che sta prima della memoria. Ottimo invece come funzione dentro un altro progetto.</dd></dl>
+    </div>
+
+    <div class="prob">
+      <h3>7 · Scatola nera per agenti</h3>
+      <p>Gli agenti AI cominciano a compiere azioni di cui l'azienda risponde: approvare un pagamento, rilasciare un lotto di produzione, cambiare una procedura di sicurezza. Come la scatola nera di un aereo, serve un registro di cosa l'agente ha visto e fatto, da consultare quando qualcosa va storto.</p>
+      <dl class="kv"><dt>Esempi</dt><dd>Ricostruire perché un agente ha approvato un pagamento sbagliato, con i dati che aveva in quel momento.</dd><dt>Legame col tema</dt><dd>Forte sul "perché è stata presa una decisione". Più facile da mostrare come funzione dentro un altro progetto.</dd></dl>
+    </div>
+  </section>
+
+  <section>
+    <h2>Come si sceglie</h2>
+    <p>Diamo a ogni idea un voto da 1 a 5 per ciascun criterio della giuria, con gli stessi pesi, e confrontiamo i totali.</p>
+    <div class="tbl"><table>
+      <tr><th>Criterio</th><th class="num">Peso</th><th>Domanda da farsi</th></tr>
+      <tr><td>Aderenza al tema</td><td class="num">25%</td><td>Si vedono memoria o ontologia funzionare nella demo?</td></tr>
+      <tr><td>Fattibilità tecnica</td><td class="num">25%</td><td>Riusciamo a costruire una demo che funziona in 2 ore e mezza? Troviamo i dati?</td></tr>
+      <tr><td>Problema reale</td><td class="num">25%</td><td>Esiste davvero, in un settore preciso? Abbiamo un numero con fonte su quanto costa?</td></tr>
+      <tr><td>Business</td><td class="num">20%</td><td>C'è un cliente che pagherebbe? Quanti ce ne sono?</td></tr>
+      <tr><td>Demo</td><td class="num">5%</td><td>Si capisce in 30 secondi? C'è un momento "wow" da mostrare?</td></tr>
+    </table></div>
+    <p class="tip">Un buon problema per noi unisce più ambiti: per esempio un'ontologia costruita dai documenti (ambito 3), una memoria visibile che sa quando una regola è superata (ambito 4) e un registro delle decisioni (ambito 7).</p>
+  </section>
+
+  <section>
+    <h2>Proposte di Claude, da discutere</h2>
+    <p>Esempi concreti trovati con una prima ricerca, con un voto iniziale sui criteri. Servono come punto di partenza: possiamo sceglierne uno, cambiarlo o proporre altro. Dettagli e fonti in <code>research/problems/candidates.md</code>.</p>
+    <div class="tbl"><table>
+      <tr><th>Proposta</th><th>In una frase</th><th>Ambiti KVA</th><th class="num">Voto</th></tr>
+      <tr><td><b>A · Manutenzione aerei</b></td><td>Le autorità emettono direttive obbligatorie che si sostituiscono tra loro; il sistema sa quali valgono oggi per ogni aereo e perché.</td><td>3, 4, 7</td><td class="num">4,55</td></tr>
+      <tr><td><b>D · Sicurezza sul lavoro</b></td><td>Quando cambia una procedura, il sistema sa quali documenti sono superati e chi non è più abilitato a usare una macchina.</td><td>3, 4, 6</td><td class="num">4,55</td></tr>
+      <tr><td><b>C · Farmaceutico</b></td><td>Procedure che cambiano versione, errori da collegare alla versione giusta, decisioni da giustificare agli ispettori.</td><td>4, 5, 7</td><td class="num">4,25</td></tr>
+      <tr><td><b>B · Regolamento Macchine UE</b></td><td>Da gennaio 2027 i costruttori di macchine devono aggiornare la documentazione alle nuove regole europee.</td><td>3</td><td class="num">4,15</td></tr>
+      <tr><td><b>E · Conoscenza dei manutentori</b></td><td>Quando un tecnico esperto va in pensione, la sua conoscenza se ne va con lui.</td><td>3, 4</td><td class="num">3,80</td></tr>
+    </table></div>
   </section>
 
   <section>
     <h2>Come si costruisce il business plan</h2>
-    <p>La giuria lo verifica alle 16:30 e vale il 20%. I giurati sono investitori: vogliono capire se può diventare un'azienda. Ogni numero ha una fonte, oppure dice chiaramente "stima nostra" e come l'abbiamo calcolata. Il modello da riempire è <code>business/business-plan.md</code>.</p>
-    <ol class="steps">
-      <li><div><b>Una frase:</b> "Aiutiamo [cliente preciso] a [risultato misurabile] senza [problema di oggi]."</div></li>
-      <li><div><b>Il problema in numeri:</b> quanto costa oggi in ore, euro, sanzioni o rischi. Con fonte.</div></li>
-      <li><div><b>Il cliente:</b> chi usa il prodotto, chi lo sceglie, chi firma il budget. Spesso sono tre persone diverse.</div></li>
-      <li><div><b>Il mercato, calcolato dal basso:</b> numero di aziende come il nostro cliente × prezzo annuo. Dal totale (TAM) a quelle che possiamo raggiungere (SAM) a quelle realistiche in 3 anni (SOM).</div></li>
-      <li><div><b>Il prezzo:</b> abbonamento annuo per sito o per utente, pari a una piccola frazione del costo del problema. Esempio: "il problema costa 50.000 € l'anno, chiediamo 6.000 €".</div></li>
-      <li><div><b>I costi:</b> modelli AI per cliente, server, vendita. Bastano numeri semplici e onesti.</div></li>
-      <li><div><b>I concorrenti:</b> ci sono sempre, anche Excel e ChatGPT. Diciamo cosa fanno, cosa manca e perché noi siamo diversi.</div></li>
-      <li><div><b>I primi 10 clienti:</b> come li troviamo. Per esempio con i consulenti come canale, o con le aziende del polo torinese.</div></li>
-      <li><div><b>Perché adesso:</b> una norma nuova, una scadenza, l'AI che oggi sa estrarre strutture dai testi.</div></li>
-      <li><div><b>I prossimi 12 mesi:</b> 3 tappe concrete.</div></li>
+    <p>La giuria lo verifica alle 16:30 e vale il 20%. I giurati sono investitori: vogliono capire se può diventare un'azienda. Ogni numero ha una fonte, oppure dice "stima nostra" e come l'abbiamo calcolata.</p>
+    <ol>
+      <li><b>Una frase:</b> "Aiutiamo [cliente] a [risultato misurabile] senza [problema di oggi]."</li>
+      <li><b>Il problema in numeri:</b> quanto costa oggi in ore, euro, sanzioni o rischi.</li>
+      <li><b>Il cliente:</b> chi usa il prodotto, chi lo sceglie, chi paga.</li>
+      <li><b>Il mercato, calcolato dal basso:</b> numero di aziende come il nostro cliente × prezzo annuo.</li>
+      <li><b>Il prezzo:</b> una piccola frazione del costo del problema.</li>
+      <li><b>I concorrenti:</b> ci sono sempre, anche Excel e ChatGPT. Cosa manca a loro, perché noi.</li>
+      <li><b>Perché adesso</b> e <b>i prossimi 12 mesi</b>.</li>
     </ol>
   </section>
 
   <section>
-    <h2>I dati</h2>
+    <h2>Dati e AI</h2>
     <ul>
-      <li><b>Solo dati che possiamo usare:</b> pubblici con licenza chiara, oppure inventati da noi (e lo diciamo).</li>
-      <li><b>Niente dati personali veri.</b> Persone e aziende della demo sono inventate.</li>
-      <li><b>Ogni dato va registrato</b> in <code>research/data/README.md</code> con fonte e licenza prima di usarlo.</li>
-      <li><b>Pochi ma veri:</b> 20 documenti veri ben scelti fanno una demo migliore di 2.000 a caso.</li>
-      <li><b>Un dataset per la demo e uno di prova:</b> la demo si prova sempre sugli stessi dati, così sabato non ci sono sorprese.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Come usiamo l'AI</h2>
-    <h3>Nel prodotto</h3>
-    <div class="flow"><span>Documenti</span><i>→</i><span>L'LLM estrae entità e relazioni in JSON</span><i>→</i><span>Grafo con versioni e fonti</span><i>→</i><span>Regole che deducono</span><i>→</i><span>Agente che risponde citando</span><i>→</i><span>Registro delle decisioni</span></div>
-    <ul>
-      <li><b>Modello:</b> Gemini Flash per velocità e costo zero con la nostra chiave; i crediti KVA se ne danno di migliori. Una chiave di riserva per ognuno.</li>
-      <li><b>L'AI estrae e spiega; le regole decidono.</b> "Mario non è abilitato" deve venire da una regola nel codice, non da un'intuizione del modello. Così la risposta è affidabile e spiegabile.</li>
-      <li><b>Demo sicura:</b> salvare le risposte dell'AI dei passaggi lenti, così la demo dal vivo non dipende da internet.</li>
-    </ul>
-    <h3>Per lavorare</h3>
-    <ul>
-      <li><b>Claude Code</b> per scrivere codice: ognuno sul suo pezzo, istruzioni chiare e piccole, salvataggi frequenti.</li>
-      <li><b>Canale tra le AI</b> nella repo: ogni Claude scrive cosa sta facendo e legge gli altri. Quello di Filippo tiene il quadro.</li>
-      <li><b>Deep Research</b> (Gemini, ChatGPT) per le ricerche di mercato, con prompt pronti in <code>docs/research-prompts.md</code>.</li>
-      <li><b>Riserve:</b> se Claude finisce i messaggi, Gemini e ChatGPT.</li>
+      <li><b>Dati:</b> solo pubblici con licenza chiara o inventati da noi (e lo diciamo). Niente dati personali veri. Pochi ma ben scelti.</li>
+      <li><b>L'AI nel prodotto:</b> legge i documenti e costruisce la mappa; le regole nel codice decidono; l'agente risponde citando le fonti.</li>
+      <li><b>L'AI per lavorare:</b> ognuno con il suo Claude, coordinati sul canale comune; Deep Research di Gemini e ChatGPT per le ricerche.</li>
     </ul>
   </section>
 </div>

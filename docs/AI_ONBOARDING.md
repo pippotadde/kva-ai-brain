@@ -57,7 +57,7 @@ Il team è di 3 studenti di Ingegneria Informatica al PoliTo. Programmano bene (
 | Percorso | Contenuto |
 |---|---|
 | `docs/site/generale.html` | Regole, voto, team, **cosa fare entro sabato in ordine**, **sabato minuto per minuto** |
-| `docs/site/problemi.html` | Problemi candidati spiegati, come si costruisce il business plan, dati, come usiamo l'AI |
+| `docs/site/problemi.html` | Come funziona la scelta, il tema, i 7 ambiti KVA spiegati, come si sceglie, proposte di Claude, business plan, dati e AI |
 | `docs/site/lettura.html` | Come si costruisce un AI brain: le 5 parti, esempio di codice funzionante, ontologia in 20 minuti, strumenti, demo, business |
 | `research/problems/candidates.md` | Rosa dei problemi con punteggi e fonti |
 | `docs/jury.md` | Chi giudica, domande probabili |
@@ -101,15 +101,12 @@ Leggi `.coord/README.md`, `.coord/SITUAZIONE.md`, `.coord/TASKS.md`; scrivi il p
 ## 7. Cosa fare entro sabato, in ordine (senza orari)
 
 1. **Ambiente e canale** (sezioni 5 e 6).
-2. **Opinione sui problemi:** aiuta la persona a leggere `docs/site/problemi.html`, poi scrivi la sua opinione (2 preferiti e perché) in `.coord/agents/<nome>/work/opinione-problemi.md`.
-3. **Lettura serale:** `docs/site/lettura.html`. Proponi l'esercizio della sezione 3 (far girare il codice d'esempio e aggiungere `chi_va_riformato`).
-4. **Approfondimento dei 2–3 candidati più votati** (sezione 8).
-5. **Una persona del settore** da sentire 10 minuti, se possibile.
-6. **Scelta del problema** principale + riserva, quando tutti hanno finito il passo 4. Registrata con `coord.sh decide`.
-7. **Preparazione del problema scelto:** dati registrati, business plan v1, test di fattibilità più serio, 3 nomi per il prodotto.
-8. **Architettura e divisione dei file** per sabato (`docs/architecture.md`, owner Giorgia).
-9. **Pitch:** 3 slide per le 12:30, slide e copione del pitch, 2 prove cronometrate.
-10. **Logistica:** istruzioni e crediti KVA, portatile carico, cuffie, caricatore.
+2. **Opinione:** aiuta la persona a leggere `docs/site/problemi.html` (tema, 7 ambiti KVA, proposte di Claude), poi scrivi la sua opinione in `.coord/agents/<nome>/work/opinione-problemi.md`. Le proposte A–E sono di Claude, non di KVA: la persona può preferire un'idea propria.
+3. **Lettura serale:** `docs/site/lettura.html`, con l'esercizio della sezione 3.
+4. **Approfondimento delle idee più votate** (sezione 8).
+5. **Scelta del problema** principale + riserva, registrata con `coord.sh decide`.
+
+Facoltativo: sentire una persona del settore. I passi successivi (dati, business plan, architettura, pitch) verranno definiti dopo la scelta e scritti in `.coord/TASKS.md`.
 
 ## 8. Approfondimento dei candidati: cosa guardare
 

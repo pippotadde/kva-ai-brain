@@ -15,7 +15,7 @@ La versione per le persone è in `docs/site/generale.html`; quella per le AI in 
 - [ ] **F G S** Accedere alla dashboard KVA (obbligatorio entro 7 giorni dalla conferma)
 
 ## 2. Opinione sui problemi
-- [ ] **F G S** Leggere `docs/site/problemi.html`, scrivere i 2 preferiti e perché (`.coord/agents/<nome>/work/opinione-problemi.md`)
+- [ ] **F G S** Leggere `docs/site/problemi.html`, scrivere quali ambiti o proposte piacciono e perché (`.coord/agents/<nome>/work/opinione-problemi.md`)
 
 ## 3. Lettura serale
 - [ ] **F G S** `docs/site/lettura.html`, con l'esercizio sul codice d'esempio
@@ -26,32 +26,14 @@ La versione per le persone è in `docs/site/generale.html`; quella per le AI in 
 - [ ] **F** Deep Research verificate, dati disponibili, tabella di sintesi in `.coord/SITUAZIONE.md`
 - [ ] **G** (facoltativo) Deep Research su ChatGPT per confronto
 
-## 5. Sentire una persona del settore
-- [ ] **chi riesce** 10 minuti al telefono con chi lavora nel settore (conoscenti, professori, LinkedIn)
-
-## 6. Scegliere
+## 5. Scegliere
 - [ ] **F G S** Problema principale + riserva, votando sui criteri della giuria (call breve o chat)
 - [ ] **F** Registrarla: `coord.sh decide`
 
-## 7. Preparare il problema scelto
-- [ ] **S** `business/business-plan.md` v1 con fonti; storia del problema; 3 nomi per il prodotto
-- [ ] **G** Test di fattibilità serio
-- [ ] **F** Dati della demo raccolti e registrati in `research/data/README.md`
-- [ ] **S** Glossario del settore: 20 termini in `.coord/shared/glossario.md`
+Facoltativo: sentire una persona del settore scelto.
 
-## 8. Architettura
-- [ ] **G** `docs/architecture.md`: com'è fatto il prodotto e chi tocca quali file sabato
-
-## 9. Pitch
-- [ ] **S** 3 slide per le 12:30, slide e copione del pitch (`pitch/pitch-script.md`)
-- [ ] **F G S** 2 prove cronometrate, anche in call
-- [ ] **F G S** Una risposta da 20 secondi per ogni domanda probabile (`docs/jury.md`)
-- [ ] **F G S** Opzione del premio se vinciamo: A (€1.500, si cede il progetto) o B (società, KVA investe per il 15%)
-
-## 10. Logistica
-- [ ] **F** Controllare email e dashboard KVA: istruzioni consegne, crediti AI, link della call
-- [ ] **F G S** Confermare il ritrovo da Giorgia alle 09:00
-- [ ] **F G S** Portatile carico, caricatore, cuffie con microfono, ciabatta. Dormire.
+## Dopo la scelta
+Da definire insieme (dati, business plan, architettura, pitch, logistica): verranno scritti in `.coord/TASKS.md`.
 
 ## Sabato
 Scaletta minuto per minuto in `docs/site/generale.html`. Le cose da non dimenticare:
