@@ -2,7 +2,12 @@
 
 > **Per la persona (Giorgia o Sian).** L'unica cosa da fare a mano è installare Claude Code dentro Linux; il resto lo fa lui.
 >
-> **Solo su Windows (Sian):** apri PowerShell **come amministratore**, scrivi `wsl --install -d Ubuntu-24.04`, riavvia, apri "Ubuntu" dal menu Start e scegli utente e password. Da qui in poi usa **sempre il terminale Ubuntu**, mai PowerShell.
+> **Solo su Windows (Sian):** prima controlla se hai già WSL: apri PowerShell e scrivi `wsl -l -v`.
+> - Se compare una riga con **Ubuntu**: ce l'hai già, apri "Ubuntu" dal menu Start e salta al passo successivo.
+> - Se dà errore o la lista è vuota: apri PowerShell **come amministratore** (tasto destro → "Esegui come amministratore"), scrivi `wsl --install -d Ubuntu-24.04`, **riavvia il computer**, poi apri "Ubuntu" dal menu Start e scegli un nome utente e una password (servirà come password `sudo`). Ci vogliono circa 10–15 minuti.
+> - Se l'installazione si lamenta della "virtualizzazione": va attivata nel BIOS; scrivi nel gruppo e ci guardiamo insieme.
+>
+> Da qui in poi usa **sempre il terminale Ubuntu**, mai PowerShell: gli script del team funzionano solo in Linux.
 >
 > **Poi (Ubuntu e WSL), nel terminale:**
 > ```bash
