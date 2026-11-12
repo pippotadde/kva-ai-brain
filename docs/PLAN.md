@@ -9,7 +9,7 @@
 | Tema (25%, decide i pareggi) | Memoria con regole che si sostituiscono + ontologia con inferenza visibili **nella demo**, non solo a parole | Ven: test di fattibilità |
 | Tecnica (25%) | Pochissime funzioni, ma che funzionano dal vivo senza errori; dati veri | Ven: test; Sab: freeze alle 16:00 |
 | Problema reale (25%) | Un settore preciso, una persona vera sentita, un numero con fonte | Gio–Ven: ricerca |
-| Business (20%) | Cliente che paga, prezzo, mercato con fonti, "perché ora" (Sian) | Ven: bozza; Sab: definitivo |
+| Business (20%) | Cliente che paga, prezzo, mercato con fonti, "perché ora" (Filippo) | Ven: bozza; Sab: definitivo |
 | Demo (5%) | Nome che si ricorda, copione provato 3 volte, video di riserva | Ven sera + Sab 16:00 |
 
 **Chi giudica** (vedi `docs/jury.md`): KVA è un venture studio AI che investe in startup e fa consulenza per aziende tramite il Gruppo Excellence (banche, assicurazioni, grandi aziende). Ragionano da investitori: vogliono vedere **un'azienda possibile**, non solo un bel progetto tecnico.

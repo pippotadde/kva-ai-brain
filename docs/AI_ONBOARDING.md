@@ -44,9 +44,9 @@ Il team è di 3 studenti di Ingegneria Informatica al PoliTo. Programmano bene (
 
 | Persona | Area | Il suo Claude |
 |---|---|---|
-| Filippo | Organizzazione | Tiene il quadro completo: `.coord/SITUAZIONE.md` e `.coord/TASKS.md` |
+| Filippo | Organizzazione e business | Tiene il quadro completo (`.coord/SITUAZIONE.md`, `.coord/TASKS.md`) e il business plan |
 | Giorgia | Architettura e prodotto | Agente tecnico |
-| Sian | Idea, business, pitch, dati | Agente idea e business |
+| Sian | Idea, pitch, dati | Agente idea e pitch |
 
 - Ognuno contribuisce a tutto, ma ogni area ha chi la segue: se dopo 5 minuti non c'è accordo, decide lui o lei.
 - **Essere dinamici:** se qualcuno porta un'idea migliore, si cambia subito.
@@ -101,10 +101,9 @@ Leggi `.coord/README.md`, `.coord/SITUAZIONE.md`, `.coord/TASKS.md`; scrivi il p
 ## 7. Cosa fare entro sabato, in ordine (senza orari)
 
 1. **Ambiente e canale** (sezioni 5 e 6).
-2. **Opinione:** aiuta la persona a leggere `docs/site/problemi.html` (tema, 7 ambiti KVA, proposte di Claude), poi scrivi la sua opinione in `.coord/agents/<nome>/work/opinione-problemi.md`. Le proposte A–E sono di Claude, non di KVA: la persona può preferire un'idea propria.
+2. **Due idee a testa (entro venerdì sera):** aiuta la persona a leggere `docs/site/metodo.html` ("Scegliere l'idea": segnali di KVA, 5 strade per trovare idee, scheda, filtro sì/no, business, scheletro tecnico) e a trovare **2 idee**. Puoi partire anche dalle proposte di `docs/site/problemi.html`, ma un'idea propria va benissimo. Scrivi le 2 schede compilate in `.coord/agents/<nome>/idee.md`. Segnali completi di KVA: `research/kva-interests.md`. **Non scegliere l'idea finale:** si decide insieme in call venerdì sera.
 3. **Lettura serale:** `docs/site/lettura.html`, con l'esercizio della sezione 3.
-4. **Approfondimento delle idee più votate** (sezione 8).
-5. **Scelta del problema** principale + riserva, registrata con `coord.sh decide`.
+4. **Scelta in call** di principale + riserva, registrata con `coord.sh decide`. Dopo la scelta: dati, mappa del settore, prova in `prototype/`, business (anche con un lavoro notturno di Claude su un ramo separato).
 
 Facoltativo: sentire una persona del settore. I passi successivi (dati, business plan, architettura, pitch) verranno definiti dopo la scelta e scritti in `.coord/TASKS.md`.
 
@@ -117,14 +116,16 @@ Facoltativo: sentire una persona del settore. I passi successivi (dati, business
 - Qual è la demo da 90 secondi e cosa serve per costruirla in 2h30?
 - Risultato: `prototype/<lettera>/NOTES.md` con "fattibile / rischioso / no" e perché.
 
-**Sian (idea, business, pitch, dati)** — per ogni candidato:
+**Business (Filippo, aiutato da Sian)** — per ogni candidato:
 - Cliente preciso, chi paga, quanto costa oggi il problema (con fonte)?
 - Quanti clienti potenziali in Italia ed Europa, quanto pagherebbero, chi sono i concorrenti?
 - La storia da 30 secondi per aprire il pitch.
 - Chi possiamo sentire (contatti, professori PoliTo, LinkedIn)?
-- Risultato: `.coord/agents/sian/work/<lettera>-business.md`. Struttura del business plan: sezione "Come si costruisce il business plan" in `docs/site/problemi.html`.
+- Risultato: `.coord/agents/filippo/work/<lettera>-business.md`. Struttura del business plan: sezione "Come si costruisce il business plan" in `docs/site/problemi.html`.
 
-**Filippo (organizzazione)** — Deep Research, dati disponibili, sintesi con i voti sui 5 criteri in `.coord/SITUAZIONE.md`.
+**Filippo (organizzazione e business)** — Deep Research, dati disponibili, business, sintesi con i voti sui 5 criteri in `.coord/SITUAZIONE.md`.
+
+**Sian (idea, pitch, dati)** — la storia da 30 secondi, chi possiamo sentire nel settore, dati disponibili.
 
 ## 9. Principi del prodotto e della demo
 

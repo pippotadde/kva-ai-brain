@@ -5,9 +5,9 @@ New here? Read `docs/AI_ONBOARDING.md` first: full context, environment setup, c
 Goal: WIN the KVA hackathon "AI brain for industry" (Sat 14 Nov 2026). Judging: fit with challenge (memory/ontologies/AI brains) 25% — also tie-breaker; technical quality of what works on the day 25%; real industry problem & impact 25%; business case 20%; demo clarity 5%.
 
 ## Roles
-- Filippo: organisation. His Claude keeps the big picture (`.coord/SITUAZIONE.md`, `.coord/TASKS.md`).
+- Filippo: organisation and business. His Claude keeps the big picture (`.coord/SITUAZIONE.md`, `.coord/TASKS.md`).
 - Giorgia: architecture and product.
-- Sian: idea, business, pitch, data.
+- Sian: idea, pitch, data.
 Everyone contributes everywhere; the area owner decides. Switch fast when a better idea appears.
 
 ## Coordination between the three Claudes (mandatory)
