@@ -24,6 +24,9 @@ VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET
 - C — Procedure GMP farmaceutico (4,25)
 - B — Regolamento Macchine UE 2023/1230 (4,15)
 
+## Scoperta chiave (12.11)
+La giuria (Bottino, Ferrero) ha costruito **Project OIDA**: registro governato delle decisioni con supersession, contraddizioni, provenienza, risolutore deterministico, astensione se mancano prove, esposto via MCP. Il tema della gara = la loro teoria (paper "Retrieval Is Not Enough"). Il loro portafoglio copre finanza/assicurazioni/media: **manca l'industria**. Strategia: non copiare OIDA in generale, applicare quei principi a un settore industriale preciso. Dossier: `research/kva-company.md` su main.
+
 ## Aperto
 - Scelta problema principale + riserva (ven 13:30)
 - Crediti AI di KVA e istruzioni checkpoint: sconosciuti
