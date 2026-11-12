@@ -80,7 +80,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
 </header>
 
 <nav class="toc" aria-label="Sezioni">
-  <a href="#regole">Regole</a><a href="#voto">Voto</a><a href="#problemi">Problemi</a><a href="#team">Team</a><a href="#sabato">Sabato</a><a href="#prima">Da fare prima</a><a href="#ai">Corso AI</a><a href="#github">GitHub</a><a href="#business">Business</a><a href="#link">Link</a>
+  <a href="#regole">Regole</a><a href="#voto">Voto</a><a href="#problemi">Problemi</a><a href="#metodo">Metodo</a><a href="#team">Team</a><a href="#sabato">Sabato</a><a href="#prima">Da fare prima</a><a href="#ai">Corso AI</a><a href="#github">GitHub</a><a href="#business">Business</a><a href="#link">Link</a>
 </nav>
 
 <section id="regole">
@@ -90,7 +90,7 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <tr><th>Cosa</th><th>Regola</th></tr>
     <tr><td>Team</td><td>Siamo in 3 (Chen si è ritirato, KVA avvisata il 12.11). Per KVA siamo tutti online: presentiamo in videochiamata, il link lo manda KVA.</td></tr>
     <tr><td>Cosa si può portare</td><td>Un'idea, un dataset che abbiamo il diritto di usare, librerie, framework e modelli open source.</td></tr>
-    <tr><td>Cosa si costruisce il giorno</td><td>Il progetto va costruito <b>principalmente durante l'evento</b>. La preparazione serve a saper usare gli strumenti, non a portare il prodotto già fatto.</td></tr>
+    <tr><td>Cosa si costruisce il giorno</td><td>Il <b>prodotto</b> va costruito principalmente durante l'evento. Problema, ricerca di mercato, business plan, dati e piccoli test di fattibilità si possono preparare prima: lo facciamo.</td></tr>
     <tr><td>AI</td><td>Si possono usare strumenti AI per codice, testi e immagini. Vanno <b>dichiarati</b> nella consegna (Claude Code, Gemini, ChatGPT, modelli usati nel prodotto).</td></tr>
     <tr><td>Codice</td><td>Obbligatoria una <b>repo pubblica</b> su GitHub.</td></tr>
     <tr><td>Checkpoint</td><td>Prima della presentazione delle 12:30 e di quella finale si manda a KVA il materiale richiesto. Se si salta un checkpoint si rischia di non essere valutati.</td></tr>
@@ -129,7 +129,22 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <li><span class="k">P6</span><div><b>Anonimizzazione</b>Togliere nomi, email, codici fiscali e indirizzi prima che i dati arrivino alla memoria o al modello, senza rendere i dati inutili.</div></li>
     <li><span class="k">P7</span><div><b>Scatola nera per agenti</b>Registrare cosa ha visto e fatto un agente che compie azioni critiche: approvare un pagamento, rilasciare un lotto di produzione, cambiare una procedura di sicurezza.</div></li>
   </ol>
-  <div class="note ok"><b>Prima impressione, da discutere.</b> I progetti che uniscono memoria e ontologia prendono il massimo sul primo criterio. P3, P4 e P7 si combinano bene e danno una demo visiva: un grafo che si aggiorna quando cambia una regola e risposte che citano la fonte. L'idea si sceglie sabato, ma venerdì arriviamo con 2-3 settori e una rosa di candidati.</div>
+  <div class="note ok"><b>Prima impressione, da discutere.</b> I progetti che uniscono memoria e ontologia prendono il massimo sul primo criterio. P3, P4 e P7 si combinano bene e danno una demo visiva: un grafo che si aggiorna quando cambia una regola e risposte che citano la fonte.</div>
+</section>
+
+<section id="metodo">
+  <h2><span class="n">3b</span>Metodo: come una startup, non all'improvviso</h2>
+  <p>Arriviamo sabato con il problema già scelto e studiato, il mercato analizzato, una bozza di business plan e i dati pronti. Sabato mattina si rifinisce, non si parte da zero.</p>
+  <div class="tbl"><table>
+    <tr><th>Fase</th><th>Cosa</th><th>Quando</th><th>Responsabile</th></tr>
+    <tr><td class="time">1</td><td><b>Problema.</b> 6-8 problemi industriali candidati: chi soffre, quanto costa, prove, dati disponibili, aderenza al tema. Punteggio sui criteri della giuria.</td><td>Giovedì</td><td>Sian</td></tr>
+    <tr><td class="time">2</td><td><b>Scelta.</b> Call di 30 minuti: si tengono 2 problemi, uno principale e uno di riserva.</td><td>Venerdì mattina</td><td>tutti</td></tr>
+    <tr><td class="time">3</td><td><b>Mercato e business plan in bozza</b> sui 2 problemi: cliente, dimensione del mercato, prezzo, concorrenti.</td><td>Venerdì</td><td>Filippo</td></tr>
+    <tr><td class="time">4</td><td><b>Dati.</b> Raccolta e analisi dei documenti e dataset per la demo, con fonte e licenza.</td><td>Venerdì</td><td>Giorgia</td></tr>
+    <tr><td class="time">5</td><td><b>Test di fattibilità veloci.</b> Prove usa e getta in <code>prototype/</code>: il modello riesce a estrarre l'ontologia da questi documenti? Il grafo regge?</td><td>Venerdì pomeriggio</td><td>Giorgia, Sian</td></tr>
+    <tr><td class="time">6</td><td><b>Architettura seria</b> e divisione del lavoro, decise sulla base dei test.</td><td>Venerdì sera</td><td>Giorgia</td></tr>
+    <tr><td class="time">7</td><td><b>Costruzione</b> del prodotto e <b>business plan definitivo</b>.</td><td>Sabato</td><td>tutti</td></tr>
+  </table></div>
 </section>
 
 <section id="team">
@@ -159,9 +174,9 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
     <tr><td class="time">09:30</td><td>Benvenuto</td><td>Collegamento alla call KVA. Si legge subito ogni istruzione sui checkpoint e sui crediti AI.</td></tr>
     <tr><td class="time">10:00</td><td>Regole, team matching</td><td>Il team è già fatto. Filippo annota le novità sulle regole.</td></tr>
     <tr><td class="time">10:15</td><td>Talk: Venture building, Memoria e AI</td><td>Sian prende appunti su cosa interessa ai giurati: parole chiave, esempi, settori citati.</td></tr>
-    <tr><td class="time">10:30</td><td>Fase I: ideazione</td><td>45 minuti: ognuno propone 2-3 idee (problema + settore + demo).</td></tr>
-    <tr><td class="time">11:15</td><td></td><td>Votiamo le idee sui 5 criteri della giuria. Ne scegliamo <b>una</b>.</td></tr>
-    <tr><td class="time">11:45</td><td></td><td>Critica incrociata. Scriviamo il copione della demo (cosa si vede, in che ordine), architettura di massima e una frase di business. Prepariamo le 3 slide.</td></tr>
+    <tr><td class="time">10:30</td><td>Fase I: ideazione</td><td>30 minuti: confermiamo il problema principale o passiamo alla riserva, in base a quello che è emerso dai talk.</td></tr>
+    <tr><td class="time">11:00</td><td></td><td>Rifinitura: copione della demo (cosa si vede, in che ordine), architettura confermata, business plan aggiornato.</td></tr>
+    <tr><td class="time">11:45</td><td></td><td>Critica incrociata. Prepariamo le 3 slide per le 12:30.</td></tr>
     <tr class="hot"><td class="time">12:30</td><td>Prima presentazione delle idee</td><td>Presenta Sian. Filippo manda il materiale del checkpoint.</td></tr>
     <tr><td class="time">13:00</td><td>Pranzo</td><td>Si fissa l'architettura in 10 minuti. Giorgia prepara la struttura del codice: chi tocca quali file.</td></tr>
     <tr><td class="time">14:00</td><td>Fase II: sviluppo</td><td>Tre filoni in parallelo. Push ogni 20-30 minuti. Il ramo <code>main</code> deve sempre partire.</td></tr>
@@ -190,11 +205,12 @@ footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-si
   </ul>
   <h3>Venerdì</h3>
   <ul class="check" data-group="fri">
-    <li><label><input type="checkbox" id="c-study"><span>Mattina: corso rapido di AI (sezione 7), circa 2 ore. <span class="who">tutti</span></span></label></li>
-    <li><label><input type="checkbox" id="c-dry"><span>Pomeriggio: <b>mini-hackathon di prova da 2 ore e mezza</b> in call, su un problema finto, con gli stessi ruoli e la stessa scaletta di sabato. <span class="who">tutti</span></span></label></li>
-    <li><label><input type="checkbox" id="c-retro"><span>Dopo la prova: 20 minuti di bilancio su cosa ha funzionato e cosa cambiare. <span class="who">tutti</span></span></label></li>
-    <li><label><input type="checkbox" id="c-sectors"><span>Ognuno porta 2 settori industriali con un problema concreto e una fonte (articolo, rapporto, numero). <span class="who">tutti</span></span></label></li>
-    <li><label><input type="checkbox" id="c-biz"><span>Modello del business case pronto da riempire. <span class="who">Filippo</span></span></label></li>
+    <li><label><input type="checkbox" id="c-choose"><span>Mattina: call di 30 minuti per scegliere il problema principale e quello di riserva (sezione 3b). <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-study"><span>Corso rapido di AI (sezione 7), circa 2 ore. <span class="who">tutti</span></span></label></li>
+    <li><label><input type="checkbox" id="c-biz"><span>Ricerca di mercato e bozza di business plan sui 2 problemi. <span class="who">Filippo</span></span></label></li>
+    <li><label><input type="checkbox" id="c-data"><span>Raccolta e analisi dei dati per la demo, con fonte e licenza in <code>research/data/</code>. <span class="who">Giorgia</span></span></label></li>
+    <li><label><input type="checkbox" id="c-dry"><span>Pomeriggio: <b>test di fattibilità</b> in <code>prototype/</code>, nelle stesse condizioni di sabato (2 ore e mezza, stessi ruoli). <span class="who">Giorgia, Sian</span></span></label></li>
+    <li><label><input type="checkbox" id="c-retro"><span>Sera: architettura definitiva, divisione dei file e 20 minuti di bilancio. <span class="who">tutti</span></span></label></li>
     <li><label><input type="checkbox" id="c-pitch"><span>Struttura del pitch da 3 minuti e modello delle slide. <span class="who">Sian</span></span></label></li>
     <li><label><input type="checkbox" id="c-call"><span>Prova di videochiamata: microfono, condivisione schermo, hotspot di riserva. <span class="who">tutti</span></span></label></li>
   </ul>
@@ -279,7 +295,7 @@ pyvis o streamlit-agraph  grafo interattivo nell'interfaccia
   <ul>
     <li>Sito KVA: <a href="https://hackathon.kakashi.ventures/en/hackathon">hackathon.kakashi.ventures</a> (la dashboard partecipanti si apre da qui)</li>
     <li>Regole ufficiali: <a href="https://github.com/kakashi-ventures/hackathon">github.com/kakashi-ventures/hackathon</a>. Cliccate <i>Watch</i> per ricevere le novità.</li>
-    <li>Repo del team: in arrivo</li>
+    <li>Repo del team: <a href="https://github.com/pippotadde/kva-ai-brain">github.com/pippotadde/kva-ai-brain</a> (privata fino a sabato, diventa pubblica all'inizio dell'evento)</li>
     <li>Chiave Gemini: <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a></li>
     <li>Contatto KVA: <code>hello@kakashi.ventures</code></li>
   </ul>
