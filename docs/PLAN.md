@@ -35,7 +35,7 @@ Siamo studenti e prima di sabato non abbiamo orari fissi: ognuno avanza quando p
 
 ## 4. Sabato 14
 
-La scaletta minuto per minuto è in `docs/site/generale.html`. In più:
+La scaletta di sabato è in `docs/site/generale.html`. In più:
 
 - **09:00** Filippo rende pubblica la repo: `gh repo edit pippotadde/kva-ai-brain --visibility public --accept-visibility-change-consequences`. Prima controlla che non ci siano chiavi: `git log -p | grep -iE "api_key|sk-|AIza"` deve essere vuoto.
 - **10:15** durante i talk: annotare parole e esempi usati dai giurati e riusarli nel pitch.

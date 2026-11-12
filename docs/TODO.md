@@ -37,7 +37,7 @@ Facoltativo: sentire una persona del settore scelto.
 Da definire insieme (dati, business plan, architettura, pitch, logistica): verranno scritti in `.coord/TASKS.md`.
 
 ## Sabato
-Scaletta minuto per minuto in `docs/site/generale.html`. Le cose da non dimenticare:
+Scaletta di sabato in `docs/site/generale.html`. Le cose da non dimenticare:
 - [ ] **F** Prima delle 09:30: controllo chiavi, repo pubblica, file `LICENSE` (proposta: MIT)
 - [ ] **F G S** Un solo computer con l'audio nella call KVA
 - [ ] 12:30 consegna del checkpoint
