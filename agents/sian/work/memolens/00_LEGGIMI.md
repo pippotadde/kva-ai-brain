@@ -4,6 +4,8 @@ Autore: Sian (con Claude) · 13.11.2026 · Base: `MemoLens_Hackathon_Track4.docx
 
 Questi file sono **mappe**: come costruirei MemoLens, non il codice. Ognuno è autonomo: idea, business, architettura, collegamenti, piano ora per ora, demo, rischi e domande della giuria.
 
+**In fondo a ogni piano c'è una GUIDA PASSO PASSO per chi parte da zero**: glossario, preparazione del computer, comandi esatti da scrivere nel terminale, messaggi pronti da incollare in Claude Code (che scrive il codice al posto nostro), come controllare che ogni passo funzioni e cosa fare con gli errori. Il piano difficile rimanda ai passi del medio per non ripeterli.
+
 | File | Per chi | Cosa si vede nella demo | Rischio | Punteggio atteso |
 |---|---|---|---|---|
 | `01_FACILE.md` | Se sabato abbiamo poco tempo o poca esperienza | Agente simulato (script), timeline, allarme, casi simili, correzione con replay | Molto basso | Buono in tecnica e demo, medio in "tema" |
