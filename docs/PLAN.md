@@ -38,6 +38,7 @@ Siamo studenti e prima di sabato non abbiamo orari fissi: ognuno avanza quando p
 La scaletta di sabato è in `docs/site/generale.html`. In più:
 
 - **09:00** Filippo rende pubblica la repo: `gh repo edit pippotadde/kva-ai-brain --visibility public --accept-visibility-change-consequences`. Prima controlla che non ci siano chiavi: `git log -p | grep -iE "api_key|sk-|AIza"` deve essere vuoto.
+- **Appena arriva la chiave API:** ognuno, nel terminale dalla repo, `bash scripts/set_key.sh` (Anthropic) o `bash scripts/set_key.sh GEMINI_API_KEY`. Guida in `docs/SETUP.md` §4.
 - **10:15** durante i talk: annotare parole e esempi usati dai giurati e riusarli nel pitch.
 - **16:00** stop alle funzioni nuove, si registra il video di riserva della demo.
 - **Consegna:** README aggiornato con descrizione, come si avvia e **strumenti AI usati** (obbligatorio, §7).

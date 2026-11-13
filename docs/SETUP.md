@@ -58,9 +58,16 @@ Per aggiungere una libreria: `uv add nome` (poi commit di `pyproject.toml` e `uv
 
 ## 4. Chiave API (per il prodotto)
 
-1. Vai su https://aistudio.google.com/apikey e crea una chiave (gratis).
-2. `cp .env.example .env` e incolla la chiave dopo `GEMINI_API_KEY=`.
-3. **Mai** copiare la chiave in un file diverso da `.env`, mai in chat pubbliche, mai in un commit.
+Quando ricevi la chiave (sabato mattina da KVA), nel terminale, dalla cartella della repo:
+
+```bash
+bash scripts/set_key.sh                    # chiave Anthropic (ANTHROPIC_API_KEY)
+bash scripts/set_key.sh GEMINI_API_KEY     # chiave Gemini (gratis: https://aistudio.google.com/apikey)
+```
+
+Lo script chiede di incollare la chiave, non la mostra a schermo, non la lascia nella history e la salva solo in `.env`.
+
+**Mai** copiare la chiave in un file diverso da `.env`, mai in chat pubbliche, mai in un commit.
 
 ## 5. Claude Code
 
