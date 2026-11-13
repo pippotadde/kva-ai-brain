@@ -10,7 +10,7 @@ Questi file sono **mappe**: come costruirei MemoLens, non il codice. Ognuno è a
 |---|---|---|---|---|
 | `01_FACILE.md` | Se sabato abbiamo poco tempo o poca esperienza | Agente simulato (script), timeline, allarme, casi simili, correzione con replay | Molto basso | Buono in tecnica e demo, medio in "tema" |
 | `02_MEDIO.md` | **Consigliato.** Equilibrio tra effetto "wow" e sicurezza | Agente vero (LLM con strumenti), memoria con versioni e fonte, grafo decisione→ricordo, supersession, "evidenza insufficiente" | Medio | Alto su tutti i criteri |
-| `03_DIFFICILE.md` | Solo se il medio è pronto alle 15:30 o se prepariamo molto stanotte | Tutto il medio + oggetti di conoscenza tipizzati stile OIDA, memoria bitemporale, server MCP interrogabile da Claude, replay controfattuale, export AI Act | Alto | Massimo sul "tema" (25%, decide i pareggi), se funziona |
+| `03_DIFFICILE.md` | Solo se il medio è pronto alle 15:15 o se prepariamo molto stanotte | Tutto il medio + oggetti di conoscenza tipizzati stile OIDA, memoria bitemporale, server MCP interrogabile da Claude, replay controfattuale, export AI Act | Alto | Massimo sul "tema" (25%, decide i pareggi), se funziona |
 
 ## Il vincolo che decide tutto
 
