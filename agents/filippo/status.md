@@ -1,4 +1,5 @@
 # Status — filippo
-Updated: 2026-11-14 11:25
-Doing: data research + business plan numbers + abstract (plan: work/piano_dati_abstract.md, prompts: work/prompt_ricerca.md). Abstract ready ~12:05 for Giorgia to upload by 12:20.
-Need from Giorgia: agree price (390 vs 800 €/month) and single abstract (hers + internal-management part).
+Updated: 2026-11-14 12:35
+Done: verified numbers (work/numeri_pitch.md, doc https://claude.ai/artifact/7LMvaeRNaZbaagsLR5GGc3); FINAL abstract uploaded via MCP (work/abstract_final.txt, 1186 chars). Do not re-save the abstract from the web form.
+Open: video upload (by 12:40, team). Price 390 vs 800 €/month still to agree with Giorgia.
+Next: plan phase II (pitch, public repo, economic model by 16:45) if selected at 13:30.

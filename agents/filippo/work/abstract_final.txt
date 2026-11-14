@@ -1,9 +1,9 @@
 Negli USA gli allergeni non dichiarati sono la prima causa di richiamo (38,8% nel 2025, PIRG). In Australia il 70% nasce da etichette sbagliate o fornitori che non avvisano (FSANZ). Le prove c’erano, sparse tra mail e registri, e le firme salgono a mano lungo la gerarchia.
 
-Cervello allergeni è un agente AI che trova questi rischi prima che il prodotto esca. Lega mail, schede fornitori e registri in una memoria di ingredienti, macchine, lotti ed etichette, con fonte e data. Trovato un rischio, propone un’azione mirata con le prove, come bloccare solo i lotti coinvolti. Una regola nel codice, non nel prompt, decide se è consentita, da firmare o vietata. La firma va da sola alla persona giusta (pulizia al capo reparto, lotti alla qualità, etichetta alla direzione), con un clic; senza risposta sale di livello. Ogni decisione resta, con il suo perché, in un registro a prova di manomissione.
+Cervello allergeni è un agente AI che trova questi rischi prima che il prodotto esca. Lega mail, schede fornitori e registri in una memoria di ingredienti, macchine, lotti ed etichette, con fonte e data. Trovato un rischio, propone un’azione mirata con le prove, come bloccare i lotti coinvolti. Una regola nel codice, non nel prompt, decide se è consentita, da firmare o vietata. La firma va da sola alla persona giusta (pulizia al capo reparto, lotti alla qualità, etichetta alla direzione), con un clic; senza risposta sale di livello. Ogni decisione resta, con il suo perché, in un registro a prova di manomissione.
 
 I software qualità archiviano, quelli per agenti AI non conoscono le regole. Noi uniamo i due.
 
-Prima PMI dolciarie e co-packer (14.300 in UE), poi pharma. Il settore paga, TraceGains venduta a 350 M$ (2024).
+Prima PMI dolciarie e co-packer (14.300 in UE), poi pharma. Il settore paga, TraceGains venduta a 350 M$.
 
 Test su 20 casi sintetici, metà puliti, almeno 8 rischi su 10, massimo 2 falsi allarmi.
