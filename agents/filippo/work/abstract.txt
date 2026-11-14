@@ -1,0 +1,5 @@
+Un allergene non dichiarato è la prima causa di richiami alimentari negli USA (38,8% dei richiami FDA+USDA nel 2025, Statista). Quasi sempre le informazioni c'erano già, ma sparse: la mail del fornitore che cambia materia prima, la linea pulita con una procedura superata, il report di turno su una macchina spostata. Nessuno le mette insieme in tempo, e ogni modifica aspetta firme a catena.
+
+Costruiamo il cervello allergeni di uno stabilimento alimentare. Legge ogni documento appena arriva e lo collega in una mappa: fornitore, ingrediente, macchina, lotto, etichetta. Ogni fatto porta fonte, autore e data, e la mappa sa quale procedura è superata. Quando trova un rischio avvisa il responsabile qualità con le prove, propone di bloccare solo i lotti coinvolti e, dopo la firma, manda le istruzioni ai lavoratori. L'AI propone, una persona decide, tutto resta tracciato per l'ispettore.
+
+L'ipotesi più rischiosa che testiamo oggi: l'AI trova il rischio giusto incrociando 3 documenti sparsi, senza falsi allarmi. Demo: stabilimento dolciario con dati sintetici dichiarati. Clienti: responsabili qualità di PMI dolciarie e co-packer.
