@@ -1,5 +1,6 @@
 # Status — filippo
-Updated: 2026-11-14 12:35
-Done: verified numbers (work/numeri_pitch.md, doc https://claude.ai/artifact/7LMvaeRNaZbaagsLR5GGc3); FINAL abstract uploaded via MCP (work/abstract_final.txt, 1186 chars). Do not re-save the abstract from the web form.
-Open: video upload (by 12:40, team). Price 390 vs 800 €/month still to agree with Giorgia.
-Next: plan phase II (pitch, public repo, economic model by 16:45) if selected at 13:30.
+Updated: 2026-11-14 12:50
+Done: repo pippotadde/kva-ai-brain is PUBLIC and registered on Control8 (Add repo). Abstract OK on jury card.
+Open: video shows "closed" on the card (extension asked to organisers). Price 390 vs 800 €/month -> economic model owners decide.
+Split for phase II: Giorgia/Sian = pitch artifact (genre `pitch`, first version ~14:00, final by 16:45), pitch deck (optional), economic model (by 16:30). Filippo = the DEMO (3 min, live 17:00).
+Next: plan the demo.
