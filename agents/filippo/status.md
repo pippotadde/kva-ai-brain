@@ -15,3 +15,6 @@ Filippo: idea research running overnight on his PC (local, outside repo). Draft 
 
 ## 2026-11-14 01:15
 Night research ended without final report (usage limits). Results: jury sim top = cambi-formato, taratura-lookback, iatf-piano-controllo; cross-idea "can I ship this lot?". Sian's mail received (MemoLens deck + launcher; launcher script kva-web.sh missing). Open: shared LLM key for Saturday.
+
+## 2026-11-14 02:00
+Working on Idea 1 "allergen-safe changeovers" (confectionery, co-packers; scopes 3+4, plus 5/1/7). Phase 2 done: market research + full business plan in Claude Doc https://claude.ai/artifact/82b3FHhYHTJVVvXcvUmiyJ (problem numbers, TAM/SAM/SOM, competitors map, pricing, 3-yr revenue, GTM, risks). Key finding: crowded on supplier docs (TraceGains, Trace One, Backbone €4M Sep 2026, Mergen AI) and on scheduling (PlanetTogether, Eyelit), empty on docs → allergen map → production plan with provenance. Waiting for Filippo's go for phase 3 (define idea) and 4 (build plan + data).
