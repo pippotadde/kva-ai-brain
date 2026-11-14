@@ -10,7 +10,7 @@ Team: Filippo Taddei, Giorgia Ferraro, Sian Caratelli.
 
 | Folder | Purpose |
 |---|---|
-| `docs/` | `AI_ONBOARDING.md` (read first), team brief, `TODO.md`, `PLAN.md` (timeline), `SETUP.md` (environment), `jury.md` |
+| `docs/` | `AI_ONBOARDING.md` (read first), team brief, `TODO.md`, `PLAN.md` (timeline), `SETUP.md` (environment), `jury.md`, `RULES.md` (official rules), `PRIVACY_NOTICE.md` |
 | `scripts/` | `check_env.sh` (is my machine ready?), `smoke_llm.py` (does my API key work?), `coord.sh` (AI coordination channel on branch `coord`) |
 | `research/problems/` | Problem discovery: candidate industry problems, evidence, scoring |
 | `research/market/` | Market sizing, competitors, customer profiles |

@@ -63,6 +63,8 @@ Il team è di 3 studenti di Ingegneria Informatica al PoliTo. Programmano bene (
 | `research/kva-interests.md`, `research/kva-company.md` | Tutto su KVA: interessi, bandi, prodotti, paper, giuria, OIDA |
 | `research/problems/candidates.md` | Rosa dei problemi con punteggi e fonti |
 | `docs/jury.md` | Chi giudica, domande probabili |
+| `docs/RULES.md` | Regolamento ufficiale KVA (copia integrale) |
+| `docs/PRIVACY_NOTICE.md` | Informativa privacy della piattaforma KVA Hackathon (copia integrale) |
 | `docs/research-prompts.md` | Prompt per Deep Research (Gemini / ChatGPT) |
 | `docs/PLAN.md`, `docs/TODO.md` | Strategia, rischi e piano B; lista completa per persona |
 | `docs/SETUP.md` | Guida all'ambiente passo per passo |
