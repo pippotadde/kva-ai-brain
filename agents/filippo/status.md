@@ -21,3 +21,8 @@ Working on Idea 1 "allergen-safe changeovers" (confectionery, co-packers; scopes
 
 ## 2026-11-14 09:45
 Fatto: hack MCP + skill 8hack installati (hash ok). Scritto shared/PRONTI.md, messaggio a tutti. PRONTI: 4/7 (manca login hack, chiave in .env, self-check). Da decidere con Filippo: rendere pubblico il repo.
+
+## 2026-11-14 10:35
+PRONTI (Filippo): hack MCP ok, 8hack sha ok, AI_GATEWAY_API_KEY in .env, gateway test 200.
+Fatto: scripts/coord_web.py su main (pagina locale messaggi/status/sync).
+Aperto: idea definitiva (nessuna decisione registrata) -> track su /me entro 12:15 -> 8hack start -> video+abstract 12:30.
