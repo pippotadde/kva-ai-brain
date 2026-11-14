@@ -9,13 +9,52 @@ Indice:
 - DeepSeek · G3 Dolciario e grandi gruppi
 - DeepSeek · D2 Verifica numeri
 - (manca) DeepSeek · D1 Gestione interna e tempi
-- (in arrivo) Gemini · stessi prompt
+- Gemini · G1, G2, G3 → file separato `ricerca_gemini.md` (salvati 14.11 ~12:00; manca ancora 1 risultato)
 
 Note rapide prima della verifica (Claude):
 - DeepSeek G1 cita uno studio MDPI "Foods 2026" e un round Biorsaf "Sep 2026": da controllare che esistano davvero.
 - G1 dice FSAI 2024 = 58 allergen alerts; la stessa ricerca ha visto anche "57" (probabile 2025). Da chiarire.
 - G1 riga Eurostat NACE 10.71 "1.142.268 imprese UE" sembra irrealistico (troppo alto): probabile errore di tabella. Da verificare su Eurostat.
 - G3 contiene il richiamo Ferrero Kinder 2022: NON usarlo nel pitch (Ferrero partner).
+
+
+## VERIFICA T3 (Claude, 14.11 11:40) — URL aperti uno per uno
+
+### OK — verificato sulla fonte (numero trovato testuale)
+| Dato | Fonte verificata |
+|---|---|
+| RASFF 2024: 5.250 notifiche, +12% | EC newsroom https://ec.europa.eu/newsroom/sante/items/882537 (non dà il n. allergeni 2024) |
+| RASFF 2023: 4.695 notifiche, +8% | https://ec.europa.eu/newsroom/sante/items/847722/en |
+| RASFF 2023: allergeni = 217 notifiche (latte il più notificato, 39) → ~4,6% | ACN Annual Report 2023 PDF (testo estratto, pag. con sez. 3.5) |
+| USA 2024: 101 richiami per allergeni non dichiarati = 34% (FDA+USDA) | food-safety.com art. 10126 (riporta PIRG) |
+| USA 2023: 154 di 313 = 49,2% | food-safety.com art. 9437 (riporta PIRG) |
+| USA 2025: 38,8% di 320 richiami, prima causa | Statista chart 36281 (cita PIRG Food for Thought 2026) |
+| USA 2004-13: 27,4% allergeni, 41,0% patogeni | USDA ERS EIB-191 Summary PDF (testo estratto) |
+| Costo medio diretto richiamo USD 10M | Interroll fact sheet 2018 che cita studio FMI/GMA (2011) → livello [fonte di settore], dato vecchio |
+| Biorsaf: round €5,2M guidato da P101 + acquisizione Cooki, 10.09.2026 | Teleborsa / Borsa Italiana / financecommunity.it |
+| Veralto compra TraceGains $350M, ott. 2024 (~$30M ricavi, >95% ricorrenti) | Veralto 10-K FY2024 (sec.gov), qualityassurancemag.com |
+| Ideagen compra Safefood 360° + Authenticate, luglio 2025 | Business Wire 20.07.2025 (importi £ non verificati) |
+| CAOBISCO: >14.000 produttori cioccolato/biscotti/dolciario UE, 99% PMI | caobisco.eu, comunicato gen. 2026 |
+| FSAI 2024: 58 allergen alerts su 126 avvisi di richiamo | Food Safety News 07/2025 (sintesi report FSAI) → [fonte di settore] |
+| FoodDocs: Standard $199, Professional $299/mese (Lite $79-99/sito) | G2/Capterra; listino ufficiale non aperto → [fonte di settore] |
+
+### NON REGGE — scartare o riformulare
+- Eurostat NACE 10.71 "1.142.268 imprese UE / 181.442 Italia": FALSO. Italia 10.71 ≈ 25.300 imprese (2021, Statista su Eurostat/Istat). Non usare.
+- Cause radice "50,1% etichetta / 16,3% fornitura / 9,4% processo": studio non trovato. Alternativa verificabile: FDA FY2013-19, 914 richiami allergeni → 71,1% errori di etichettatura, 23,4% contaminazione crociata (food-safety.com art. 8496).
+- UK FSA "101 allergy alerts 2024 vs 64": numeri esatti non trovati; il report FSA 2024/25 dice +55% Allergy Alerts (incidente senape/arachidi). Usare "+55%" se serve.
+- MDPI Foods 2026 (27,1% FDA / 38,6% FSIS): sito risponde 403, esistenza non verificata. Non usare.
+- Biorsaf "3,4M imprese italiane, digitalizzazione 3%": stima dell'azienda, non usare come dato.
+
+### NON ANCORA VERIFICATI (fonti non date da DeepSeek)
+- ATECO 10.82 Italia 821 imprese / €5,117 mld; Italia 56.780 imprese F&B (fonte rivista, include bevande); stabilimenti Ferrero/Mondelez; prezzi concorrenti di terze parti (Safefood €500-2.000, Redzone $2-6K, TraceGains $20K/anno); QAD-Redzone ~$1B; Reg. 2021/382 (testo EUR-Lex esiste, citazione da controllare).
+
+### Numeri consigliati per pitch/abstract
+1. "Gli allergeni non dichiarati sono la prima causa di richiamo alimentare negli USA: 38,8% nel 2025" (Statista/PIRG).
+2. "Il 71% dei richiami per allergeni nasce da errori di etichettatura, il 23% da contaminazione crociata" (FDA 2013-19).
+3. "RASFF 2024: 5.250 allerte UE, +12%" (Commissione UE).
+4. "14.000 produttori dolciari UE, 99% PMI" (CAOBISCO) — il nostro cliente.
+5. Mercato si muove: Biorsaf €5,2M (set. 2026), TraceGains $350M (2024).
+
 
 ---
 
@@ -172,4 +211,4 @@ Strongest (DeepSeek): RASFF 2024 (official); USDA ERS 27.4% (official, old); PIR
 
 ---
 
-## Gemini — (in arrivo)
+## Gemini — vedi `ricerca_gemini.md`
