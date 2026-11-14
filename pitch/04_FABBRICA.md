@@ -4,17 +4,23 @@
 
 ## Consegna delle 12:30
 
-Alle 12:30 servono l'abstract qui sotto (1.106 caratteri su 1.200) e un video di 50 secondi. Il video si gira con lo schermo e una voce: niente codice, bastano tre slide o un mock-up del grafo disegnato a mano.
+Alle 12:30 servono l'abstract qui sotto (1.197 caratteri su 1.200) e un video di 50 secondi. Il video si gira con lo schermo e una voce: niente codice, bastano tre slide o un mock-up del grafo disegnato a mano.
 
 Traccia consigliata: **Blackbox agents** (seconda scelta: Making memory visible to people). Si cambia fino alle 12:15.
 
 ### Abstract
 
-Nelle fabbriche gli agenti AI iniziano a decidere: in uno stabilimento dolciario un agente pianifica la sequenza dei lotti e le pulizie tra un prodotto e l'altro. Ma usa una memoria che nessuno vede. Se un fornitore aggiorna la scheda del cacao ("può contenere arachidi") e l'agente continua a usare la revisione vecchia, l'errore non fa rumore: si ripete su decine di lotti fino al richiamo. Nel 2023 metà dei richiami alimentari USA era dovuta ad allergeni non dichiarati, e un richiamo costa in media 10 milioni di dollari.
+PROBLEMA. In uno stabilimento dolciario un agente AI decide l'ordine dei lotti e le pulizie tra i prodotti, usando schede fornitori e procedure. Quando un documento cambia, nessuno sa quali decisioni si basavano sulla versione vecchia.
 
-MemoLens è il registratore di volo della memoria degli agenti di fabbrica. Per ogni decisione mostra quale ricordo è stato usato, da quale documento, e se era ancora valido. Quando arriva una nuova revisione, segna in rosso il ricordo superato, trova tutti i lotti già decisi con quel ricordo e li blocca prima che escano. Se due fonti si contraddicono o manca una validazione, lo dice invece di indovinare. Il modello capisce, il codice decide.
+DATI. Nel 2023 il 49% dei richiami alimentari USA era dovuto ad allergeni non dichiarati, e un richiamo costa in media 10 milioni di dollari. Gartner prevede che oltre il 40% dei progetti con agenti AI verrà cancellato entro il 2027, anche per controlli sul rischio inadeguati.
 
-Per il responsabile qualità significa un registro pronto per audit, clienti della GDO e AI Act, senza leggere una riga di log.
+PROPOSTA. MemoLens registra la memoria degli agenti di fabbrica: per ogni decisione, quale informazione è stata usata, da quale documento e revisione, e se era ancora valida.
+
+PROTOTIPO. Un agente pianifica 14 lotti con la scheda cacao rev 2. Carichiamo la rev 3 ("può contenere arachidi"): MemoLens segna superata la rev 2, trova i lotti decisi con quella e li blocca. Se una nota di turno smentisce la procedura di pulizia, applica la procedura e spiega perché. Se manca una validazione, risponde "evidenza insufficiente".
+
+EFFICACIA. Le regole sugli allergeni le applica il codice, non il modello AI. Ogni decisione si ricostruisce fino al documento, pronta per audit e AI Act.
+
+Fonti dei dati: PIRG via Food Safety Magazine (richiami USA 2023), New Food Magazine (costo medio di un richiamo), Gartner (progetti agentici cancellati). I 14 lotti e le schede sono dati sintetici del team.
 
 ### Copione del video (50 secondi)
 
