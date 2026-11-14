@@ -1,10 +1,13 @@
 # SITUAZIONE — quadro completo
-Aggiornato: 2026-11-12 18:00 · Autore: regista (Claude di Filippo)
+Aggiornato: 2026-11-14 09:45 · Autore: regista (Claude di Filippo)
 
 ## Obiettivo
 VINCERE l'hackathon KVA "AI brain for industry", sabato 14.11, 09:30–18:30 CET, online. Team: Filippo, Giorgia, Sian.
 
-## Fase attuale
+## OGGI — leggere prima `shared/PRONTI.md`
+Condizione per partire + comandi da lanciare + scadenze vere (video 12:30 = gate 1 di selezione; pitch 16:45). Fonte: skill ufficiale 8hack, vince su RULES.md.
+
+## Fase attuale (12.11, superata)
 **Preparazione.** Tema aperto: il problema lo scegliamo noi. Prima di sabato niente orari fissi (siamo studenti): si avanza per passi in ordine (`docs/TODO.md`). La scelta del problema avviene quando tutti hanno finito l'approfondimento dei candidati.
 
 ## Ruoli
