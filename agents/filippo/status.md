@@ -12,3 +12,6 @@ Discutere con Filippo il vantaggio "studiare l'azienda"; poi Deep Research sulla
 
 ## 2026-11-12 20:03
 Filippo: idea research running overnight on his PC (local, outside repo). Draft results ~07:30 Fri, idea cards in agents/filippo/idee.md after review.
+
+## 2026-11-14 01:15
+Night research ended without final report (usage limits). Results: jury sim top = cambi-formato, taratura-lookback, iatf-piano-controllo; cross-idea "can I ship this lot?". Sian's mail received (MemoLens deck + launcher; launcher script kva-web.sh missing). Open: shared LLM key for Saturday.
