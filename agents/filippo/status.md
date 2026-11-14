@@ -18,3 +18,6 @@ Night research ended without final report (usage limits). Results: jury sim top 
 
 ## 2026-11-14 02:00
 Working on Idea 1 "allergen-safe changeovers" (confectionery, co-packers; scopes 3+4, plus 5/1/7). Phase 2 done: market research + full business plan in Claude Doc https://claude.ai/artifact/82b3FHhYHTJVVvXcvUmiyJ (problem numbers, TAM/SAM/SOM, competitors map, pricing, 3-yr revenue, GTM, risks). Key finding: crowded on supplier docs (TraceGains, Trace One, Backbone €4M Sep 2026, Mergen AI) and on scheduling (PlanetTogether, Eyelit), empty on docs → allergen map → production plan with provenance. Waiting for Filippo's go for phase 3 (define idea) and 4 (build plan + data).
+
+## 2026-11-14 09:45
+Fatto: hack MCP + skill 8hack installati (hash ok). Scritto shared/PRONTI.md, messaggio a tutti. PRONTI: 4/7 (manca login hack, chiave in .env, self-check). Da decidere con Filippo: rendere pubblico il repo.
