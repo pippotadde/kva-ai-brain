@@ -1,0 +1,7 @@
+Negli USA gli allergeni non dichiarati sono la prima causa di richiamo (38,8% nel 2025, PIRG). In Australia il 48% nasce da un’etichetta sbagliata, il 22% da un fornitore che non ha avvisato (FSANZ). Le prove c’erano, sparse tra mail e registri, e ogni approvazione sale a mano lungo la gerarchia, e intanto si produce.
+
+Cervello allergeni collega i documenti in una memoria che lega fornitore, ingrediente, macchina, lotto ed etichetta, con fonte, autore e data. Una procedura superata resta, marcata come non valida. Trovato un rischio, l’agente prepara il caso con prove e norma e propone un blocco mirato. Prima di ogni azione una regola nel codice, non nel prompt, decide se è consentita, da firmare o vietata. La richiesta va da sola al livello giusto della gerarchia (pulizia al capo reparto, blocco lotti alla qualità, etichetta anche alla direzione) e si firma con un clic. Senza risposta il caso sale di livello. Poi partono le istruzioni agli operatori, con conferma, e tutto va in un registro a prova di manomissione.
+
+Partiamo da co-packer e PMI dolciarie (14.300 in UE, 99% PMI).
+
+Test su 20 casi sintetici, metà puliti. Obiettivo almeno 8 rischi su 10 e massimo 2 falsi allarmi.
