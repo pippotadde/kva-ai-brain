@@ -17,4 +17,4 @@ Scelte di Claude: solo numeri verificati (no Gartner, no 10 M$); tono semplice, 
 1. [FATTO 12:00, G1+G2+G3; manca 1] Salvare risultati Gemini → ricerca_gemini.md
 2. Verificare i dati Gemini (URL uno per uno, come VERIFICA T3).
 3. [FATTO] Confrontare e integrare con DeepSeek → numeri_pitch.md con livelli.
-4. Scrivere l'abstract con questa struttura, contare caratteri (wc -m ≤ 1200), salvare in abstract.txt.
+4. [FATTO v3, 1198 car., abstract_v3.txt] Scrivere l'abstract con questa struttura, contare caratteri (wc -m ≤ 1200), salvare in abstract.txt.
