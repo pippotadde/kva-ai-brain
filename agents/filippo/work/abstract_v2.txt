@@ -1,0 +1,7 @@
+Negli USA gli allergeni non dichiarati sono la prima causa di richiamo alimentare (38,8% nel 2025, PIRG). In Australia il 48% nasce da un'etichetta sbagliata, il 22% da un fornitore che non ha avvisato (FSANZ). Le prove c'erano: una mail, un registro pulizie, un report di turno. Nessuno le ha collegate.
+
+Cervello allergeni è la memoria di uno stabilimento alimentare, con un agente AI che agisce e una scatola nera che lo controlla. L'agente collega i documenti in una mappa fornitore → ingrediente → macchina → lotto → etichetta: ogni fatto ha fonte, autore e data, le procedure superate restano marcate, mai cancellate. Trovato un rischio, prepara il caso con prove e norma (Reg. UE 1169/2011). Prima di ogni azione un controllo nel codice, non nel prompt, decide: consentita, serve la firma della persona giusta, vietata. Tutto resta in un registro a prova di manomissione, che l'ispettore rilegge.
+
+I software qualità conservano documenti, quelli per agenti AI non conoscono le regole: noi uniamo i due.
+
+Oggi testiamo: su 10 casi sintetici dichiarati, almeno 8 rischi trovati e al massimo 2 falsi allarmi. Per chi: co-packer e PMI dolciarie (14.300 in UE, 99% PMI, CAOBISCO).
